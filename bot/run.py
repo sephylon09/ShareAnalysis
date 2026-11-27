@@ -12,7 +12,7 @@ import logging
 import os
 import sys
 
-from .config import Settings
+from .config import Settings, load_dotenv
 from .engine import Engine
 from .scorer import LexiconScorer, make_scorer
 from .store import Store
@@ -32,7 +32,12 @@ def main(argv: list[str] | None = None) -> int:
     args = ap.parse_args(argv)
 
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s", stream=sys.stdout)
+    load_dotenv()
     settings = Settings()
+    if not args.demo and not (settings.alpaca_key and settings.alpaca_secret):
+        logging.warning("ALPACA_KEY_ID / ALPACA_SECRET_KEY are not set yet. On GitHub add them under "
+                        "Settings > Secrets and variables > Actions; on a PC put them in .env. Nothing to do.")
+        return 0
     suffix = "-moomoo" if args.prices == "moomoo" else ""
     data_dir = args.data_dir or f"data{suffix}"
     branch = args.branch or f"data{suffix}"
