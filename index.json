@@ -1,0 +1,23 @@
+{
+ "days": [
+  {
+   "date": "2026-11-27",
+   "status": "closed",
+   "half_day": true,
+   "demo": false,
+   "scorer": "claude (claude-haiku-5-5)",
+   "price_source": "alpaca",
+   "trades": 1,
+   "wins": 1,
+   "losses": 0,
+   "win_rate": 100.0,
+   "pnl_usd": 8.41,
+   "capital_per_trade": 10000,
+   "predictions": 3,
+   "predictions_correct": 0,
+   "prediction_accuracy": 0.0,
+   "best": "INSM",
+   "worst": "INSM"
+  }
+ ]
+}
