@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import logging
 import os
+import re
 
 from .market import AlpacaProvider, ProviderError, Quote
 from .timeutil import utcnow
@@ -34,6 +35,7 @@ class MoomooProvider(AlpacaProvider):
         self._ok = RET_OK
         self.quote_ctx = quote_ctx if quote_ctx is not None else OpenQuoteContext(host=host, port=port)
         self.fallback_minutes = 0
+        self.rejected: set[str] = set()  # tickers moomoo has no quote for (OTC, foreign)
 
     def shutdown(self) -> None:
         try:
@@ -59,25 +61,40 @@ class MoomooProvider(AlpacaProvider):
             )
         return out
 
+    @staticmethod
+    def _rejected_symbols(msg: str, candidates: list[str]) -> set[str]:
+        """Pull the ticker(s) moomoo complained about out of its error text,
+        e.g. 'US OTC market quote is not available for BIOF.'"""
+        cand = set(candidates)
+        found = {m for m in re.findall(r"US\.([A-Z0-9.]+)", msg) if m in cand}
+        tail = re.search(r"\bfor\s+(.+)$", msg)
+        if tail:
+            found |= {t.rstrip(".") for t in re.findall(r"[A-Z][A-Z0-9.]{0,6}", tail.group(1)) if t.rstrip(".") in cand}
+        return found
+
     def snapshots(self, symbols: list[str]) -> dict[str, Quote]:
-        syms = sorted({s for s in symbols if s and s.isascii() and s.replace(".", "").isalnum() and len(s) <= 6})
+        syms = sorted({s for s in symbols if s and s.isascii() and s.replace(".", "").isalnum() and len(s) <= 6}
+                      - self.rejected)
         out: dict[str, Quote] = {}
         for i in range(0, len(syms), 300):  # moomoo allows up to 400 per request
-            chunk = syms[i : i + 300]
-            try:
-                out.update(self._moomoo_snap(chunk))
-                continue
-            except ProviderError as e:
-                # usually one unknown ticker (OTC / foreign) rejects the whole request:
-                # keep only symbols Alpaca recognises and try once more
-                log.info("moomoo snapshot failed (%s); retrying with validated symbols", str(e)[:120])
-            alpaca = super().snapshots(chunk)
-            try:
-                out.update(self._moomoo_snap(sorted(alpaca)))
-            except ProviderError as e:
-                self.fallback_minutes += 1
-                log.warning("moomoo unavailable (%s); using Alpaca prices this minute", str(e)[:120])
-                out.update(alpaca)
+            remaining = syms[i : i + 300]
+            for _ in range(15):  # moomoo allows 60 snapshot requests / 30 s
+                if not remaining:
+                    break
+                try:
+                    out.update(self._moomoo_snap(remaining))
+                    break
+                except ProviderError as e:
+                    # one OTC / foreign ticker rejects the whole request: drop it, remember it, retry
+                    bad = self._rejected_symbols(str(e), remaining)
+                    if not bad:
+                        self.fallback_minutes += 1
+                        log.warning("moomoo unavailable (%s); using Alpaca prices this minute", str(e)[:150])
+                        out.update(super().snapshots(remaining))
+                        break
+                    self.rejected |= bad
+                    log.info("moomoo has no quote for %s (OTC/foreign); skipping from now on", ", ".join(sorted(bad)))
+                    remaining = [s for s in remaining if s not in bad]
         return out
 
 

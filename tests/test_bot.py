@@ -178,6 +178,30 @@ class MoomooTests(unittest.TestCase):
         self.assertEqual(q.source, "moomoo")
         self.assertAlmostEqual(q.change_pct, (181.5 / 180 - 1) * 100)
 
+    def test_otc_ticker_is_dropped_and_remembered(self):
+        import pandas as pd
+        from moomoo import RET_ERROR, RET_OK
+
+        from bot.market_moomoo import MoomooProvider
+
+        class FakeQuote:
+            def __init__(self):
+                self.calls = []
+
+            def get_market_snapshot(self, codes):
+                self.calls.append(list(codes))
+                if "US.BIOF" in codes:
+                    return RET_ERROR, "US OTC market quote is not available for BIOF."
+                return RET_OK, pd.DataFrame([{"code": c, "last_price": 10.0} for c in codes])
+
+        fq = FakeQuote()
+        p = MoomooProvider("k", "s", quote_ctx=fq)
+        q = p.snapshots(["AAPL", "BIOF", "NVDA"])
+        self.assertEqual(sorted(q), ["AAPL", "NVDA"])
+        self.assertEqual(p.rejected, {"BIOF"})
+        p.snapshots(["AAPL", "BIOF"])
+        self.assertEqual(fq.calls[-1], ["US.AAPL"])  # BIOF no longer requested
+
     def test_paper_mirror_only_ever_uses_simulate(self):
         import pandas as pd
         from moomoo import RET_OK, TrdSide
