@@ -45,6 +45,7 @@ class Quote:
     ask: float | None = None
     ts: datetime | None = None
     volume: float | None = None
+    source: str = ""
 
     @property
     def change_pct(self) -> float | None:
@@ -71,6 +72,7 @@ class ProviderError(RuntimeError):
 
 
 class AlpacaProvider:
+    name = "alpaca"
     TRADING = "https://paper-api.alpaca.markets"
     DATA = "https://data.alpaca.markets"
 
@@ -181,6 +183,7 @@ class AlpacaProvider:
                     ask=float(quote["ap"]) if quote.get("ap") else None,
                     ts=parse_ts(trade["t"]) if trade.get("t") else None,
                     volume=float(daily["v"]) if daily.get("v") else None,
+                    source="alpaca",
                 )
         return out
 

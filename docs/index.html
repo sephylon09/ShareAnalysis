@@ -86,6 +86,10 @@ summary{cursor:pointer;font-weight:500}
     <h1>News Sim Desk <small>paper trading on US-stock news · no real money</small></h1>
     <div class="controls">
       <span id="status" class="pill"><span class="dot"></span><span>loading…</span></span>
+      <select id="src" aria-label="Price source">
+        <option value="alpaca">Cloud · Alpaca prices</option>
+        <option value="moomoo">Desktop · moomoo prices</option>
+      </select>
       <select id="day" aria-label="Trading day"></select>
       <button id="refresh" title="Reload data">Refresh</button>
     </div>
@@ -110,6 +114,9 @@ summary{cursor:pointer;font-weight:500}
   <h2>History <span class="sub">one row per trading day</span></h2>
   <div id="history"></div>
 
+  <h2>Cloud vs desktop <span class="sub">same news, different price feed: Alpaca (cloud) vs moomoo (desktop)</span></h2>
+  <div id="compare"></div>
+
   <div class="foot" id="rules"></div>
 </div>
 
@@ -123,18 +130,23 @@ summary{cursor:pointer;font-weight:500}
   const cls = v => v > 0 ? "pos" : v < 0 ? "neg" : "";
   const px = v => v == null ? "–" : "$" + Number(v).toFixed(2);
 
-  function dataBase() {
-    if (params.get("data")) return params.get("data").replace(/\/?$/, "/");
+  const BRANCH = {alpaca: "data", moomoo: "data-moomoo"};
+  function dataBase(src) {
+    const branch = BRANCH[src] || "data";
+    if (params.get("data") && src === (params.get("src") || "alpaca")) return params.get("data").replace(/\/?$/, "/");
     const m = location.hostname.match(/^([^.]+)\.github\.io$/i);
     if (m) {
       const seg = location.pathname.split("/").filter(Boolean)[0];
       const repo = params.get("repo") || `${m[1]}/${seg || m[1] + ".github.io"}`;
-      return `https://raw.githubusercontent.com/${repo}/data/`;
+      return `https://raw.githubusercontent.com/${repo}/${branch}/`;
     }
-    return "../data/";
+    return `../${branch}/`;
   }
-  const BASE = dataBase();
-  const get = async p => { const r = await fetch(BASE + p + "?t=" + Date.now(), {cache: "no-store"}); if (!r.ok) throw new Error(`${r.status} for ${p}`); return r.json(); };
+  let SRC = BRANCH[params.get("src")] ? params.get("src") : "alpaca";
+  $("src").value = SRC;
+  let BASE = dataBase(SRC);
+  const getFrom = async (base, p) => { const r = await fetch(base + p + "?t=" + Date.now(), {cache: "no-store"}); if (!r.ok) throw new Error(`${r.status} for ${p}`); return r.json(); };
+  const get = p => getFrom(BASE, p);
 
   const etFmt = new Intl.DateTimeFormat("en-US", {timeZone: "America/New_York", hour: "2-digit", minute: "2-digit", hour12: false});
   const localFmt = new Intl.DateTimeFormat(undefined, {hour: "2-digit", minute: "2-digit", hour12: false});
@@ -159,9 +171,28 @@ summary{cursor:pointer;font-weight:500}
       current = await get(`days/${sel.value}.json`);
       render(current);
     } catch (e) {
-      $("error").innerHTML = `<div class="err">Could not load data from <code>${esc(BASE)}</code>: ${esc(e.message)}.<br>
-        The bot publishes to the <code>data</code> branch after its first run. If this is a fork, add <code>?repo=owner/name</code> to the URL.</div>`;
+      renderEmpty();
+      const who = SRC === "moomoo" ? "The desktop (moomoo) bot publishes to the <code>data-moomoo</code> branch after its first run on your PC."
+                                   : "The cloud bot publishes to the <code>data</code> branch after its first run.";
+      $("error").innerHTML = `<div class="err">No results yet from <code>${esc(BASE)}</code> (${esc(e.message)}).<br>${who}
+        If the repo name can't be detected, add <code>?repo=owner/name</code> to the URL.</div>`;
     }
+    renderCompare();
+  }
+
+  async function renderCompare() {
+    const [a, m] = await Promise.all(["alpaca", "moomoo"].map(s => getFrom(dataBase(s), "index.json").catch(() => null)));
+    const rows = new Map();
+    for (const [src, idx] of [["a", a], ["m", m]]) for (const r of (idx?.days || [])) {
+      if (r.demo) continue;
+      rows.set(r.date, {...(rows.get(r.date) || {}), [src]: r});
+    }
+    if (!rows.size) { $("compare").innerHTML = `<div class="empty">Appears once both the cloud and desktop bots have run on the same days.</div>`; return; }
+    const cell = r => r ? `<td class="num ${cls(r.pnl_usd)}">${money(r.pnl_usd)}</td><td class="num">${r.trades ?? 0}</td><td class="num">${r.win_rate == null ? "–" : r.win_rate + "%"}</td>`
+                        : `<td class="num muted">–</td><td class="num muted">–</td><td class="num muted">–</td>`;
+    $("compare").innerHTML = `<div class="tablewrap"><table>
+      <thead><tr><th>Day</th><th class="num">Cloud P&L</th><th class="num">Trades</th><th class="num">Win</th><th class="num">Desktop P&L</th><th class="num">Trades</th><th class="num">Win</th></tr></thead>
+      <tbody>${[...rows.entries()].sort((x, y) => y[0] < x[0] ? -1 : 1).map(([d, r]) => `<tr><td>${esc(d)}</td>${cell(r.a)}${cell(r.m)}</tr>`).join("")}</tbody></table></div>`;
   }
 
   function setStatus(latest) {
@@ -190,7 +221,7 @@ summary{cursor:pointer;font-weight:500}
       kpi("Prediction accuracy", s.prediction_accuracy == null ? "–" : s.prediction_accuracy + "%",
           d.finalized ? `${s.predictions_correct}/${s.predictions} calls right at close` : `${s.predictions || 0} calls · graded at close`),
       kpi("Session", d.session?.close ? `${tET(d.session.open).replace(" ET","")}–${tET(d.session.close)}` : "–",
-          `${d.session?.half_day ? "half day · " : ""}scorer: ${esc(d.scorer)}`),
+          `${d.session?.half_day ? "half day · " : ""}prices: ${esc(d.price_source || "alpaca")} · scorer: ${esc(d.scorer)}`),
     ].join("");
 
     // picks
@@ -290,6 +321,7 @@ summary{cursor:pointer;font-weight:500}
       <div><div class="small muted" style="margin-bottom:2px">Why ${inW.toLowerCase()}</div><ul class="why">${(t.entry_reason || []).map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
       <div class="box"><b>Plan at entry:</b> stop ${px(plan.stop_price)} · break-even lock arms at ${px(plan.breakeven_arm_price)} · trailing arms at ${px(plan.trail_arm_price)} · target ${px(plan.target_price)} · out by ${tET(plan.latest_exit_time)}</div>
       ${t._open ? "" : `<div class="box"><b>Why ${outW.toLowerCase()}:</b> ${esc(t.exit_reason)}</div>`}
+      ${t.mirror_entry || t.mirror_exit ? `<div class="small muted">${esc([t.mirror_entry, t.mirror_exit].filter(Boolean).join(" · "))}</div>` : ""}
       ${verdict}
     </article>`;
   }
@@ -330,6 +362,11 @@ summary{cursor:pointer;font-weight:500}
     svg.addEventListener("pointerleave", () => { tip.style.display = "none"; xh.style.display = "none"; });
   }
 
+  $("src").onchange = () => {
+    SRC = $("src").value; BASE = dataBase(SRC); $("day").innerHTML = "";
+    const u = new URL(location.href); u.searchParams.set("src", SRC); history.replaceState(null, "", u);
+    load();
+  };
   $("day").onchange = () => load($("day").value);
   $("refresh").onclick = () => load($("day").value);
   load();

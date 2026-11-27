@@ -1,0 +1,6 @@
+-r requirements.txt
+moomoo-api>=10.12
+pandas
+# Pinned: newer pycryptodome builds are blocked by Windows Smart App Control on some PCs;
+# 3.20.0 has the same API and loads fine.
+pycryptodome==3.20.0

@@ -89,6 +89,48 @@ After that it runs by itself every weekday. It wakes about 90 min before the ope
 trades during the session, and grades everything at the close. Results appear on the dashboard within about
 5 minutes, because GitHub caches the data files.
 
+## Optional: desktop copy with moomoo prices
+
+A second copy can run on your Windows PC at the same time as the cloud copy. It uses **moomoo real-time prices**
+through moomoo OpenD. News, the market clock and the hot-stock list still come from Alpaca, using the same keys.
+It saves to `data-moomoo/` and publishes to the `data-moomoo` branch. On the dashboard, pick
+**Desktop · moomoo prices** at the top. The **Cloud vs desktop** table compares the two day by day.
+
+1. **Install and log in to moomoo OpenD.** Download it from moomoo's OpenAPI page, log in with your moomoo account,
+   and complete the API questionnaire on first login. Leave it running on the default port `11111`.
+   Your moomoo login stays inside OpenD. The bot never sees it.
+2. **Install the Python packages** (from the project folder):
+   ```powershell
+   python -m venv .venv
+   .venv\Scripts\pip install -r requirements-desktop.txt
+   ```
+   `pycryptodome` is pinned to 3.20.0 because Windows Smart App Control blocks the newest build's native file.
+3. **Add your keys:** copy `.env.example` to `.env` and fill in the Alpaca and Anthropic keys.
+   `.env` is git-ignored.
+4. **Try one run by hand:**
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File scripts\run-desktop.ps1
+   ```
+   The log is in `logs\desktop-YYYYMMDD.log`. When the market is closed, it logs "Market closed" and exits.
+5. **Make it automatic:**
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File scripts\install-desktop-task.ps1
+   ```
+   This registers the Windows task `NewsSimDesk-moomoo`. It runs on US trading days, every 30 min for 10 h from
+   12:00 UTC (20:00 in Singapore), and wakes the PC from sleep. Remove it with
+   `Unregister-ScheduledTask -TaskName NewsSimDesk-moomoo`.
+
+Options in `.env`:
+- `MOOMOO_PAPER_MIRROR=1` also places each simulated entry and exit as a market order in your moomoo **paper**
+  account, so you can watch it in the moomoo app. The code always sends orders to moomoo's SIMULATE environment
+  and cannot trade real money. Paper fills follow moomoo's own rules, so they can differ slightly from the
+  ±$0.01 simulation.
+- `MOOMOO_SECURITY_FIRM` is your moomoo broker entity (`FUTUSG` for Singapore).
+- `PUBLISH_DESKTOP=0` keeps desktop results only on your PC.
+
+If OpenD stops responding, the desktop copy uses Alpaca prices for that minute and keeps going.
+Your PC must stay on, or at least able to wake from sleep, during US market hours.
+
 ## Run it on your own PC instead
 
 ```powershell
@@ -103,6 +145,8 @@ view at `http://localhost:8765/docs/`.
 | Path | What it does |
 |---|---|
 | `bot/market.py` | Alpaca client: clock, news, real-time IEX snapshots, most-active and movers screener |
+| `bot/market_moomoo.py` | moomoo price source and the optional paper-account mirror (desktop copy) |
+| `scripts/` | desktop run script and the Windows scheduled-task installer |
 | `bot/scorer.py` | Claude scorer (structured JSON output) and the keyword fallback |
 | `bot/engine.py` | the loop: picks, entry rules, exit rules, end-of-day grading |
 | `bot/sim.py` | fill and P&L math with the ±$0.01 rule |

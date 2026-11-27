@@ -25,8 +25,9 @@ def confidence_of(p_up: float) -> int:
 
 
 class Engine:
-    def __init__(self, settings: Settings, provider, scorer, store: Store, tag: str = ""):
+    def __init__(self, settings: Settings, provider, scorer, store: Store, tag: str = "", mirror=None):
         self.tag = tag  # "-demo" keeps demo days separate from live days
+        self.mirror = mirror  # optional: copies entries/exits into a broker PAPER account
         self.s = settings
         self.p = provider
         self.scorer = scorer
@@ -102,6 +103,7 @@ class Engine:
             "id": today + self.tag,
             "date": today,
             "demo": bool(self.tag),
+            "price_source": getattr(self.p, "name", "unknown"),
             "created_at": iso(now),
             "session": {"open": None, "close": None, "half_day": False},
             "status": "premarket",
@@ -329,6 +331,8 @@ class Engine:
             "exit_reason": reason, "pnl_usd": usd, "pnl_pct": pct,
             "held_min": round(minutes_between(parse_ts(pos["entry_time"]), now), 1),
         })
+        if self.mirror:
+            pos["mirror_exit"] = self.mirror.close(pos)
         self.day["trades"].append(pos)
         log.info("EXIT %s %s @ %.2f  %+.2f USD (%s)", pos["side"], pos["symbol"], fill, usd, reason)
 
@@ -425,6 +429,8 @@ class Engine:
             },
             "peak_pnl_pct": sim.live_pnl_pct(side, fill, q.price, s.slippage),
         }
+        if self.mirror:
+            pos["mirror_entry"] = self.mirror.open(pos)
         self.day["positions"].append(pos)
         self.day["price_paths"].setdefault(sym, [])
         log.info("ENTER %s %s x%d @ %.2f (%s %d%%)", side, sym, shares, fill, call_of(a["p_up"]), conf)

@@ -142,6 +142,64 @@ class DemoDayTest(unittest.TestCase):
             self.assertLessEqual(parse_ts(t["exit_time"]), parse_ts(day["session"]["close"]))
             self.assertIn("call_correct_at_close", t)
         self.assertTrue(all(p["correct"] is not None for p in day["predictions"]))
+        idx = json.loads(open(f"{d}/index.json", encoding="utf-8").read())
+        self.assertEqual([r["date"] for r in idx["days"]], ["2026-11-24-demo"])  # one row per day, no duplicates
+
+
+class MoomooTests(unittest.TestCase):
+    def setUp(self):
+        try:
+            import moomoo  # noqa: F401
+            import pandas  # noqa: F401
+        except Exception:  # noqa: BLE001
+            self.skipTest("moomoo-api not installed")
+
+    def test_snapshot_parsing(self):
+        import pandas as pd
+        from moomoo import RET_OK
+
+        from bot.market_moomoo import MoomooProvider
+
+        class FakeQuote:
+            def __init__(self):
+                self.calls = []
+
+            def get_market_snapshot(self, codes):
+                self.calls.append(codes)
+                return RET_OK, pd.DataFrame([{"code": "US.NVDA", "last_price": 181.5, "prev_close_price": 180.0,
+                                              "open_price": 180.5, "bid_price": 181.49, "ask_price": 181.51,
+                                              "volume": 1e6}])
+
+        fq = FakeQuote()
+        p = MoomooProvider("k", "s", quote_ctx=fq)
+        q = p.snapshots(["NVDA"])["NVDA"]
+        self.assertEqual(fq.calls[0], ["US.NVDA"])
+        self.assertEqual(q.price, 181.5)
+        self.assertEqual(q.source, "moomoo")
+        self.assertAlmostEqual(q.change_pct, (181.5 / 180 - 1) * 100)
+
+    def test_paper_mirror_only_ever_uses_simulate(self):
+        import pandas as pd
+        from moomoo import RET_OK, TrdSide
+
+        from bot.market_moomoo import MoomooPaperMirror
+
+        class FakeTrade:
+            def __init__(self):
+                self.calls = []
+
+            def place_order(self, **kw):
+                self.calls.append(kw)
+                return RET_OK, pd.DataFrame([{"order_id": "123"}])
+
+        ft = FakeTrade()
+        m = MoomooPaperMirror(ctx=ft)
+        pos = {"symbol": "TSLA", "side": "SHORT", "shares": 10, "entry_price": 399.99, "exit_price": 390.01}
+        self.assertIn("123", m.open(pos))
+        m.close(pos)
+        self.assertEqual([c["trd_env"] for c in ft.calls], ["SIMULATE", "SIMULATE"])
+        self.assertEqual([c["trd_side"] for c in ft.calls], [TrdSide.SELL_SHORT, TrdSide.BUY_BACK])
+        self.assertEqual(ft.calls[0]["code"], "US.TSLA")
 
 
 if __name__ == "__main__":

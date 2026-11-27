@@ -46,6 +46,8 @@ class _Event:
 
 
 class DemoProvider:
+    name = "demo"
+
     def __init__(self, date: str | None = None, half_day: bool = False, seed: int | None = None):
         today = date or datetime.now(timezone.utc).strftime("%Y-%m-%d")
         y, m, d = (int(x) for x in today.split("-"))

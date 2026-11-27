@@ -2,5 +2,7 @@ __pycache__/
 *.pyc
 .venv/
 data/
+data-moomoo/
 demo-data/
+logs/
 .env

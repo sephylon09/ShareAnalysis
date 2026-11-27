@@ -13,10 +13,11 @@ log = logging.getLogger(__name__)
 
 
 class Store:
-    def __init__(self, root: str | Path, publish_enabled: bool = False):
+    def __init__(self, root: str | Path, publish_enabled: bool = False, branch: str = "data"):
         self.root = Path(root)
         (self.root / "days").mkdir(parents=True, exist_ok=True)
         self.publish_enabled = publish_enabled
+        self.branch = branch
         if not (self.root / "index.json").exists():
             self._write(self.root / "index.json", {"days": []})
 
@@ -40,8 +41,8 @@ class Store:
         p = self.root / "index.json"
         idx = json.loads(p.read_text(encoding="utf-8")) if p.exists() else {"days": []}
         row = {"date": day["id"], "status": day["status"], "half_day": day["session"].get("half_day"),
-               "demo": day.get("demo", False), "scorer": day.get("scorer"), **(day.get("summary") or {})}
-        idx["days"] = [r for r in idx["days"] if r["date"] != day["date"]] + [row]
+               "demo": day.get("demo", False), "scorer": day.get("scorer"), "price_source": day.get("price_source"), **(day.get("summary") or {})}
+        idx["days"] = [r for r in idx["days"] if r["date"] != day["id"]] + [row]
         idx["days"].sort(key=lambda r: r["date"], reverse=True)
         self._write(p, idx)
 
@@ -57,29 +58,40 @@ class Store:
 
     # ------------------------------------------------------------------ publish
     def publish(self) -> None:
-        """Force-push the data folder as a single commit to the `data` branch (GitHub Actions only)."""
+        """Force-push the data folder as a single commit to the results branch.
+
+        On GitHub Actions this uses the workflow token; on a desktop it pushes to this repo's `origin`
+        remote using your normal git login.
+        """
         if not self.publish_enabled:
             return
         repo = os.environ.get("GITHUB_REPOSITORY")
-        token = os.environ.get("GITHUB_TOKEN")
-        if not repo or not token:
-            log.warning("publish skipped: GITHUB_REPOSITORY / GITHUB_TOKEN not set")
-            return
+        token = os.environ.get("GITHUB_TOKEN") or ""
+        if repo and token:
+            remote = f"https://x-access-token:{token}@github.com/{repo}.git"
+        else:
+            r = subprocess.run(["git", "remote", "get-url", "origin"], capture_output=True, text=True, timeout=20)
+            remote = r.stdout.strip()
+            if r.returncode != 0 or not remote:
+                log.warning("publish skipped: no GITHUB_TOKEN and no git `origin` remote")
+                return
         tmp = Path(tempfile.mkdtemp(prefix="pub-"))
         try:
             shutil.copytree(self.root, tmp, dirs_exist_ok=True)
-            remote = f"https://x-access-token:{token}@github.com/{repo}.git"
             cmds = [
-                ["git", "init", "-q", "-b", "data"],
+                ["git", "init", "-q", "-b", self.branch],
                 ["git", "add", "-A"],
                 ["git", "-c", "user.name=news-sim-bot", "-c", "user.email=bot@users.noreply.github.com",
                  "commit", "-q", "-m", "data snapshot"],
-                ["git", "push", "-q", "-f", remote, "data"],
+                ["git", "push", "-q", "-f", remote, self.branch],
             ]
             for c in cmds:
-                r = subprocess.run(c, cwd=tmp, capture_output=True, text=True, timeout=60)
+                r = subprocess.run(c, cwd=tmp, capture_output=True, text=True, timeout=90)
                 if r.returncode != 0:
-                    log.warning("publish step failed: %s", (r.stderr or r.stdout).replace(token, "***")[:300])
+                    msg = (r.stderr or r.stdout)
+                    if token:
+                        msg = msg.replace(token, "***")
+                    log.warning("publish step failed: %s", msg[:300])
                     return
             log.info("published data snapshot")
         finally:
