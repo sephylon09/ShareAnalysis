@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>News Sim Desk</title>
+<style>
+:root{
+  --page:#f9f9f7; --surface:#fcfcfb; --card:#ffffff; --line:#e6e5e0; --line-soft:#efeee9;
+  --ink:#0b0b0b; --ink-2:#52514e; --ink-3:#7a7974;
+  --series:#2a78d6; --good:#0a7d0a; --good-mark:#0ca30c; --bad:#c23131; --bad-mark:#d03b3b; --warn:#b97800;
+  --chip:#f0efec; --focus:#2a78d6;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --page:#0d0d0d; --surface:#1a1a19; --card:#151514; --line:#2c2c2a; --line-soft:#232321;
+    --ink:#f0efec; --ink-2:#c3c2b7; --ink-3:#8f8e86;
+    --series:#3987e5; --good:#3fc13f; --good-mark:#0ca30c; --bad:#ef6b6b; --bad-mark:#d03b3b; --warn:#e6a42a;
+    --chip:#262624;
+  }
+}
+:root[data-theme="dark"]{
+  --page:#0d0d0d; --surface:#1a1a19; --card:#151514; --line:#2c2c2a; --line-soft:#232321;
+  --ink:#f0efec; --ink-2:#c3c2b7; --ink-3:#8f8e86;
+  --series:#3987e5; --good:#3fc13f; --good-mark:#0ca30c; --bad:#ef6b6b; --bad-mark:#d03b3b; --warn:#e6a42a;
+  --chip:#262624;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);font:14px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:20px 16px 60px}
+header{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:18px}
+h1{font-size:20px;margin:0;letter-spacing:-.01em}
+h1 small{font-weight:400;color:var(--ink-3);font-size:13px;margin-left:6px}
+h2{font-size:15px;margin:28px 0 10px;display:flex;align-items:baseline;gap:8px}
+h2 .sub{font-weight:400;color:var(--ink-3);font-size:12.5px}
+.controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+select,button{font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:5px 10px}
+button{cursor:pointer}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:999px;background:var(--chip);font-size:12.5px;color:var(--ink-2)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--ink-3)}
+.pill.open .dot{background:var(--good-mark)} .pill.premarket .dot{background:var(--warn)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.kpi .label{font-size:12px;color:var(--ink-2)}
+.kpi .val{font-size:24px;font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums;margin-top:2px}
+.kpi .note{font-size:12px;color:var(--ink-3)}
+.pos{color:var(--good)} .neg{color:var(--bad)}
+.tablewrap{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+th{font-weight:500;color:var(--ink-2);font-size:12px;white-space:nowrap;background:var(--surface)}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.call{display:inline-block;font-size:11.5px;font-weight:600;padding:1px 7px;border-radius:6px;white-space:nowrap}
+.call.RISE,.call.LONG{background:color-mix(in srgb,var(--good-mark) 16%,transparent);color:var(--good)}
+.call.FALL,.call.SHORT{background:color-mix(in srgb,var(--bad-mark) 16%,transparent);color:var(--bad)}
+.sym{font-weight:600}
+.muted{color:var(--ink-3)} .small{font-size:12px}
+.headline{max-width:440px;min-width:220px}
+.trades{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px}
+.trade{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:10px}
+.trade .top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.trade .top .sym{font-size:17px}
+.trade .pnl{font-size:18px;font-weight:600;font-variant-numeric:tabular-nums}
+.legs{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;font-size:13px}
+.legs b{font-weight:500;color:var(--ink-2)}
+ul.why{margin:0;padding-left:18px;font-size:12.5px;color:var(--ink-2)}
+ul.why li{margin:2px 0}
+.box{background:var(--surface);border:1px solid var(--line-soft);border-radius:8px;padding:8px 10px;font-size:12.5px}
+.verdict{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12.5px}
+.chart{position:relative}
+.chart svg{display:block;width:100%;height:120px}
+.tip{position:absolute;pointer-events:none;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:3px 7px;font-size:11.5px;white-space:nowrap;transform:translate(-50%,-110%);display:none;font-variant-numeric:tabular-nums}
+.empty{padding:22px;text-align:center;color:var(--ink-3);background:var(--card);border:1px dashed var(--line);border-radius:12px}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-top:10px}
+summary{cursor:pointer;font-weight:500}
+.foot{margin-top:34px;font-size:12.5px;color:var(--ink-2)}
+.foot li{margin:3px 0}
+.err{background:color-mix(in srgb,var(--bad-mark) 12%,var(--card));border:1px solid var(--bad-mark);padding:10px 14px;border-radius:10px;margin-bottom:12px}
+@media (max-width:520px){.trades{grid-template-columns:1fr}.kpi .val{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>News Sim Desk <small>paper trading on US-stock news · no real money</small></h1>
+    <div class="controls">
+      <span id="status" class="pill"><span class="dot"></span><span>loading…</span></span>
+      <select id="day" aria-label="Trading day"></select>
+      <button id="refresh" title="Reload data">Refresh</button>
+    </div>
+  </header>
+  <div id="error"></div>
+  <section class="kpis" id="kpis"></section>
+
+  <h2>Hot picks <span class="sub">stocks the news model has a strong call on right now (rise/fall chance at today's close)</span></h2>
+  <div id="picks"></div>
+
+  <h2>Simulated trades <span class="sub">buy = price + $0.01, sell = price − $0.01 · decided live, never in hindsight</span></h2>
+  <div id="trades"></div>
+
+  <h2>Prediction log <span class="sub">every strong call, graded against the closing price</span></h2>
+  <div id="preds"></div>
+
+  <h2>Scored news <span class="sub">latest analysed headlines</span></h2>
+  <div id="news"></div>
+
+  <details id="skipsBox"><summary>Why some picks were not bought</summary><div id="skips" style="margin-top:10px"></div></details>
+
+  <h2>History <span class="sub">one row per trading day</span></h2>
+  <div id="history"></div>
+
+  <div class="foot" id="rules"></div>
+</div>
+
+<script>
+(() => {
+  const params = new URLSearchParams(location.search);
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const money = (v, sign = true) => v == null ? "–" : (sign && v > 0 ? "+" : v < 0 ? "−" : "") + "$" + Math.abs(v).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
+  const pct = (v, d = 2) => v == null ? "–" : (v > 0 ? "+" : v < 0 ? "−" : "") + Math.abs(v).toFixed(d) + "%";
+  const cls = v => v > 0 ? "pos" : v < 0 ? "neg" : "";
+  const px = v => v == null ? "–" : "$" + Number(v).toFixed(2);
+
+  function dataBase() {
+    if (params.get("data")) return params.get("data").replace(/\/?$/, "/");
+    const m = location.hostname.match(/^([^.]+)\.github\.io$/i);
+    if (m) {
+      const seg = location.pathname.split("/").filter(Boolean)[0];
+      const repo = params.get("repo") || `${m[1]}/${seg || m[1] + ".github.io"}`;
+      return `https://raw.githubusercontent.com/${repo}/data/`;
+    }
+    return "../data/";
+  }
+  const BASE = dataBase();
+  const get = async p => { const r = await fetch(BASE + p + "?t=" + Date.now(), {cache: "no-store"}); if (!r.ok) throw new Error(`${r.status} for ${p}`); return r.json(); };
+
+  const etFmt = new Intl.DateTimeFormat("en-US", {timeZone: "America/New_York", hour: "2-digit", minute: "2-digit", hour12: false});
+  const localFmt = new Intl.DateTimeFormat(undefined, {hour: "2-digit", minute: "2-digit", hour12: false});
+  const tET = iso => iso ? etFmt.format(new Date(iso)) + " ET" : "–";
+  const tBoth = iso => iso ? `${etFmt.format(new Date(iso))} ET <span class="muted small">(${localFmt.format(new Date(iso))} your time)</span>` : "–";
+  const ago = iso => { const m = Math.round((Date.now() - new Date(iso)) / 60000); return m < 1 ? "just now" : m < 60 ? `${m} min ago` : `${Math.round(m/60)} h ago`; };
+
+  let index = null, current = null;
+
+  async function load(dayWanted) {
+    $("error").innerHTML = "";
+    try {
+      const [latest, idx] = await Promise.all([get("latest.json").catch(() => null), get("index.json")]);
+      index = idx;
+      const days = idx.days || [];
+      const sel = $("day");
+      const keep = dayWanted || sel.value || (latest && latest.day) || (days[0] && days[0].date);
+      sel.innerHTML = days.map(d => `<option value="${d.date}">${d.date}${d.half_day ? " (half day)" : ""}</option>`).join("");
+      if (keep) sel.value = keep;
+      setStatus(latest);
+      if (!sel.value) { renderEmpty(); return; }
+      current = await get(`days/${sel.value}.json`);
+      render(current);
+    } catch (e) {
+      $("error").innerHTML = `<div class="err">Could not load data from <code>${esc(BASE)}</code>: ${esc(e.message)}.<br>
+        The bot publishes to the <code>data</code> branch after its first run. If this is a fork, add <code>?repo=owner/name</code> to the URL.</div>`;
+    }
+  }
+
+  function setStatus(latest) {
+    const el = $("status");
+    const st = latest?.status || "unknown";
+    const label = {open: "Market open · bot running", premarket: "Pre-market · analysing news", closed: "Market closed"}[st] || st;
+    el.className = "pill " + st;
+    el.innerHTML = `<span class="dot"></span><span>${label}${latest?.updated_at ? " · updated " + ago(latest.updated_at) : ""}</span>`;
+  }
+
+  function renderEmpty() {
+    ["kpis","picks","trades","preds","news","history"].forEach(id => $(id).innerHTML = "");
+    $("picks").innerHTML = `<div class="empty">No data yet — the bot hasn't run.</div>`;
+  }
+
+  function kpi(label, val, note, c = "") { return `<div class="kpi"><div class="label">${label}</div><div class="val ${c}">${val}</div><div class="note">${note || "&nbsp;"}</div></div>`; }
+
+  function render(d) {
+    const s = d.summary || {};
+    const open = d.positions || [];
+    const totalCap = (s.capital_per_trade || 10000);
+    $("kpis").innerHTML = [
+      kpi("Realised P&L (simulated)", money(s.pnl_usd), `${s.trades || 0} closed trades · $${totalCap.toLocaleString()} per trade`, cls(s.pnl_usd)),
+      kpi("Open positions", open.length, open.length ? `unrealised ${money(s.open_pnl_usd)}` : "none", cls(s.open_pnl_usd)),
+      kpi("Win rate", s.win_rate == null ? "–" : s.win_rate + "%", `${s.wins || 0} won · ${s.losses || 0} lost`),
+      kpi("Prediction accuracy", s.prediction_accuracy == null ? "–" : s.prediction_accuracy + "%",
+          d.finalized ? `${s.predictions_correct}/${s.predictions} calls right at close` : `${s.predictions || 0} calls · graded at close`),
+      kpi("Session", d.session?.close ? `${tET(d.session.open).replace(" ET","")}–${tET(d.session.close)}` : "–",
+          `${d.session?.half_day ? "half day · " : ""}scorer: ${esc(d.scorer)}`),
+    ].join("");
+
+    // picks
+    const picks = d.picks || [];
+    $("picks").innerHTML = picks.length ? `<div class="tablewrap"><table>
+      <thead><tr><th>Stock</th><th>Call</th><th class="num">Chance</th><th class="num">Price</th><th class="num">Today</th><th>Why (top headline)</th><th>Status</th></tr></thead>
+      <tbody>${picks.map(p => `<tr>
+        <td><span class="sym">${esc(p.symbol)}</span>${p.hot ? `<div class="muted small">${esc(p.hot)}</div>` : ""}</td>
+        <td><span class="call ${p.call}">${p.call === "RISE" ? "▲ RISE" : "▼ FALL"}</span></td>
+        <td class="num">${p.confidence}%</td>
+        <td class="num">${px(p.price)}</td>
+        <td class="num ${cls(p.change_pct)}">${pct(p.change_pct)}</td>
+        <td class="headline">${esc(p.headline)}<div class="muted small">${esc(p.reason)} · ${tET(p.news_time)} · ${p.articles} article${p.articles>1?"s":""}</div></td>
+        <td class="small">${esc(p.status)}</td></tr>`).join("")}</tbody></table></div>`
+      : `<div class="empty">No strong calls yet. Picks appear when the news gives a ≥ 62% rise or fall chance.</div>`;
+
+    // trades
+    const all = [...open.map(p => ({...p, _open: true})), ...(d.trades || []).slice().reverse()];
+    $("trades").innerHTML = all.length ? `<div class="trades">${all.map(t => tradeCard(t, d)).join("")}</div>`
+      : `<div class="empty">No simulated trades ${d.finalized ? "this day" : "yet"}. A trade needs ≥ ${d.rules?.entry_confidence ?? 70}% confidence, fresh news and price confirmation.</div>`;
+    all.forEach(t => drawChart(t, d));
+
+    // predictions
+    const preds = (d.predictions || []).slice().reverse();
+    $("preds").innerHTML = preds.length ? `<div class="tablewrap"><table>
+      <thead><tr><th>Time</th><th>Stock</th><th>Call</th><th class="num">Chance</th><th class="num">Price then</th><th class="num">Close</th><th class="num">Move</th><th>Result</th><th>Headline</th></tr></thead>
+      <tbody>${preds.map(p => `<tr><td class="small">${tBoth(p.time)}${p.session === "premarket" ? '<div class="muted small">pre-market</div>' : ""}</td>
+        <td class="sym">${esc(p.symbol)}</td><td><span class="call ${p.call}">${p.call}</span></td><td class="num">${p.confidence}%</td>
+        <td class="num">${px(p.price)}</td><td class="num">${px(p.close_price)}</td><td class="num ${cls(p.move_pct)}">${pct(p.move_pct)}</td>
+        <td>${p.correct == null ? '<span class="muted">pending</span>' : p.correct ? '<span class="pos">✔ right</span>' : '<span class="neg">✘ wrong</span>'}</td>
+        <td class="headline small">${esc(p.headline)}</td></tr>`).join("")}</tbody></table></div>`
+      : `<div class="empty">No strong calls recorded.</div>`;
+
+    // news
+    const sigs = (d.signals || []).slice(-40).reverse();
+    $("news").innerHTML = sigs.length ? `<div class="tablewrap"><table>
+      <thead><tr><th>Published</th><th>Stock</th><th>Call</th><th class="num">Rise chance</th><th>Impact</th><th>Headline / analysis</th></tr></thead>
+      <tbody>${sigs.map(s => `<tr><td class="small">${tET(s.published_at)}</td><td class="sym">${esc(s.symbol)}</td>
+        <td><span class="call ${s.p_up >= 50 ? "RISE" : "FALL"}">${s.p_up >= 50 ? "RISE" : "FALL"}</span></td>
+        <td class="num">${s.p_up}%</td><td class="small">${esc(s.impact)}</td>
+        <td class="headline">${esc(s.headline)}<div class="muted small">${esc(s.reason)}</div></td></tr>`).join("")}</tbody></table></div>`
+      : `<div class="empty">No analysed news yet.</div>`;
+
+    // skips
+    const sk = (d.skips || []).slice(-60).reverse();
+    $("skips").innerHTML = sk.length ? `<div class="tablewrap"><table><thead><tr><th>Time</th><th>Stock</th><th>Reason</th></tr></thead>
+      <tbody>${sk.map(x => `<tr><td class="small">${tET(x.time)}</td><td class="sym">${esc(x.symbol)}</td><td class="small">${esc(x.why)}</td></tr>`).join("")}</tbody></table></div>`
+      : `<div class="muted">Nothing skipped.</div>`;
+
+    // history
+    const days = index?.days || [];
+    const tot = days.reduce((a, r) => a + (r.pnl_usd || 0), 0);
+    $("history").innerHTML = days.length ? `<div class="tablewrap"><table>
+      <thead><tr><th>Day</th><th class="num">Trades</th><th class="num">Win rate</th><th class="num">P&L</th><th class="num">Prediction accuracy</th><th>Best / worst</th><th>Status</th></tr></thead>
+      <tbody>${days.map(r => `<tr><td><a href="#" data-day="${r.date}">${r.date}</a>${r.half_day ? ' <span class="muted small">half day</span>' : ""}</td>
+        <td class="num">${r.trades ?? 0}</td><td class="num">${r.win_rate == null ? "–" : r.win_rate + "%"}</td>
+        <td class="num ${cls(r.pnl_usd)}">${money(r.pnl_usd)}</td><td class="num">${r.prediction_accuracy == null ? "–" : r.prediction_accuracy + "%"}</td>
+        <td class="small">${esc(r.best || "–")} / ${esc(r.worst || "–")}</td><td class="small">${esc(r.status)}</td></tr>`).join("")}
+        <tr><td><b>All days</b></td><td class="num">${days.reduce((a, r) => a + (r.trades || 0), 0)}</td><td></td><td class="num ${cls(tot)}"><b>${money(tot)}</b></td><td colspan="3"></td></tr>
+      </tbody></table></div>` : "";
+    document.querySelectorAll("[data-day]").forEach(a => a.onclick = e => { e.preventDefault(); load(a.dataset.day); window.scrollTo({top: 0, behavior: "smooth"}); });
+
+    const r = d.rules || {};
+    $("rules").innerHTML = `<b>How the simulation decides</b><ul>
+      <li><b>Analysis:</b> each new headline is scored by ${esc(d.scorer)} into a 1–99% chance the stock closes above its price at news time; scores per stock are combined, newer and higher-impact news weighing more.</li>
+      <li><b>Buy / short:</b> combined chance ≥ ${r.entry_confidence}% for RISE (long) or FALL (short), news ≤ ${r.fresh_news_min} min old (or overnight news in the first hour), price not moving against the news over the last 5 min, not already up/down > 15% today, not in the first 5 or last ${r.no_entry_before_close_min} min. $${(r.position_usd||10000).toLocaleString()} per trade, max ${r.max_open_positions} at once, ${r.max_trades_per_day}/day, one trade per stock per day.</li>
+      <li><b>Sell / cover (checked every minute with the live price):</b> stop-loss at −${r.stop_loss_pct}% · once up +${r.breakeven_trigger_pct}%, exit if it falls back to break-even (a winner never becomes a loser) · once up +${r.trail_trigger_pct}%, trailing stop ${r.trail_pct}% below the peak · take-profit +${r.take_profit_pct}% · exit if new news flips the call · exit ${r.force_exit_before_close_min} min before the close (never held overnight).</li>
+      <li><b>Fills:</b> buy at last price + $${r.slippage ?? 0.01}, sell at last price − $${r.slippage ?? 0.01} (short: the reverse). P&L includes this.</li>
+      <li>Simulation for learning only. Not investment advice; past simulated results don't predict real results.</li></ul>`;
+  }
+
+  function tradeCard(t, d) {
+    const long = t.side === "LONG";
+    const inW = long ? "Bought" : "Shorted", outW = long ? "Sold" : "Covered";
+    const pnlUsd = t._open ? (t.live_pnl_pct ?? 0) / 100 * t.entry_price * t.shares : t.pnl_usd;
+    const pnlPct = t._open ? t.live_pnl_pct : t.pnl_pct;
+    const plan = t.plan || {};
+    let verdict = "";
+    if (!t._open && t.close_price != null) {
+      const saved = t.pnl_pct - t.hold_to_close_pnl_pct;
+      verdict = `<div class="verdict box">
+        <span>Close: <b>${px(t.close_price)}</b></span>
+        <span>Call at close: ${t.call_correct_at_close ? '<span class="pos">✔ right direction</span>' : '<span class="neg">✘ wrong direction</span>'}</span>
+        <span>Went as planned: ${t.went_as_planned ? '<span class="pos">✔ profit</span>' : '<span class="neg">✘ no</span>'}</span>
+        <span>Holding to close would be ${pct(t.hold_to_close_pnl_pct)} → our exit ${saved >= 0 ? "did better by" : "did worse by"} ${Math.abs(saved).toFixed(2)} pts</span></div>`;
+    }
+    return `<article class="trade">
+      <div class="top"><div><span class="sym">${esc(t.symbol)}</span> <span class="call ${t.side}">${t.side}</span>
+        <span class="muted small">${t.shares} sh · ${t.confidence}% ${long ? "rise" : "fall"} call</span></div>
+        <div class="pnl ${cls(pnlUsd)}">${money(Math.round(pnlUsd * 100) / 100)} <span class="small">(${pct(pnlPct)})</span>${t._open ? ' <span class="muted small">open</span>' : ""}</div></div>
+      <div class="legs">
+        <b>${inW}</b><span>${tBoth(t.entry_time)} @ <b>${px(t.entry_price)}</b> <span class="muted small">(market ${px(t.entry_market_price)} ${long ? "+" : "−"} $0.01)</span></span>
+        ${t._open ? `<b>Now</b><span>${px(t.last_price)} · peak ${pct(t.peak_pnl_pct)}</span>`
+          : `<b>${outW}</b><span>${tBoth(t.exit_time)} @ <b>${px(t.exit_price)}</b> <span class="muted small">(market ${px(t.exit_market_price)} ${long ? "−" : "+"} $0.01 · held ${Math.round(t.held_min)} min)</span></span>`}
+      </div>
+      <div class="chart" id="c-${esc(t.id)}"><div class="tip"></div></div>
+      <div><div class="small muted" style="margin-bottom:2px">Why ${inW.toLowerCase()}</div><ul class="why">${(t.entry_reason || []).map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
+      <div class="box"><b>Plan at entry:</b> stop ${px(plan.stop_price)} · break-even lock arms at ${px(plan.breakeven_arm_price)} · trailing arms at ${px(plan.trail_arm_price)} · target ${px(plan.target_price)} · out by ${tET(plan.latest_exit_time)}</div>
+      ${t._open ? "" : `<div class="box"><b>Why ${outW.toLowerCase()}:</b> ${esc(t.exit_reason)}</div>`}
+      ${verdict}
+    </article>`;
+  }
+
+  function drawChart(t, d) {
+    const host = document.getElementById("c-" + t.id);
+    const path = (d.price_paths || {})[t.symbol] || [];
+    if (!host || path.length < 2) { if (host) host.style.display = "none"; return; }
+    const W = Math.max(240, Math.round(host.clientWidth || 600)), H = 120, P = {l: 8, r: 8, t: 18, b: 16};
+    const xs = path.map(p => +new Date(p[0])), ys = path.map(p => p[1]);
+    const marks = [[t.entry_time, t.entry_market_price, t.side === "LONG" ? "Buy" : "Short"]];
+    if (!t._open && t.exit_time) marks.push([t.exit_time, t.exit_market_price, t.side === "LONG" ? "Sell" : "Cover"]);
+    const allY = ys.concat(marks.map(m => m[1]));
+    const x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...allY), y1 = Math.max(...allY);
+    const X = v => P.l + (v - x0) / Math.max(1, x1 - x0) * (W - P.l - P.r);
+    const Y = v => P.t + (1 - (v - y0) / Math.max(1e-9, y1 - y0)) * (H - P.t - P.b);
+    const line = path.map((p, i) => `${i ? "L" : "M"}${X(xs[i]).toFixed(1)},${Y(ys[i]).toFixed(1)}`).join("");
+    const mk = marks.map(([ti, pr, lab]) => { const cx = X(+new Date(ti)), cy = Y(pr);
+      const anchor = cx > W - 60 ? "end" : cx < 60 ? "start" : "middle";
+      return `<circle cx="${cx}" cy="${cy}" r="5" fill="var(--card)" stroke="var(--ink)" stroke-width="2"/>
+        <text x="${cx}" y="${cy - 9}" text-anchor="${anchor}" font-size="11" fill="var(--ink-2)">${lab}</text>`; }).join("");
+    host.insertAdjacentHTML("afterbegin", `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(t.symbol)} price during the trade">
+      <line x1="${P.l}" x2="${W - P.r}" y1="${Y(t.entry_market_price)}" y2="${Y(t.entry_market_price)}" stroke="var(--line)" stroke-dasharray="3 3"/>
+      <path d="${line}" fill="none" stroke="var(--series)" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+      ${mk}
+      <line class="xh" y1="${P.t}" y2="${H - P.b}" stroke="var(--ink-3)" stroke-width="1" vector-effect="non-scaling-stroke" style="display:none"/>
+      <text x="${P.l}" y="${H - 3}" font-size="10" fill="var(--ink-3)">${tET(path[0][0])}</text>
+      <text x="${W - P.r}" y="${H - 3}" font-size="10" fill="var(--ink-3)" text-anchor="end">${tET(path[path.length - 1][0])}</text>
+    </svg>`);
+    const svg = host.querySelector("svg"), tip = host.querySelector(".tip"), xh = svg.querySelector(".xh");
+    svg.addEventListener("pointermove", e => {
+      const r = svg.getBoundingClientRect(); const vx = (e.clientX - r.left) / r.width * W;
+      let best = 0; xs.forEach((v, i) => { if (Math.abs(X(v) - vx) < Math.abs(X(xs[best]) - vx)) best = i; });
+      xh.setAttribute("x1", X(xs[best])); xh.setAttribute("x2", X(xs[best])); xh.style.display = "";
+      tip.style.display = "block"; tip.style.left = (X(xs[best]) / W * r.width) + "px"; tip.style.top = (Y(ys[best]) / H * r.height) + "px";
+      tip.textContent = `${tET(path[best][0])} · ${px(ys[best])}`;
+    });
+    svg.addEventListener("pointerleave", () => { tip.style.display = "none"; xh.style.display = "none"; });
+  }
+
+  $("day").onchange = () => load($("day").value);
+  $("refresh").onclick = () => load($("day").value);
+  load();
+  setInterval(() => { if (!document.hidden) load($("day").value); }, 60000);
+})();
+</script>
+</body>
+</html>

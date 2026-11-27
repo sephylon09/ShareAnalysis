@@ -1,0 +1,59 @@
+name: news-sim-bot
+
+# Fires every 30 min on weekdays between 12:00 and 21:30 UTC (covers 7am-4:30pm ET in both EST and EDT).
+# Only one run executes at a time; while one is running the next trigger waits in the queue and resumes
+# the day where the previous run stopped (each run is capped below GitHub's 6 h job limit).
+# Runs that start while the market is closed exit within seconds.
+on:
+  schedule:
+    - cron: "*/30 12-21 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      demo:
+        description: "Run an offline demo day instead of live (true/false)"
+        default: "false"
+
+concurrency:
+  group: news-sim-bot
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install -r requirements.txt
+
+      - name: Restore previous results from the data branch
+        run: |
+          mkdir -p data
+          if git fetch --depth=1 origin data; then
+            git --work-tree=data checkout FETCH_HEAD -- .
+            git reset -q
+          else
+            echo "no data branch yet (first run)"
+          fi
+
+      - name: Run bot
+        env:
+          ALPACA_KEY_ID: ${{ secrets.ALPACA_KEY_ID }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ "${{ github.event.inputs.demo }}" = "true" ]; then
+            python -m bot.run --demo --data-dir data --publish
+          else
+            python -m bot.run --data-dir data --publish --max-runtime-min 340
+          fi
