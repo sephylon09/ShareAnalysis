@@ -1,0 +1,6264 @@
+{
+ "id": "2026-11-27",
+ "date": "2026-11-27",
+ "demo": false,
+ "price_source": "moomoo",
+ "created_at": "2026-11-27T14:42:07Z",
+ "session": {
+  "open": "2026-11-27T14:30:00Z",
+  "close": "2026-11-27T18:00:00Z",
+  "half_day": true
+ },
+ "status": "closed",
+ "scorer": "claude (claude-haiku-5-5)",
+ "rules": {
+  "position_usd": 10000,
+  "slippage": 0.01,
+  "entry_confidence": 70,
+  "stop_loss_pct": 1.5,
+  "breakeven_trigger_pct": 0.8,
+  "trail_trigger_pct": 1.5,
+  "trail_pct": 0.7,
+  "take_profit_pct": 4.0,
+  "force_exit_before_close_min": 10,
+  "no_entry_before_close_min": 30,
+  "fresh_news_min": 45,
+  "max_open_positions": 5,
+  "max_trades_per_day": 12
+ },
+ "news_cursor": "2026-11-27T17:33:03Z",
+ "seen_article_ids": [
+  "131702286",
+  "131702287",
+  "131702288",
+  "131703140",
+  "131703141",
+  "131703142",
+  "131703143",
+  "131703144",
+  "131753649",
+  "131753650",
+  "131753651",
+  "131753652",
+  "131753653",
+  "131753664",
+  "131754013",
+  "131754014",
+  "131754015",
+  "131754016",
+  "131754017",
+  "131754018",
+  "131754019",
+  "131754020",
+  "131754021",
+  "131754022",
+  "131754023",
+  "131754024",
+  "131754025",
+  "131754026",
+  "131754027",
+  "131754028",
+  "131754029",
+  "131754030",
+  "131754031",
+  "131754032",
+  "131754033",
+  "131754034",
+  "131754035",
+  "131754065",
+  "131754066",
+  "131754067",
+  "131754068",
+  "131754069",
+  "131756110",
+  "131758176",
+  "131758177",
+  "131758178",
+  "131758179",
+  "131758180",
+  "131758181",
+  "131758182",
+  "131758225",
+  "131758226",
+  "131758227",
+  "131763583",
+  "131766390",
+  "131769164",
+  "131769165",
+  "131769166",
+  "131769167",
+  "131769168",
+  "131769169",
+  "131769170",
+  "131769171",
+  "131769172",
+  "131769173",
+  "131769174",
+  "131769175",
+  "131769176",
+  "131769177",
+  "131769178",
+  "131769179",
+  "131769180",
+  "131769181",
+  "131769247",
+  "131769248",
+  "131769249",
+  "131769250",
+  "131769251",
+  "131769252",
+  "131769253",
+  "131769254",
+  "131769255",
+  "131769256",
+  "131769257",
+  "131773742",
+  "131773743",
+  "131773744",
+  "131773745",
+  "131773746",
+  "131773747",
+  "131773748",
+  "131773749",
+  "131773750",
+  "131773751",
+  "131773752",
+  "131773753",
+  "131773754",
+  "131773755",
+  "131773756",
+  "131773757",
+  "131773758",
+  "131773759",
+  "131773760",
+  "131773761",
+  "131773762",
+  "131773763",
+  "131773764",
+  "131773765",
+  "131773766",
+  "131773873",
+  "131773874",
+  "131773767",
+  "131773768",
+  "131773875",
+  "131773878",
+  "131773879",
+  "131773880",
+  "131773881",
+  "131773882",
+  "131773883",
+  "131773884",
+  "131773885",
+  "131773769",
+  "131773770",
+  "131773771",
+  "131773889",
+  "131773890",
+  "131773891",
+  "131773892",
+  "131773893",
+  "131773894",
+  "131773895",
+  "131773896",
+  "131773897",
+  "131773898",
+  "131773899",
+  "131773900",
+  "131773901",
+  "131773902",
+  "131773903",
+  "131773904",
+  "131773905",
+  "131773906",
+  "131773907",
+  "131773908",
+  "131773909",
+  "131773910",
+  "131773911",
+  "131773912",
+  "131773913",
+  "131773914",
+  "131773915",
+  "131773916",
+  "131773917",
+  "131773918",
+  "131773919",
+  "131773920",
+  "131773921",
+  "131773922",
+  "131773923",
+  "131773924",
+  "131773925",
+  "131773926",
+  "131773927",
+  "131773928",
+  "131773929",
+  "131773930",
+  "131773931",
+  "131773932",
+  "131773933",
+  "131773934",
+  "131773935",
+  "131773936",
+  "131773937",
+  "131773938",
+  "131773939",
+  "131773940",
+  "131773941",
+  "131773942",
+  "131773943",
+  "131773944",
+  "131773945",
+  "131773946",
+  "131773947",
+  "131773948",
+  "131773949",
+  "131773950",
+  "131773951",
+  "131773952",
+  "131773953",
+  "131773954",
+  "131773955",
+  "131773956",
+  "131773957",
+  "131773958",
+  "131773959",
+  "131773960",
+  "131773961",
+  "131773962",
+  "131773963",
+  "131773964",
+  "131773965",
+  "131774165",
+  "131774166",
+  "131774167",
+  "131773966",
+  "131773967",
+  "131773968",
+  "131774168",
+  "131774169",
+  "131774170",
+  "131774171",
+  "131773969",
+  "131774176",
+  "131774177",
+  "131774178",
+  "131774179",
+  "131774180",
+  "131774181",
+  "131774182",
+  "131773970",
+  "131774183",
+  "131774185",
+  "131774186",
+  "131774187",
+  "131774188",
+  "131774189",
+  "131774190",
+  "131774191",
+  "131774192",
+  "131774193",
+  "131774194",
+  "131774195",
+  "131774196",
+  "131774197",
+  "131774198",
+  "131774199",
+  "131774200",
+  "131774201",
+  "131774202",
+  "131774203",
+  "131774204",
+  "131774205",
+  "131774206",
+  "131774207",
+  "131774208",
+  "131774209",
+  "131774210",
+  "131774211",
+  "131774212",
+  "131774213",
+  "131774214",
+  "131774215",
+  "131774216",
+  "131774217",
+  "131774218",
+  "131774219",
+  "131774220",
+  "131774221",
+  "131774222",
+  "131774223",
+  "131774224",
+  "131774225",
+  "131774226",
+  "131774227",
+  "131774228",
+  "131774229",
+  "131774489",
+  "131781510",
+  "131781511",
+  "131781512",
+  "131781513",
+  "131781514",
+  "131781515",
+  "131781516",
+  "131781784",
+  "131781785",
+  "131781786",
+  "131789617",
+  "131789618",
+  "131789619",
+  "131789620",
+  "131789621",
+  "131789622",
+  "131789623",
+  "131789624",
+  "131789625",
+  "131789626",
+  "131789627",
+  "131789628",
+  "131789629",
+  "131789630",
+  "131789631",
+  "131789939",
+  "131789632",
+  "131789941",
+  "131789633",
+  "131789942",
+  "131789634",
+  "131789635",
+  "131789636",
+  "131789637",
+  "131789638",
+  "131789639",
+  "131789640",
+  "131789641",
+  "131789642",
+  "131789643",
+  "131789644",
+  "131789645",
+  "131789646",
+  "131789647",
+  "131789648",
+  "131789649",
+  "131789650",
+  "131789651",
+  "131789652",
+  "131789963",
+  "131789653",
+  "131789964",
+  "131789966",
+  "131789967",
+  "131789968",
+  "131789969",
+  "131789970",
+  "131789971",
+  "131789972",
+  "131789973",
+  "131789974",
+  "131789975",
+  "131789976",
+  "131789977",
+  "131789978",
+  "131789979",
+  "131789980",
+  "131789981",
+  "131789982",
+  "131789983",
+  "131789984",
+  "131789985",
+  "131789986",
+  "131789987",
+  "131789988",
+  "131799704",
+  "131799705",
+  "131799706",
+  "131799707",
+  "131799708",
+  "131799709",
+  "131799710",
+  "131799711",
+  "131799712",
+  "131800057",
+  "131810063",
+  "131810064",
+  "131810065",
+  "131810066",
+  "131810067",
+  "131810068",
+  "131810069",
+  "131810070",
+  "131810424",
+  "131810425",
+  "131810426",
+  "131810427",
+  "131820781",
+  "131831522",
+  "131831523",
+  "131831524",
+  "131831525",
+  "131831526",
+  "131831527",
+  "131831528",
+  "131831529",
+  "131831530",
+  "131842541",
+  "131842542",
+  "131842543",
+  "131842544",
+  "131842545",
+  "131842546",
+  "131842547",
+  "131842548",
+  "131842549",
+  "131842550",
+  "131842551",
+  "131842552",
+  "131842553",
+  "131842554",
+  "131842555",
+  "131842556",
+  "131842557",
+  "131842558",
+  "131842559",
+  "131842560",
+  "131842948",
+  "131842949",
+  "131842950",
+  "131842951",
+  "131854291",
+  "131854292",
+  "131854293",
+  "131854294",
+  "131854690",
+  "131854691",
+  "131866205",
+  "131866206",
+  "131866207",
+  "131866208",
+  "131866209",
+  "131866210",
+  "131866211",
+  "131866212",
+  "131866618",
+  "131866619",
+  "131866620",
+  "131866621",
+  "131866622",
+  "131866623",
+  "131866624",
+  "131866625",
+  "131866626",
+  "131866627",
+  "131866628",
+  "131866629",
+  "131866630",
+  "131866631",
+  "131866632",
+  "131866633",
+  "131866634",
+  "131866635",
+  "131866636",
+  "131866637",
+  "131867063",
+  "131867064",
+  "131867065",
+  "131879050",
+  "131879051",
+  "131879052",
+  "131879053",
+  "131879054",
+  "131879055",
+  "131879056",
+  "131879057",
+  "131879058",
+  "131879059",
+  "131879060",
+  "131879061",
+  "131879062",
+  "131879063",
+  "131879064",
+  "131879065",
+  "131879066",
+  "131879067",
+  "131879068",
+  "131879069",
+  "131879070",
+  "131879071",
+  "131879072",
+  "131879073",
+  "131879074",
+  "131879075",
+  "131879076",
+  "131879077",
+  "131879078",
+  "131879079",
+  "131879080",
+  "131879081",
+  "131879082",
+  "131879083",
+  "131879084",
+  "131879085",
+  "131879086",
+  "131879087",
+  "131879088",
+  "131879557",
+  "131879089",
+  "131879560",
+  "131879561",
+  "131879562",
+  "131879563",
+  "131879090",
+  "131879564",
+  "131879565",
+  "131879566",
+  "131879568",
+  "131879569",
+  "131879570",
+  "131879571",
+  "131879572",
+  "131879573",
+  "131879574",
+  "131879575",
+  "131879576",
+  "131879577",
+  "131879578",
+  "131879579",
+  "131879580",
+  "131879581",
+  "131879582",
+  "131879583",
+  "131879584",
+  "131879585",
+  "131879586",
+  "131879587",
+  "131880085",
+  "131880086",
+  "131909029",
+  "131909030",
+  "131909031",
+  "131909032",
+  "131909033",
+  "131909034",
+  "131909035",
+  "131909036",
+  "131909037",
+  "131909038",
+  "131909039",
+  "131909040",
+  "131909041",
+  "131909042",
+  "131909043",
+  "131909044",
+  "131909045",
+  "131909046",
+  "131909047",
+  "131909048",
+  "131909049",
+  "131909050",
+  "131909051",
+  "131909052",
+  "131909053",
+  "131909054",
+  "131909055",
+  "131909056",
+  "131909057",
+  "131909058",
+  "131909059",
+  "131909589",
+  "131909060",
+  "131909594",
+  "131909595",
+  "131909061",
+  "131909597",
+  "131909598",
+  "131909599",
+  "131909600",
+  "131909601",
+  "131909602",
+  "131909603",
+  "131909604",
+  "131909605",
+  "131909606",
+  "131909607",
+  "131909608",
+  "131909609",
+  "131909610",
+  "131909611",
+  "131909612",
+  "131909613",
+  "131909614",
+  "131909615",
+  "131909616",
+  "131909617",
+  "131909618",
+  "131909619",
+  "131909620",
+  "131909621",
+  "131909622",
+  "131909623",
+  "131909624",
+  "131909625",
+  "131909626",
+  "131909627",
+  "131909628",
+  "131909629",
+  "131909630",
+  "131909631",
+  "131910201",
+  "131909632",
+  "131910203",
+  "131910204",
+  "131910206",
+  "131909633",
+  "131910208",
+  "131910209",
+  "131910210",
+  "131910211",
+  "131910212",
+  "131910213",
+  "131910214",
+  "131910215",
+  "131910216",
+  "131910217",
+  "131910218",
+  "131910219",
+  "131910220",
+  "131910221",
+  "131910222",
+  "131910223",
+  "131910224",
+  "131910225",
+  "131910226",
+  "131910227",
+  "131910228",
+  "131910229",
+  "131910230",
+  "131910231",
+  "131910232",
+  "131910233",
+  "131910234",
+  "131910235",
+  "131910236",
+  "131910237",
+  "131910238",
+  "131910239",
+  "131910240",
+  "131910241",
+  "131910242",
+  "131910243",
+  "131910244",
+  "131910245",
+  "131910246",
+  "131910247",
+  "131910248",
+  "131910249",
+  "131910250",
+  "131910251",
+  "131910252",
+  "131910253",
+  "131910254",
+  "131910255",
+  "131910256",
+  "131910257",
+  "131910258",
+  "131910259",
+  "131910260",
+  "131910261",
+  "131910262",
+  "131910263",
+  "131910264",
+  "131910265",
+  "131910266",
+  "131910267",
+  "131910268",
+  "131910269",
+  "131910270",
+  "131910271",
+  "131910272",
+  "131910273",
+  "131910274",
+  "131910275",
+  "131910276",
+  "131910277",
+  "131910278",
+  "131910279",
+  "131910280",
+  "131910281",
+  "131910282",
+  "131910283",
+  "131910284",
+  "131910285",
+  "131910286",
+  "131910941",
+  "131910942",
+  "131910287",
+  "131910944",
+  "131910945",
+  "131910946",
+  "131910947",
+  "131910948",
+  "131910949",
+  "131910950",
+  "131910951",
+  "131910952",
+  "131910953",
+  "131910954",
+  "131910955",
+  "131910956",
+  "131910957",
+  "131910958",
+  "131910959",
+  "131910960",
+  "131910961",
+  "131910962",
+  "131910963",
+  "131910964",
+  "131910965",
+  "131910966",
+  "131910967",
+  "131910968",
+  "131910969",
+  "131910970",
+  "131910971",
+  "131910972",
+  "131910973",
+  "131910974",
+  "131910975",
+  "131910976",
+  "131910977",
+  "131910978",
+  "131910979",
+  "131910980",
+  "131910981",
+  "131910982",
+  "131910983",
+  "131910984",
+  "131910985",
+  "131910986",
+  "131910987",
+  "131910988",
+  "131910989",
+  "131910990",
+  "131910991",
+  "131910992",
+  "131910993",
+  "131910994",
+  "131910995",
+  "131910996",
+  "131910997",
+  "131910998",
+  "131910999",
+  "131911000",
+  "131911001",
+  "131911002",
+  "131911003",
+  "131911004",
+  "131911005",
+  "131911006",
+  "131911007",
+  "131911008",
+  "131911009",
+  "131911010",
+  "131911011",
+  "131911012",
+  "131911013",
+  "131911014",
+  "131911015",
+  "131911016",
+  "131911017",
+  "131911018",
+  "131911019",
+  "131911020",
+  "131911754",
+  "131911755",
+  "131911756",
+  "131911757",
+  "131911758",
+  "131911759",
+  "131930974",
+  "131930975",
+  "131930976",
+  "131930977",
+  "131930978",
+  "131930979",
+  "131930980",
+  "131930981",
+  "131930982",
+  "131930983",
+  "131930984",
+  "131930985",
+  "131930986",
+  "131930987",
+  "131930988",
+  "131930989",
+  "131930990",
+  "131931747",
+  "131931748",
+  "131931749",
+  "131931750",
+  "131931751",
+  "131931752",
+  "131931753",
+  "131931754",
+  "131931755",
+  "131931756",
+  "131931757",
+  "131931758",
+  "131931759",
+  "131931760",
+  "131931761",
+  "131932533",
+  "131932534",
+  "131932535",
+  "131933310",
+  "131977486",
+  "131977487",
+  "131977488",
+  "131978267",
+  "131978268",
+  "132000889",
+  "132000890",
+  "132000891",
+  "132000892",
+  "132000893",
+  "132000894",
+  "132000895",
+  "132000896",
+  "132000897",
+  "132001687",
+  "132001688",
+  "132001689",
+  "132024658",
+  "132024659",
+  "132024660",
+  "132024661",
+  "132024662",
+  "132024663",
+  "132024664",
+  "132024665",
+  "132024666",
+  "132024667",
+  "132024668",
+  "132024669",
+  "132024670",
+  "132024671",
+  "132024672",
+  "132024673",
+  "132024674",
+  "132024675",
+  "132024676",
+  "132024677",
+  "132024678",
+  "132024679",
+  "132024680",
+  "132024681",
+  "132024682",
+  "132024683",
+  "132024684",
+  "132024685",
+  "132024686",
+  "132025508",
+  "132025509",
+  "132025510",
+  "132025511",
+  "132025512",
+  "132025513",
+  "132025514",
+  "132025515",
+  "132025516",
+  "132025517",
+  "132049617",
+  "132049618",
+  "132049619",
+  "132049620",
+  "132049621",
+  "132049622",
+  "132049623",
+  "132049624",
+  "132049625",
+  "132049626",
+  "132049627",
+  "132049628",
+  "132049629",
+  "132049630",
+  "132049631",
+  "132049632",
+  "132049633",
+  "132049634",
+  "132049635",
+  "132049636",
+  "132049637",
+  "132049638",
+  "132049639",
+  "132049640",
+  "132049641",
+  "132049642",
+  "132049643",
+  "132049644",
+  "132049645",
+  "132049646",
+  "132049647",
+  "132050510",
+  "132050511",
+  "132050512",
+  "132050513",
+  "132050514",
+  "132050515",
+  "132050516",
+  "132050517",
+  "132050518",
+  "132050519",
+  "132075808",
+  "132075809",
+  "132075810",
+  "132075811",
+  "132075812",
+  "132075813",
+  "132075814",
+  "132075815",
+  "132075816",
+  "132075817",
+  "132075818",
+  "132075819",
+  "132075820",
+  "132075821",
+  "132075822",
+  "132075823",
+  "132075824",
+  "132075825",
+  "132075826",
+  "132075827",
+  "132075828",
+  "132075829",
+  "132075830",
+  "132075831",
+  "132075832",
+  "132075833",
+  "132075834",
+  "132075835",
+  "132076736",
+  "132077638",
+  "132077639"
+ ],
+ "signals": [
+  {
+   "article_id": "131702286",
+   "symbol": "F",
+   "headline": "Ford Racing Unveils New GT41 Hypercar for 2027 Le Mans Return",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Racing program unveiling for 2027 Le Mans is long-dated and immaterial to near-term earnings or price.",
+   "published_at": "2026-11-26T23:01:38Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 12.185,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131702287",
+   "symbol": "BEN",
+   "headline": "Franklin Templeton Launches Tokenized Euro Money Market Fund",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Tokenized euro money market fund launch is a minor product expansion with no immediate earnings impact.",
+   "published_at": "2026-11-26T23:01:49Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 34.055,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131702288",
+   "symbol": "ABCL",
+   "headline": "AbCellera to Present at the Piper Sandler Healthcare Conference on December 1, 2026",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine conference participation announcement carries no new material information.",
+   "published_at": "2026-11-26T23:01:56Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 10.7031,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131703140",
+   "symbol": "HPQ",
+   "headline": "HSBC Downgrades HP Inc. to Hold, Citing Quality of Earnings Concerns",
+   "p_up": 32,
+   "impact": "medium",
+   "reason": "HSBC downgrade to Hold with lower $29.40 target flags earnings quality concerns; stock already down 2.2%.",
+   "published_at": "2026-11-26T23:02:04Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 30.465,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131703141",
+   "symbol": "ANDG",
+   "headline": "Andersen CPA Services Professional Corporation Announces Transition to Karbon Client Portal",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Client portal platform transition is operational news with no price relevance.",
+   "published_at": "2026-11-26T23:02:07Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 58.39,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131703142",
+   "symbol": "DOV",
+   "headline": "Andrew Puente Promoted to Vice President, Global Sourcing at Dover Corporation",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Internal promotion of a procurement VP is not material to the stock.",
+   "published_at": "2026-11-26T23:02:12Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 207.9,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131703143",
+   "symbol": "EXLS",
+   "headline": "Wedbush Initiates Coverage of ExlService Holdings, Inc. with Outperform Rating",
+   "p_up": 56,
+   "impact": "low",
+   "reason": "Wedbush initiation with Outperform and $50 target, about 11% above price, offers modest positive sentiment.",
+   "published_at": "2026-11-26T23:02:25Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 45.15,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131703144",
+   "symbol": "FHI",
+   "headline": "Federated Hermes, Inc. Opens New $159.6 Million Position in Coupang",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Filing discloses a position in Coupang, not in Federated Hermes itself; no direct impact.",
+   "published_at": "2026-11-26T23:02:32Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 61.44,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131753649",
+   "symbol": "JNJ",
+   "headline": "Johanna Mendez Appointed Global Procurement Director at Johnson & Johnson",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Procurement director appointment is routine personnel news with no material impact.",
+   "published_at": "2026-11-27T00:01:37Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 273.905,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131753650",
+   "symbol": "CVX",
+   "headline": "Investigation into Alleged Deliberate Methane Releases at Chevron Facilities",
+   "p_up": 45,
+   "impact": "low",
+   "reason": "Methane release investigation is a potential regulatory overhang but lacks penalties or quantified financial exposure.",
+   "published_at": "2026-11-27T00:01:38Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 214.22,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131753652",
+   "symbol": "UBER",
+   "headline": "Families File Lawsuit Against Uber Following Fatal Arizona Collision",
+   "p_up": 45,
+   "impact": "low",
+   "reason": "Lawsuit over 2025 crash alleging negligent driver screening; litigation headline with limited near-term price impact.",
+   "published_at": "2026-11-27T00:01:51Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 66.67,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131753653",
+   "symbol": "MCD",
+   "headline": "Reports Indicate McDonald's App Sending Unauthorized Notifications",
+   "p_up": 49,
+   "impact": "low",
+   "reason": "User reports of unauthorized app notifications; minor reputational noise, no material financial information.",
+   "published_at": "2026-11-27T00:01:52Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 282.0,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131753664",
+   "symbol": "BMO",
+   "headline": "BofA Securities Updates Bank of Montreal Rating and Price Target",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "BofA maintained Hold with a price target adjustment; routine analyst action with no rating change.",
+   "published_at": "2026-11-27T00:03:00Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 160.11,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131754013",
+   "symbol": "JPM",
+   "headline": "JPMorgan Chase & Co. Discloses Holding in Vistry Group PLC",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine threshold disclosure in Vistry Group; no operational or financial news for JPMorgan.",
+   "published_at": "2026-11-27T01:01:20Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 322.5004,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131754014",
+   "symbol": "AMZN",
+   "headline": "MegazoneCloud Launches Amazon Quick Center of Excellence",
+   "p_up": 51,
+   "impact": "low",
+   "reason": "Third-party partner launches AI support center for Amazon Quick; minor ecosystem news, stock already up 2.4%.",
+   "published_at": "2026-11-27T01:01:24Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 250.33,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131754015",
+   "symbol": "XOM",
+   "headline": "ExxonMobil Files Disclosure Regarding Threshold Crossing in Esso S.A.F.",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Disclosure of stake reduction in Esso S.A.F. after block sale; immaterial to ExxonMobil's valuation.",
+   "published_at": "2026-11-27T01:01:26Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 160.35,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131754016",
+   "symbol": "DELL",
+   "headline": "Wall Street Analysts Update Ratings and Price Targets for Dell Technologies",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Generic roundup of analyst rating and target updates with no specific new action identified.",
+   "published_at": "2026-11-27T01:01:30Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 304.32,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131754020",
+   "symbol": "C",
+   "headline": "Citi Presents 2026 Distinguished Alumni Award",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Community alumni award recognition; no financial relevance to Citigroup.",
+   "published_at": "2026-11-27T01:01:34Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 115.63,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131758176",
+   "symbol": "CSCO",
+   "headline": "Cisco Named Premier Sponsor of OpenSSL",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Premier sponsorship of OpenSSL open-source project; no financial materiality.",
+   "published_at": "2026-11-27T03:01:24Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 95.9,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131758177",
+   "symbol": "ETN",
+   "headline": "Dana Prepares to Combine with Eaton's Mobility Business",
+   "p_up": 48,
+   "impact": "low",
+   "reason": "Dana preparing to combine with Eaton's Mobility business; Eaton is a counterparty with unclear deal terms, limited impact.",
+   "published_at": "2026-11-27T03:01:28Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 322.76,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131758178",
+   "symbol": "SNPS",
+   "headline": "Synopsys Launches EPIC HPC Scale-Up Program in India",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Regional HPC program launch with AWS partner; incremental, not material to near-term earnings or price.",
+   "published_at": "2026-11-27T03:01:34Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 412.8,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131758179",
+   "symbol": "LMT",
+   "headline": "NASA Takes Ownership of X-59 Supersonic Aircraft",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "NASA taking ownership of an already-known X-59 aircraft is a routine milestone with no financial impact.",
+   "published_at": "2026-11-27T03:01:34Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 603.58,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131758180",
+   "symbol": "IMO",
+   "headline": "Oil Sands Alliance Evaluates Impact of New Federal Tax Deduction on Pathways Carbon Capture Project",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Evaluation of a potential federal tax deduction for Pathways project; speculative and not yet decided.",
+   "published_at": "2026-11-27T03:01:35Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 118.53,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131758181",
+   "symbol": "NFLX",
+   "headline": "All Indian Cine Workers Association Demands Ban on Netflix's Pakistani Series",
+   "p_up": 48,
+   "impact": "low",
+   "reason": "Indian industry group demand to block a series; unlikely to be enacted and minimally price-relevant.",
+   "published_at": "2026-11-27T03:01:42Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 60.765,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131758182",
+   "symbol": "ANT",
+   "headline": "JERA in Talks With Anthropic and Meta Regarding Data Center Development",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Reported talks only; no signed deal, and ANT appears to be a non-standard ticker, so little edge.",
+   "published_at": "2026-11-27T03:01:57Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 86.4,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131758225",
+   "symbol": "C",
+   "headline": "Citi Reiterates Sell Rating on Elekta",
+   "p_up": 48,
+   "impact": "low",
+   "reason": "Citi reiterating a sell rating on Elekta is about a different company and not new for Citigroup's stock.",
+   "published_at": "2026-11-27T03:02:01Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 115.63,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131758226",
+   "symbol": "MSI",
+   "headline": "Motorola Solutions Leadership Discusses AI Adoption at WeAreDevelopers Conference India",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Country-head conference remarks on AI adoption; general commentary with no material new information.",
+   "published_at": "2026-11-27T03:02:07Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 542.38,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131758227",
+   "symbol": "KKR",
+   "headline": "Sankei Real Estate Reports No Notice of KKR Bid Withdrawal",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Absence of notice of bid withdrawal for a small Japanese deal; immaterial to KKR.",
+   "published_at": "2026-11-27T03:02:12Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 95.83,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131773749",
+   "symbol": "GDS",
+   "headline": "Ramsay Santé Demerger from Ramsay Health Care Becomes Effective",
+   "p_up": 48,
+   "impact": "low",
+   "reason": "Demerger from Ramsay Health Care became effective; largely expected corporate event, stock already down 3% today.",
+   "published_at": "2026-11-27T08:01:41Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 13.38,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131773754",
+   "symbol": "IG",
+   "headline": "InstallatørGruppen A/S Provides Update on Share Buyback Program",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine buyback progress update with no new material information; no edge.",
+   "published_at": "2026-11-27T08:01:43Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 19.82,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131773761",
+   "symbol": "PEP",
+   "headline": "Polenergia Subsidiaries Complete Debt Refinancing and Interest Rate Hedging Settlement",
+   "p_up": 54,
+   "impact": "low",
+   "reason": "Debt refinancing and hedging settlement yields about 61.5M PLN positive impact; modestly favorable but small relative to valuation.",
+   "published_at": "2026-11-27T08:01:48Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 144.26,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131773762",
+   "symbol": "GAM",
+   "headline": "AMF Approves Response Document for Gaumont Public Withdrawal Offer",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "AMF visa on response document for routine tender offer process; procedural, no price edge.",
+   "published_at": "2026-11-27T08:01:50Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 55.535,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131773764",
+   "symbol": "STM",
+   "headline": "Stabilus SE Supervisory Board Extends CEO Contract",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "CEO contract extension through 2030 is mildly positive for stability but routine.",
+   "published_at": "2026-11-27T08:01:50Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 39.8,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131773898",
+   "symbol": "ADV",
+   "headline": "Comsol Networks Expands 5G Capacity Using Adtran FSP 3000 Technology",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Customer deployment of Adtran FSP 3000 is incremental news; stock already up 5.44% today.",
+   "published_at": "2026-11-27T08:02:05Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 29.365,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131773901",
+   "symbol": "VOX",
+   "headline": "Voxel S.A. Reports Financial Results for the Quarter Ended September 30, 2026",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Q3 results show revenue and EPS growth, but no guidance or surprise detail; modest edge at most.",
+   "published_at": "2026-11-27T08:02:06Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 179.73,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131773919",
+   "symbol": "EHI",
+   "headline": "EHI! S.p.A. Completes Statutory Adjustment Phase with No Shareholder Withdrawals",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Completion of SPAC statutory phase with no withdrawals; procedural with no material price impact.",
+   "published_at": "2026-11-27T08:02:29Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 5.185,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131773949",
+   "symbol": "GCOR",
+   "headline": "Gaming Corps Enters Partnership with DAZN Bet to Expand in Italy",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Partnership with DAZN Bet to launch iGaming in Italy is modest, incremental commercial news.",
+   "published_at": "2026-11-27T08:02:44Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 40.02,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131773968",
+   "symbol": "DBE",
+   "headline": "DB Energy S.A. Convenes Ordinary General Meeting for December 22, 2026",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Notice of ordinary general meeting for December; routine corporate governance item with no edge.",
+   "published_at": "2026-11-27T08:02:55Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 34.235,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131774182",
+   "symbol": "SHG",
+   "headline": "Starhedge S.A. Postpones Publication of Q3 2026 Financial Report",
+   "p_up": 42,
+   "impact": "medium",
+   "reason": "Postponed quarterly report publication raises concern about reporting issues or delays; negative signal, though timing details are unclear.",
+   "published_at": "2026-11-27T08:02:58Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 63.15,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131774187",
+   "symbol": "BINV",
+   "headline": "BioInvent Appoints Catharina Johansson as New CFO",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine CFO appointment with no financial impact or new operating information; no edge expected.",
+   "published_at": "2026-11-27T08:03:00Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 45.04,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131774197",
+   "symbol": "AEF",
+   "headline": "Aeffe Faces Legal Challenge Over Collective Layoffs",
+   "p_up": 47,
+   "impact": "low",
+   "reason": "Legal challenge over layoffs is a minor, slow-moving negative with a hearing not until December; limited intraday impact.",
+   "published_at": "2026-11-27T08:03:10Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 7.4,
+   "scored_at": "2026-11-27T14:42:07Z"
+  },
+  {
+   "article_id": "131774216",
+   "symbol": "AERO",
+   "headline": "Nomination Committee Appointed for the 2027 Annual General Meeting of Svenska Aerogel Holding AB (publ)",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine appointment of nomination committee for AGM; no material new financial information.",
+   "published_at": "2026-11-27T08:03:29Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 16.885,
+   "scored_at": "2026-11-27T14:43:35Z"
+  },
+  {
+   "article_id": "131774489",
+   "symbol": "INSP",
+   "headline": "Insplorion sets record date for distribution of shares in Insplorion RTO AB and Altera Invest AB",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Record date set for share distribution of subsidiaries; procedural, mostly priced in and not a clear value driver.",
+   "published_at": "2026-11-27T08:04:15Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 54.985,
+   "scored_at": "2026-11-27T14:43:35Z"
+  },
+  {
+   "article_id": "131781510",
+   "symbol": "TM",
+   "headline": "Toyota, Honda, Nissan, and Mazda Collaborate on Vehicle Component Standardization",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Standardization collaboration among Japanese automakers is incremental and unlikely to move Toyota's shares materially today.",
+   "published_at": "2026-11-27T08:31:21Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 213.2325,
+   "scored_at": "2026-11-27T14:43:35Z"
+  },
+  {
+   "article_id": "131781514",
+   "symbol": "AEG",
+   "headline": "Transamerica Life Bermuda Expands Operations in Dubai International Financial Centre",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Minor regional subsidiary expansion in Dubai; not material to Aegon's overall outlook.",
+   "published_at": "2026-11-27T08:31:43Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 8.53,
+   "scored_at": "2026-11-27T14:43:35Z"
+  },
+  {
+   "article_id": "131781516",
+   "symbol": "DTE",
+   "headline": "Deutsche Telekom and Rheinmetall Reportedly Explore Joint Surveillance Platform Offering",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Unconfirmed report of exploratory partnership talks; Deutsche Telekom not the primary party with minimal financial impact.",
+   "published_at": "2026-11-27T08:31:59Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 137.61,
+   "scored_at": "2026-11-27T14:43:35Z"
+  },
+  {
+   "article_id": "131781784",
+   "symbol": "SAP",
+   "headline": "SAP Confirms No Customer Data Breach Following Security Incident",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Company confirmed no customer data compromise, removing a potential overhang; modest relief effect only.",
+   "published_at": "2026-11-27T08:32:01Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 211.52,
+   "scored_at": "2026-11-27T14:43:35Z"
+  },
+  {
+   "article_id": "131781786",
+   "symbol": "BAVA",
+   "headline": "Bavarian Nordic Appoints Allan Bødskov Andersen as Chief Financial Officer",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "CFO appointment is routine executive news; stock already down 3.56% intraday with no clear edge.",
+   "published_at": "2026-11-27T08:32:08Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 17.45,
+   "scored_at": "2026-11-27T14:43:35Z"
+  },
+  {
+   "article_id": "131789617",
+   "symbol": "HMC",
+   "headline": "Honda, Nissan, and Mazda to Standardize Vehicle Components",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Duplicate report of Japanese automaker component standardization; no material new information for Honda.",
+   "published_at": "2026-11-27T09:01:21Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 33.505,
+   "scored_at": "2026-11-27T14:43:35Z"
+  },
+  {
+   "article_id": "131789622",
+   "symbol": "ROAD",
+   "headline": "Roadside Real Estate plc Provides Trading Update for FY26",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "FY26 trading update describes transition and acquisitions; largely recap with no new guidance or earnings surprise.",
+   "published_at": "2026-11-27T09:01:37Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 73.99,
+   "scored_at": "2026-11-27T14:43:35Z"
+  },
+  {
+   "article_id": "131789630",
+   "symbol": "EMR",
+   "headline": "Empresaria Group plc Raises Full-Year 2026 Profit Forecast",
+   "p_up": 65,
+   "impact": "medium",
+   "reason": "Raised full-year 2026 profit guidance to at least £7.3m is a material positive new information signal.",
+   "published_at": "2026-11-27T09:01:47Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 160.2,
+   "scored_at": "2026-11-27T14:43:35Z"
+  },
+  {
+   "article_id": "131789631",
+   "symbol": "KEN",
+   "headline": "Kendrick Resources Provides Project Update and Assay Results for Teufelskuppe Complex",
+   "p_up": 55,
+   "impact": "low",
+   "reason": "Confirmed assay results add modest drill-data support for Teufelskuppe rare earths; small-cap exploration news with limited near-term price impact.",
+   "published_at": "2026-11-27T09:01:47Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 54.25,
+   "scored_at": "2026-11-27T14:43:35Z"
+  },
+  {
+   "article_id": "131789941",
+   "symbol": "NRR",
+   "headline": "NewRiver REIT Announces Appointment of Sarah Williams as Chair of the Audit Committee",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine board appointment of audit committee chair; no financial information, so no meaningful price edge.",
+   "published_at": "2026-11-27T09:01:48Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 15.6646,
+   "scored_at": "2026-11-27T14:43:35Z"
+  },
+  {
+   "article_id": "131789634",
+   "symbol": "ROCK",
+   "headline": "Rockfire Resources Announces Maiden Germanium Resource at Molaoi Deposit",
+   "p_up": 54,
+   "impact": "low",
+   "reason": "Maiden germanium resource is a positive milestone for a developer, but Inferred-category tonnage is modest and largely expected.",
+   "published_at": "2026-11-27T09:01:50Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 30.65,
+   "scored_at": "2026-11-27T14:43:35Z"
+  },
+  {
+   "article_id": "131789641",
+   "symbol": "FDM",
+   "headline": "FDM Group Announces Retirement of Chief Commercial Officer Andy Brown",
+   "p_up": 49,
+   "impact": "low",
+   "reason": "Executive retirement announcement after 30+ years is routine and not material to near-term price.",
+   "published_at": "2026-11-27T09:01:52Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 87.8716,
+   "scored_at": "2026-11-27T14:43:35Z"
+  },
+  {
+   "article_id": "131789651",
+   "symbol": "TRI",
+   "headline": "Trifast plc Announces Director-Related Share Purchase",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Director-linked share purchase is a mildly positive insider signal but small in size.",
+   "published_at": "2026-11-27T09:01:58Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 109.65,
+   "scored_at": "2026-11-27T14:43:35Z"
+  },
+  {
+   "article_id": "131789653",
+   "symbol": "EML",
+   "headline": "Emmerson PLC Announces Results of Annual General Meeting and Proceeds with Fundraising",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "AGM resolutions passed and fundraising proceeding was previously announced; no new information.",
+   "published_at": "2026-11-27T09:01:59Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 30.21,
+   "scored_at": "2026-11-27T14:43:35Z"
+  },
+  {
+   "article_id": "131789964",
+   "symbol": "EML",
+   "headline": "Emmerson PLC Restores Trading on AIM",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Trading restoration on AIM after a capital access window is procedural with no new information.",
+   "published_at": "2026-11-27T09:01:59Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 30.21,
+   "scored_at": "2026-11-27T14:43:35Z"
+  },
+  {
+   "article_id": "131789984",
+   "symbol": "AXS",
+   "headline": "Accsys Technologies: Forecasts maintained after resilient first half",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine forecast maintenance by one research firm after resilient first half; no new material information.",
+   "published_at": "2026-11-27T09:02:19Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 108.57,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131789985",
+   "symbol": "CDL",
+   "headline": "Cloudbreak Discovery Lands Exclusive Option for Australia's Historic Emerald Gold Mine",
+   "p_up": 54,
+   "impact": "low",
+   "reason": "Exclusive option on a historic gold mine is a small, early-stage asset deal with limited near-term financial impact.",
+   "published_at": "2026-11-27T09:02:20Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 81.58,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131800057",
+   "symbol": "BP",
+   "headline": "BP and Iberdrola Joint Venture Commences Operations at 25-MW Green Hydrogen Plant in Spain",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Start of a 25-MW green hydrogen plant via JV is incremental and immaterial to BP's overall valuation today.",
+   "published_at": "2026-11-27T09:32:08Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 43.27,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131810063",
+   "symbol": "MC",
+   "headline": "LVMH Announces Interim Dividend of €5.50 Per Share for 2026",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine interim dividend declaration already expected; no surprise to the share price.",
+   "published_at": "2026-11-27T10:01:19Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 53.745,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131810064",
+   "symbol": "TM",
+   "headline": "Toyota Reports Decline in October Group Production and Sales",
+   "p_up": 46,
+   "impact": "low",
+   "reason": "Reported decline in October group production and sales is mildly negative, largely known and routine.",
+   "published_at": "2026-11-27T10:01:21Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 213.36,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131810065",
+   "symbol": "TME",
+   "headline": "Melon Releases First Global-K Chart Data Report in Partnership with Tencent Music and Line Music",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Data report on K-pop chart rankings is a non-financial partnership update with no clear price impact.",
+   "published_at": "2026-11-27T10:01:25Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 9.995,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131810066",
+   "symbol": "FAB",
+   "headline": "First Abu Dhabi Bank P.J.S.C. Securities Admitted to FCA Official List",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Administrative FCA listing of securities has no material economic impact.",
+   "published_at": "2026-11-27T10:01:34Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 105.807,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131810068",
+   "symbol": "XPEV",
+   "headline": "XPeng Unveils 2027 Global Physical AI Expansion Roadmap",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Roadmap announcement at auto show is strategic and forward-looking, with little near-term earnings effect.",
+   "published_at": "2026-11-27T10:01:36Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 9.2579,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131810069",
+   "symbol": "SU",
+   "headline": "Schneider Electric Launches Ultra-Fast EV Charging and Battery Energy Storage Solutions in Hong Kong",
+   "p_up": 51,
+   "impact": "low",
+   "reason": "Regional product launch in Hong Kong is incremental and unlikely to move the stock materially.",
+   "published_at": "2026-11-27T10:01:37Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 65.5229,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131810426",
+   "symbol": "HCM",
+   "headline": "HUTCHMED Announces NDA Acceptance for ORPATHYS Plus Osimertinib in China",
+   "p_up": 55,
+   "impact": "medium",
+   "reason": "NDA acceptance in China is a positive regulatory milestone, though already up 5.67% today and modest in financial impact.",
+   "published_at": "2026-11-27T10:02:13Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 14.255,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131810427",
+   "symbol": "UMC",
+   "headline": "United Microelectronics Acquires NT$17 Billion of Production Facilities",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine facility acquisition of NT$17B; modest capacity expansion news with no clear near-term earnings impact.",
+   "published_at": "2026-11-27T10:02:27Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 13.17,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131831523",
+   "symbol": "SKHY",
+   "headline": "SK Hynix Reports Near-Sold-Out Production Capacity for 2029",
+   "p_up": 57,
+   "impact": "medium",
+   "reason": "Near-sold-out 2029 capacity and persistent memory shortages signal strong pricing power; stock already up 2.95% today.",
+   "published_at": "2026-11-27T11:01:25Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 114.415,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131831529",
+   "symbol": "HSBC",
+   "headline": "HSBC to Consolidate Support Functions Across India in Cost-Cutting Push",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "India support-function consolidation is a routine cost-cutting reorganization with no immediate earnings guidance change.",
+   "published_at": "2026-11-27T11:01:44Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 83.115,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131842541",
+   "symbol": "MU",
+   "headline": "Micron Reports High Bandwidth Memory (HBM) Capacity Largely Booked for Upcoming Year",
+   "p_up": 57,
+   "impact": "medium",
+   "reason": "Majority of next-year HBM capacity committed to customers supports demand outlook; stock already up 2.41% today.",
+   "published_at": "2026-11-27T11:31:22Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 615.72,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131842542",
+   "symbol": "AMZN",
+   "headline": "ScitiX Launches Model Inference Services on AWS Marketplace",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Third-party AI inference platform listing on AWS Marketplace is minor and not material to Amazon's results.",
+   "published_at": "2026-11-27T11:31:28Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 250.75,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131842543",
+   "symbol": "KO",
+   "headline": "The Coca-Cola Company Completes Sale of Controlling Interest in Coca-Cola Beverages Africa",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Completed sale of CCBA controlling stake was already announced; limited new information for Coca-Cola's share price.",
+   "published_at": "2026-11-27T11:31:29Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 97.045,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131842544",
+   "symbol": "MCO",
+   "headline": "Moody's Upgrades Vietnam's Sovereign Credit Rating to Ba1",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Moody's sovereign rating action on Vietnam is a rating agency's own action with no direct effect on Moody's parent.",
+   "published_at": "2026-11-27T11:31:30Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 486.69,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131842545",
+   "symbol": "CRM",
+   "headline": "Salesforce Releases Global Consumer Research on AI Adoption and Data Privacy",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Consumer research publication is routine marketing content with no earnings or deal implications for Salesforce.",
+   "published_at": "2026-11-27T11:31:30Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 198.82,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131842546",
+   "symbol": "TMO",
+   "headline": "Thermo Fisher Scientific Discusses Cooperation with Uzbekistan's Medical and Pharmaceutical Agency",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Exploratory cooperation talks with Uzbekistan agency; no material financial impact or new contract disclosed.",
+   "published_at": "2026-11-27T11:31:31Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 681.125,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131842547",
+   "symbol": "NET",
+   "headline": "Cloudflare Reports Significant Internet Traffic Surges During Grand Theft Auto 6 Launch",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Traffic surge from GTA 6 launch is a mild positive narrative for Cloudflare; not a formal financial event.",
+   "published_at": "2026-11-27T11:31:33Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 283.935,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131842548",
+   "symbol": "C",
+   "headline": "Citigroup Launches Reviews of Data Center Clients Following New U.S. Export Rules",
+   "p_up": 46,
+   "impact": "low",
+   "reason": "Compliance reviews of data center clients under new export rules; modest regulatory overhang, stock already up 2%.",
+   "published_at": "2026-11-27T11:31:36Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 115.69,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131842549",
+   "symbol": "GS",
+   "headline": "Goldman Sachs Warns of $100 Billion in Upcoming Systematic Selling",
+   "p_up": 45,
+   "impact": "medium",
+   "reason": "Warning of $100B systematic selling wave may pressure markets near term; GS stock already up 0.87%.",
+   "published_at": "2026-11-27T11:31:37Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 808.0,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131842550",
+   "symbol": "BLK",
+   "headline": "BlackRock Files Major Holdings Notification for Adtran Holdings, Inc.",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine voting-rights filing for Adtran stake; no material impact on BlackRock.",
+   "published_at": "2026-11-27T11:31:39Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 1168.08,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131842551",
+   "symbol": "BLK",
+   "headline": "BlackRock Increases Voting Rights Stake in J Sainsbury PLC",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine voting-rights filing for J Sainsbury stake; no material impact on BlackRock.",
+   "published_at": "2026-11-27T11:31:39Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 1168.08,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131842552",
+   "symbol": "LOW",
+   "headline": "Lowe's Reports November Sales Performance",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "November sales in line with expectations; no surprise, routine update.",
+   "published_at": "2026-11-27T11:31:41Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 235.89,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131842553",
+   "symbol": "EQIX",
+   "headline": "Equinix Collaborates with Honeywell on AI Data Center Infrastructure",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Partnership with Honeywell on AI data center infrastructure; incremental, not a material financial change.",
+   "published_at": "2026-11-27T11:31:43Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 980.03,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131842554",
+   "symbol": "DIS",
+   "headline": "Disney Issues Cease-and-Desist to ByteDance Over AI Copyright Concerns",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Cease-and-desist to ByteDance over AI training; legal posture news with limited immediate price impact.",
+   "published_at": "2026-11-27T11:31:44Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 126.85,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131842555",
+   "symbol": "TGT",
+   "headline": "Target Implements New Pricing Strategy for Holiday Season",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Holiday pricing strategy update; routine retail messaging with no clear new financial information.",
+   "published_at": "2026-11-27T11:31:47Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 172.53,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131842556",
+   "symbol": "UBER",
+   "headline": "Uber Secures Approximately 87% of Delivery Hero Shares",
+   "p_up": 55,
+   "impact": "low",
+   "reason": "Secured 87% of Delivery Hero via completed takeover; largely expected outcome already known, modest upside clarity for Uber.",
+   "published_at": "2026-11-27T11:31:50Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 66.84,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131842557",
+   "symbol": "PLTR",
+   "headline": "Palantir Technologies Reportedly to Supply Maven Smart System to Poland's Defence Ministry",
+   "p_up": 55,
+   "impact": "medium",
+   "reason": "Reported Polish defence ministry Maven contract; new but unconfirmed government deal, modest positive for Palantir.",
+   "published_at": "2026-11-27T11:31:52Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 165.825,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131842558",
+   "symbol": "BMY",
+   "headline": "Jefferies Adjusts Price Target on Bristol-Myers Squibb to $77 From $76",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Minor $1 price target increase from Jefferies; routine analyst adjustment with little price impact.",
+   "published_at": "2026-11-27T11:31:55Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 61.525,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131842559",
+   "symbol": "TSLA",
+   "headline": "Tesla Files Plans to Acquire German Company Emag",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Filing to acquire Emag with cartel office; small acquisition, no clear material impact on Tesla's share price.",
+   "published_at": "2026-11-27T11:31:55Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 391.4277,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131842560",
+   "symbol": "MDT",
+   "headline": "Daiwa Adjusts Price Target on Medtronic to $115 From $108",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Daiwa raises Medtronic target to $115; a positive analyst action from a mid-tier firm, limited impact.",
+   "published_at": "2026-11-27T11:31:57Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 95.615,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131842948",
+   "symbol": "SYK",
+   "headline": "Stryker Insider Sold Shares Worth $1,999,140",
+   "p_up": 48,
+   "impact": "low",
+   "reason": "Routine insider sale disclosed via SEC filing; insider selling carries minimal predictive signal.",
+   "published_at": "2026-11-27T11:31:58Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 330.17,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131842949",
+   "symbol": "TJX",
+   "headline": "Daiwa Adjusts Price Target on The TJX Companies, Inc.",
+   "p_up": 47,
+   "impact": "low",
+   "reason": "Daiwa cuts TJX target from $155 to $152; minor negative analyst revision, stock already down 1.59%.",
+   "published_at": "2026-11-27T11:32:02Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 143.76,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131842950",
+   "symbol": "MRNA",
+   "headline": "Jefferies Adjusts Price Target on Moderna to $215 From $200",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Jefferies raises Moderna target to $215; positive analyst action but stock already up on the day.",
+   "published_at": "2026-11-27T11:32:15Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 223.255,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131842951",
+   "symbol": "WMT",
+   "headline": "Daiwa Adjusts Price Target on Walmart to $140 From $113",
+   "p_up": 54,
+   "impact": "low",
+   "reason": "Daiwa raises Walmart target to $140 from $113; sizable target lift but routine analyst action.",
+   "published_at": "2026-11-27T11:32:24Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 132.115,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131866205",
+   "symbol": "GOOG",
+   "headline": "Alphabet and Other Tech Providers Impacted by US Air Force Cloud One Security Breach",
+   "p_up": 42,
+   "impact": "low",
+   "reason": "Security breach affecting Air Force Cloud One is a negative headline, but Alphabet's role is peripheral and exposure unclear.",
+   "published_at": "2026-11-27T12:31:32Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 272.53,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131866206",
+   "symbol": "MS",
+   "headline": "Morgan Stanley Discloses Major Holding in tk accelis Group AG & Co. KGaA",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine voting-rights threshold disclosure in a German company; no material impact on Morgan Stanley.",
+   "published_at": "2026-11-27T12:31:34Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 170.525,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131866207",
+   "symbol": "SPGI",
+   "headline": "S&P Global Ratings Upgrades Sri Lanka's Sovereign Credit Rating",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Sri Lanka sovereign upgrade is a rating action on a country, not S&P Global's business; no edge.",
+   "published_at": "2026-11-27T12:31:35Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 459.62,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131866209",
+   "symbol": "HIG",
+   "headline": "Bleakley Financial Group LLC Acquires Shares of The Hartford Insurance Group, Inc.",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine 13F-style small share acquisition by an investment firm; no material new information.",
+   "published_at": "2026-11-27T12:31:41Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 140.415,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131866210",
+   "symbol": "OMC",
+   "headline": "Omnicom Selected as Agency Partner for The Coca-Cola Company in North America",
+   "p_up": 58,
+   "impact": "medium",
+   "reason": "Omnicom selected as Coca-Cola North America agency partner, a meaningful new account win, though already up 1.36% today.",
+   "published_at": "2026-11-27T12:31:45Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 91.93,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131866211",
+   "symbol": "BBY",
+   "headline": "Best Buy Observes Consumer Shift Toward Value and Premium Upgrades",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "General consumer trend commentary from Best Buy; no quantitative guidance or new material information.",
+   "published_at": "2026-11-27T12:31:48Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 104.325,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131866212",
+   "symbol": "SMTC",
+   "headline": "LILYGO Updates T-Beam 1W Development Board with Semtech LR2021 LoRa Radio",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Third-party dev board update using Semtech chip; immaterial to Semtech's near-term price.",
+   "published_at": "2026-11-27T12:31:58Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 93.23,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131866619",
+   "symbol": "OGC",
+   "headline": "Ausgold Shareholders Approve OceanaGold Acquisition Scheme",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Ausgold shareholder approval of acquisition by OceanaGold; expected step, already up 4.31% today.",
+   "published_at": "2026-11-27T12:32:12Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 25.785,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131866621",
+   "symbol": "BMNR",
+   "headline": "Market Analysis Highlights Bitmine Immersion Technologies' Ethereum Treasury Strategy",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Market analysis recap of existing Ethereum treasury strategy; no new catalyst.",
+   "published_at": "2026-11-27T12:32:17Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 13.595,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131866622",
+   "symbol": "NRG",
+   "headline": "BMO Adjusts NRG Energy Price Target Following Asset Sale",
+   "p_up": 48,
+   "impact": "low",
+   "reason": "BMO lowering price target after asset sale to LS Power is a modest negative revision, though stock is up 1.58%.",
+   "published_at": "2026-11-27T12:32:19Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 93.395,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131866623",
+   "symbol": "ADM",
+   "headline": "Jefferies Adjusts Price Target on Archer-Daniels-Midland to $76 From $89",
+   "p_up": 42,
+   "impact": "low",
+   "reason": "Jefferies cut price target from $89 to $76, still well above $67.58 price; modest negative sentiment, limited intraday impact.",
+   "published_at": "2026-11-27T12:32:29Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 67.5779,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131866624",
+   "symbol": "PIPR",
+   "headline": "Senior Managing Principal Jonathan Doyle Sells Piper Sandler Shares",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine insider share sale by senior principal; no new fundamental information for intraday direction.",
+   "published_at": "2026-11-27T12:32:32Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 63.38,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131866625",
+   "symbol": "MAA",
+   "headline": "JPMorgan Adjusts Price Target on Mid-America Apartment Communities to $137 From $145",
+   "p_up": 46,
+   "impact": "low",
+   "reason": "JPMorgan trimmed price target from $145 to $137; target still far above price, minor negative signal.",
+   "published_at": "2026-11-27T12:32:35Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 117.855,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131866626",
+   "symbol": "RKLB",
+   "headline": "Rocket Lab Completes 101st Electron Rocket Launch",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Routine 101st Electron launch success; largely expected operational news, already up 2.5% today.",
+   "published_at": "2026-11-27T12:32:40Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 48.1999,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131866627",
+   "symbol": "MORN",
+   "headline": "Morningstar Insider Sells Shares Worth $5.16 Million",
+   "p_up": 48,
+   "impact": "low",
+   "reason": "Insider sale filing of $5.16M is routine and typically carries little intraday signal.",
+   "published_at": "2026-11-27T12:32:44Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 236.49,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131866628",
+   "symbol": "SBRA",
+   "headline": "Huntington Adjusts Price Target on Sabra Health Care REIT to $23.50 From $23, Maintains Outperform Rating",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Huntington nudged price target to $23.50 with Outperform rating; minor positive, routine analyst update.",
+   "published_at": "2026-11-27T12:32:44Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 21.12,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131866629",
+   "symbol": "ASTS",
+   "headline": "Berenberg Downgrades AST SpaceMobile to Hold",
+   "p_up": 30,
+   "impact": "medium",
+   "reason": "Berenberg downgrade to Hold with lower target is material analyst action; stock already down 3.4% today.",
+   "published_at": "2026-11-27T12:32:45Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 25.135,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131866630",
+   "symbol": "DLTR",
+   "headline": "Citigroup Adjusts Price Target on Dollar Tree to $155 From $125",
+   "p_up": 55,
+   "impact": "low",
+   "reason": "Citigroup raised price target from $125 to $155, well above $150.93 price; modest positive analyst signal.",
+   "published_at": "2026-11-27T12:32:46Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 150.93,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131866631",
+   "symbol": "LIF",
+   "headline": "Life360 Insider Executes Significant Stock Sale",
+   "p_up": 48,
+   "impact": "low",
+   "reason": "Insider stock sale disclosed via SEC filing; routine, minimal expected intraday price impact.",
+   "published_at": "2026-11-27T12:32:47Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 38.69,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131866632",
+   "symbol": "LTC",
+   "headline": "Huntington Adjusts Price Target on LTC Properties to $50",
+   "p_up": 51,
+   "impact": "low",
+   "reason": "Huntington marginally raised target to $50 with Outperform rating; minor routine analyst update.",
+   "published_at": "2026-11-27T12:32:48Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 43.39,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131866633",
+   "symbol": "HBAN",
+   "headline": "Huntington Adjusts Price Target on Chiron Real Estate",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Price target cut on Chiron Real Estate is a target change for a non-HBAN company; no material edge for Huntington.",
+   "published_at": "2026-11-27T12:32:48Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 15.055,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131866634",
+   "symbol": "HBAN",
+   "headline": "Huntington Adjusts Price Target on LTC Properties",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Minor price target raise on LTC Properties by Huntington; routine analyst action with no direct HBAN impact.",
+   "published_at": "2026-11-27T12:32:48Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 15.055,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131866635",
+   "symbol": "HBAN",
+   "headline": "Huntington Adjusts Price Target on Sabra Health Care REIT",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Minor price target raise on Sabra Health Care REIT; routine analyst action with no direct HBAN impact.",
+   "published_at": "2026-11-27T12:32:48Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 15.055,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131866636",
+   "symbol": "MRVL",
+   "headline": "HSBC Adjusts Price Target on Marvell Technology to $200 From $450",
+   "p_up": 38,
+   "impact": "medium",
+   "reason": "HSBC slashing target from $450 to $200 is a large bearish signal, though stock already up 2.93% today.",
+   "published_at": "2026-11-27T12:32:54Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 134.77,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131866637",
+   "symbol": "MDT",
+   "headline": "Truist Adjusts Price Target on Medtronic to $101",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Truist minor target raise to $101 with Hold rating; routine action with little expected price impact.",
+   "published_at": "2026-11-27T12:32:57Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 95.615,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131867063",
+   "symbol": "CF",
+   "headline": "Bernstein Adjusts Price Target on CF Industries",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Bernstein nudged target from $162 to $163; immaterial routine change.",
+   "published_at": "2026-11-27T12:33:04Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 119.475,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131867064",
+   "symbol": "ADPT",
+   "headline": "Adaptive Biotechnologies Insider Sells Shares Worth Approximately $19.9 Million",
+   "p_up": 45,
+   "impact": "low",
+   "reason": "Insider sale of about $19.9M is a mildly negative signal but routine and often non-informative.",
+   "published_at": "2026-11-27T12:33:19Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 28.51,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131867065",
+   "symbol": "ERO",
+   "headline": "Ero Copper Suspends Tucumã Mine Operations Following Environmental Notice",
+   "p_up": 35,
+   "impact": "high",
+   "reason": "Suspension of Tucumã mine operations is material production loss; stock already down 6.6% today.",
+   "published_at": "2026-11-27T12:33:30Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 20.89,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131879051",
+   "symbol": "SKHY",
+   "headline": "SK hynix Doubles Daily Share Buyback Volume",
+   "p_up": 55,
+   "impact": "low",
+   "reason": "Doubled buyback support after a significant decline may modestly support the price; stock already up 2.95%.",
+   "published_at": "2026-11-27T13:01:23Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 114.415,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131879052",
+   "symbol": "MC",
+   "headline": "Goldman Sachs Adjusts LVMH Price Target",
+   "p_up": 48,
+   "impact": "low",
+   "reason": "Goldman trimmed LVMH target by only €5 while keeping Buy; minimal new information.",
+   "published_at": "2026-11-27T13:01:26Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 53.745,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131879053",
+   "symbol": "NVDA",
+   "headline": "NVIDIA Faces New U.S. Export Controls and Regional Market Shifts",
+   "p_up": 42,
+   "impact": "medium",
+   "reason": "New export license requirements for AI chip sales to Southeast Asia and Brazil are a modest negative for regional revenue; stock already down 1.23%.",
+   "published_at": "2026-11-27T13:01:27Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 147.4599,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131879056",
+   "symbol": "CBK",
+   "headline": "German Government Supports UniCredit's Supervisory Board Nominees for Commerzbank",
+   "p_up": 55,
+   "impact": "medium",
+   "reason": "German government backing UniCredit's board nominees signals easing takeover resistance, a mildly positive signal for Commerzbank's takeover path.",
+   "published_at": "2026-11-27T13:01:30Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 32.32,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131879060",
+   "symbol": "TD",
+   "headline": "TD Cowen Analyst Comments on Potential Credit Card Interest Rate Caps",
+   "p_up": 47,
+   "impact": "low",
+   "reason": "Analyst assessment of possible credit card rate cap legislation is speculative and could weigh slightly on card-heavy lenders.",
+   "published_at": "2026-11-27T13:01:33Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 116.785,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131879061",
+   "symbol": "SAN",
+   "headline": "Santander Joins Brazilian Banks in Shared Digital Asset Infrastructure Project",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Participation in shared Brazilian digital asset settlement infrastructure is routine news; stock already up 4.72% today.",
+   "published_at": "2026-11-27T13:01:33Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 11.865,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131879070",
+   "symbol": "WFC",
+   "headline": "Wells Fargo & Company Securities Admitted to FCA Official List",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine FCA listing of existing bonds with no new financial information.",
+   "published_at": "2026-11-27T13:01:40Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 82.2064,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131879074",
+   "symbol": "BNR",
+   "headline": "Goldman Sachs Adjusts Price Target for Brenntag SE",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Goldman trimmed Brenntag target from 76 to 75 euros but kept Buy; minor adjustment, near-neutral.",
+   "published_at": "2026-11-27T13:01:44Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 13.26,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131879077",
+   "symbol": "HON",
+   "headline": "Honeywell Executive Discusses Pure-Play Automation and AI Strategy",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Executive interview on AI strategy; no new material financial information.",
+   "published_at": "2026-11-27T13:01:44Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 227.1725,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131879080",
+   "symbol": "NVO",
+   "headline": "Novo Nordisk to Launch Wegovy Weight-Loss Pill in Sweden",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Swedish launch date for Wegovy pill is routine and already expected; limited price impact.",
+   "published_at": "2026-11-27T13:01:46Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 40.935,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131879084",
+   "symbol": "TKO",
+   "headline": "Tikehau Capital: Disclosure of Shares Repurchases (20 Nov 2026 – 26 Nov 2026)",
+   "p_up": 51,
+   "impact": "low",
+   "reason": "Routine weekly buyback disclosure; mildly supportive but immaterial.",
+   "published_at": "2026-11-27T13:01:51Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 193.955,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131879087",
+   "symbol": "CRM",
+   "headline": "Erste Group Downgrades Salesforce to Hold",
+   "p_up": 42,
+   "impact": "medium",
+   "reason": "Erste Group downgrade to Hold from a smaller firm; modest negative sentiment.",
+   "published_at": "2026-11-27T13:01:51Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 198.82,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131879560",
+   "symbol": "CNQ",
+   "headline": "Letko, Brosseau & Associates Opposes Canadian Natural Resources' Acquisition Proposal for Advantage Energy",
+   "p_up": 48,
+   "impact": "low",
+   "reason": "Shareholder opposition to Advantage Energy acquisition; acquirer impact limited, slight deal-risk concern.",
+   "published_at": "2026-11-27T13:01:53Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 46.425,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131879563",
+   "symbol": "SPOT",
+   "headline": "Erste Group Upgrades Spotify Technology to Buy",
+   "p_up": 55,
+   "impact": "low",
+   "reason": "Erste upgrade to Buy citing steady revenue growth; minor analyst action from a non-major bank.",
+   "published_at": "2026-11-27T13:01:54Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 627.345,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131879090",
+   "symbol": "HBM",
+   "headline": "Hornbach Launches 'Hornbach macht Schule' Initiative",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "CSR school initiative has no financial materiality; stock already up 5.45% today.",
+   "published_at": "2026-11-27T13:01:55Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 18.18,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131879565",
+   "symbol": "EBS",
+   "headline": "Erste Group Bank Participates in Electrica Bond Program and Bridge Financing",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Erste's role as bank partner in Electrica financing is not a material event for listed ticker.",
+   "published_at": "2026-11-27T13:01:55Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 5.54,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131879568",
+   "symbol": "SAF",
+   "headline": "Safran participated in bidding process for Lumibird acquisition",
+   "p_up": 46,
+   "impact": "low",
+   "reason": "Safran lost bidding for Lumibird; minor negative for growth optionality, not material.",
+   "published_at": "2026-11-27T13:01:55Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 25.01,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131879570",
+   "symbol": "ORCL",
+   "headline": "Security Breach Reported at US Air Force Cloud One Platform",
+   "p_up": 47,
+   "impact": "low",
+   "reason": "Security breach at Air Force Cloud One involving Oracle infrastructure; possible reputational/contract risk but unconfirmed Oracle fault and limited scope.",
+   "published_at": "2026-11-27T13:01:56Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 105.13,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131879574",
+   "symbol": "BUD",
+   "headline": "Altria Group Rumored to Consider Sale of AB InBev Stake",
+   "p_up": 48,
+   "impact": "low",
+   "reason": "Rumored Altria sale of AB InBev stake is unconfirmed and mainly affects Altria; minor overhang on BUD shares.",
+   "published_at": "2026-11-27T13:02:11Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 79.13,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131879577",
+   "symbol": "CM",
+   "headline": "CIBC Asset Management Completes Termination of Select ETF Series",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine ETF series termination by CIBC Asset Management; immaterial to CM's share price.",
+   "published_at": "2026-11-27T13:02:19Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 104.99,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131879578",
+   "symbol": "CM",
+   "headline": "CIBC Asset Management Announces 2026 Annual Reinvested Capital Gains Distributions",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine ETF capital gains distribution announcement; no material impact on CM.",
+   "published_at": "2026-11-27T13:02:19Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 104.99,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131879580",
+   "symbol": "ATS",
+   "headline": "Director's Dealings: AT&S Austria Technologie & Systemtechnik AG Reports Share Acquisition",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Director-related share purchase by closely associated party; small insider buying signal, minor price relevance.",
+   "published_at": "2026-11-27T13:02:21Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 17.96,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131879582",
+   "symbol": "ZGN",
+   "headline": "Zegna strengthens supply chain with new footwear and leather goods hub in Sala Baganza",
+   "p_up": 51,
+   "impact": "low",
+   "reason": "Facility expansion in supply chain is routine operational news with no immediate earnings impact.",
+   "published_at": "2026-11-27T13:02:32Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 13.54,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131879583",
+   "symbol": "ZGN",
+   "headline": "J.P. Morgan updates price target for Ermenegildo Zegna",
+   "p_up": 49,
+   "impact": "low",
+   "reason": "J.P. Morgan price target adjustment within sector outlook; modest, already-known analyst activity.",
+   "published_at": "2026-11-27T13:02:32Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 13.54,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131880085",
+   "symbol": "DB",
+   "headline": "Deutsche Bank Adjusts Price Target for Burlington Stores",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Deutsche Bank lowered Burlington target on Hold; refers to Burlington, not Deutsche Bank, so no edge for DB.",
+   "published_at": "2026-11-27T13:03:06Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 33.19,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131880086",
+   "symbol": "DB",
+   "headline": "Deutsche Bank Analysts Assess New ECB Board Appointments",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Deutsche Bank research commentary on ECB appointments; routine opinion with no direct price catalyst.",
+   "published_at": "2026-11-27T13:03:06Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 33.19,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131909029",
+   "symbol": "ITUB",
+   "headline": "Itaú Unibanco Joins B3 and Other Financial Firms to Launch 'Open BRL' Stablecoin",
+   "p_up": 46,
+   "impact": "medium",
+   "reason": "Stablecoin partnership is new but already up 12.65% today; move likely priced in, with some mean-reversion risk.",
+   "published_at": "2026-11-27T14:01:15Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 7.75,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131909031",
+   "symbol": "HLN",
+   "headline": "Haleon Establishes Future of Health Innovation Hub in Singapore",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Routine R&D investment announcement in Singapore; no material new financial information for the stock today.",
+   "published_at": "2026-11-27T14:01:21Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 9.5294,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131909033",
+   "symbol": "KYIV",
+   "headline": "Barclays Maintains Bullish Rating on Kyivstar Group",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Reaffirmed bullish rating and unchanged $15 target from Barclays is not new information; stock already up 1.79%.",
+   "published_at": "2026-11-27T14:01:23Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 11.36,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131909034",
+   "symbol": "ASML",
+   "headline": "Dutch Government to Request US Non-Enforcement of MATCH Act",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Reported Dutch request to delay US MATCH Act could modestly ease export restriction worries; effect uncertain and likely small.",
+   "published_at": "2026-11-27T14:01:24Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 1304.7331,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131909040",
+   "symbol": "MANU",
+   "headline": "Disciplinary Action Announced Following Manchester United vs. Aston Villa Match",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Disciplinary action on a match is not material to the stock's price today.",
+   "published_at": "2026-11-27T14:01:28Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 21.83,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131909041",
+   "symbol": "EZJ",
+   "headline": "easyJet Delists from Stock Market Following Profit Decline",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Delisting notice after profit decline; price shows flat trading and delisting itself has little near-term price effect.",
+   "published_at": "2026-11-27T14:01:28Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 54.1132,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131909042",
+   "symbol": "BCS",
+   "headline": "Barclays Capital Securities Limited Appointed to Conduct Airtel Africa Share Buyback",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Appointment of broker for Airtel Africa buyback is routine and does not concern Barclays' own share price materially.",
+   "published_at": "2026-11-27T14:01:29Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 21.555,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131909046",
+   "symbol": "NTES",
+   "headline": "NetEase Announces Share Incentive Grant",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine share incentive grant announcement with no financial impact; stock already up 2.93%.",
+   "published_at": "2026-11-27T14:01:37Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 107.32,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131909047",
+   "symbol": "RYAAY",
+   "headline": "Frankfurt Higher Regional Court Rules on Ryanair Hand Luggage Policy",
+   "p_up": 53,
+   "impact": "low",
+   "reason": "Court ruling upholding Ryanair's hand luggage policy is a mildly positive legal outcome with limited price impact.",
+   "published_at": "2026-11-27T14:01:41Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 57.04,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131909049",
+   "symbol": "GIC",
+   "headline": "Global Industrial Releases Guide to Commercial HVAC Systems",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Educational guide on HVAC systems is routine content with no material impact on the stock.",
+   "published_at": "2026-11-27T14:01:41Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 44.9,
+   "scored_at": "2026-11-27T14:44:48Z"
+  },
+  {
+   "article_id": "131909051",
+   "symbol": "VOD",
+   "headline": "Vodafone Expands Regional Mobile Connectivity in Western Australia",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine regional network expansion in Australia; no material new financial information for Vodafone.",
+   "published_at": "2026-11-27T14:01:42Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 13.62,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131909057",
+   "symbol": "ASX",
+   "headline": "ASE Technology Unit Buys NT$4.8 Billion Worth of Equipment From Advantest",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Equipment purchase by subsidiary signals capacity investment; modest, largely expected, stock already up 3.44%.",
+   "published_at": "2026-11-27T14:01:51Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 30.505,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131909058",
+   "symbol": "ASX",
+   "headline": "ASE Technology Subsidiary Acquires Land and Factory Buildings for NT$19.7 Billion",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Subsidiary land and factory purchase signals expansion; capex-heavy but not clearly material to near-term price.",
+   "published_at": "2026-11-27T14:01:51Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 30.505,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131909059",
+   "symbol": "CTEC",
+   "headline": "JPMorgan Boosts ConvaTec Group Price Target, Maintains Overweight Rating",
+   "p_up": 54,
+   "impact": "low",
+   "reason": "JPMorgan price target raise with Overweight maintained is a mildly positive analyst action; stock flat today.",
+   "published_at": "2026-11-27T14:01:51Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 43.8475,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131909598",
+   "symbol": "CF",
+   "headline": "Canaccord Genuity Acts as Joint Bookrunner for Mayfair Gold Corp. Offering",
+   "p_up": 48,
+   "impact": "low",
+   "reason": "Canaccord bookrunner role on a Mayfair Gold offering is routine; no direct impact on CF, a fertilizer company.",
+   "published_at": "2026-11-27T14:01:57Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 119.39,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131909606",
+   "symbol": "CLSK",
+   "headline": "Chardan Cuts Price Target on CleanSpark to $15",
+   "p_up": 42,
+   "impact": "medium",
+   "reason": "Chardan cut price target from $20 to $15 while keeping Buy; negative revision, stock already down 1.54%.",
+   "published_at": "2026-11-27T14:02:04Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 5.1,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131909607",
+   "symbol": "RIO",
+   "headline": "LBBW Upgrades Rio Tinto to Buy",
+   "p_up": 58,
+   "impact": "medium",
+   "reason": "LBBW upgrade to Buy is a positive analyst action from a bank; stock already up 1.77% today.",
+   "published_at": "2026-11-27T14:02:05Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 75.9,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131909608",
+   "symbol": "RIO",
+   "headline": "Rio Tinto's Simfer Venture Completes First Iron Ore Shipment from Simandou Project",
+   "p_up": 55,
+   "impact": "low",
+   "reason": "First Simandou iron ore shipment is a positive operational milestone, though largely anticipated by the market.",
+   "published_at": "2026-11-27T14:02:05Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 75.9,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131909612",
+   "symbol": "CNA",
+   "headline": "Centrica Flags Hundreds of Jobs at Risk at UK's Rough Gas Storage Site",
+   "p_up": 48,
+   "impact": "low",
+   "reason": "Job cut warning at Rough storage site is minor for Centrica's overall earnings; slight negative tone.",
+   "published_at": "2026-11-27T14:02:17Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 48.93,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131909614",
+   "symbol": "MTA",
+   "headline": "Metalla Royalty & Streaming Ltd. Adopts Shareholder Rights Plan",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Shareholder rights plan is defensive governance step; no direct fundamental change, stock up 3.2% already.",
+   "published_at": "2026-11-27T14:02:19Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 6.811,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131909617",
+   "symbol": "BOW",
+   "headline": "Bowhead Specialty CFO and Treasurer Brad Mulcahey to Depart in April 2027",
+   "p_up": 46,
+   "impact": "low",
+   "reason": "CFO departure announced for April 2027, a future transition with no immediate operational impact; slight negative sentiment.",
+   "published_at": "2026-11-27T14:02:30Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 34.23,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131909621",
+   "symbol": "PDD",
+   "headline": "Temu Commits to Aligning Commercial Practices with EU Consumer Protection Laws",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Temu commitment to EU consumer protection compliance is routine regulatory news, modest cost implications, already up 2% today.",
+   "published_at": "2026-11-27T14:02:31Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 89.24,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131909624",
+   "symbol": "KODK",
+   "headline": "Kodak-Branded SlideTag Item Locator Launched",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Kodak-branded product launched by licensee; minor brand news with no material financial impact to Kodak.",
+   "published_at": "2026-11-27T14:02:40Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 8.17,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131909625",
+   "symbol": "ETG",
+   "headline": "Entrée Resources Provides Operational Update and Hugo North Extension Drill Results",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine operational update and drill results from Hugo North Extension; no clear material new information.",
+   "published_at": "2026-11-27T14:02:41Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 22.29,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131909626",
+   "symbol": "CEPO",
+   "headline": "FalconX Closes First Bitcoin-Backed Financing from Cantor",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "First Bitcoin-backed financing from Cantor is a minor operational milestone for a private-market-linked name; limited direct impact.",
+   "published_at": "2026-11-27T14:02:41Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 10.84,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131909627",
+   "symbol": "TASK",
+   "headline": "TaskUs Faces Labor Concerns Over Restructuring and AI-Driven Downsizing",
+   "p_up": 47,
+   "impact": "medium",
+   "reason": "Labor scrutiny over restructuring and AI-driven layoffs of 1,000+ employees is a mild negative headline risk.",
+   "published_at": "2026-11-27T14:02:43Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 9.39,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131909628",
+   "symbol": "CION",
+   "headline": "CION Investment Corporation Dividend Declaration",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine dividend declaration of 0.1 USD per share, expected and already priced in.",
+   "published_at": "2026-11-27T14:02:44Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 6.12,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131910201",
+   "symbol": "CDNL",
+   "headline": "Bleichmar Fonti & Auld LLP Investigates Cardinal Infrastructure Group, Inc. for Potential Securities Violations",
+   "p_up": 42,
+   "impact": "medium",
+   "reason": "Law firm investigation after significant price declines is routine, but signals continued selling pressure; stock already down 2.7%.",
+   "published_at": "2026-11-27T14:02:53Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 6.12,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131910204",
+   "symbol": "EOG",
+   "headline": "Eco (Atlantic) Oil & Gas Ltd. Announces Investor Presentation",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Investor presentation announcement following half-year results; no new material information.",
+   "published_at": "2026-11-27T14:02:54Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 150.25,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131910209",
+   "symbol": "PPX",
+   "headline": "PPX Mining Corp. Completes Repayment of 25% of Construction Loan",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Partial loan repayment reduces debt modestly; positive but routine development for a pre-production miner.",
+   "published_at": "2026-11-27T14:03:02Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 25.43,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131910217",
+   "symbol": "SM",
+   "headline": "Sierra Madre Gold and Silver Targets 1,200 to 1,500 Tonnes Per Day Production",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Production target for 2027 is forward-looking operational guidance with limited immediate price impact; stock already up 1.98%.",
+   "published_at": "2026-11-27T14:03:09Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 29.42,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131910218",
+   "symbol": "NRC",
+   "headline": "Nations Royalty Corp. Reports Q2 Fiscal 2027 Results and Appoints New Board Chair",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine quarterly results and board chair appointment with no clear surprise; no material edge.",
+   "published_at": "2026-11-27T14:03:11Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 25.43,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131910219",
+   "symbol": "WW",
+   "headline": "Weight Watchers Announces Results of Discounted Term Loan Prepayment Solicitation",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Debt retirement at a discount using $10M cash reduces debt modestly; small positive but largely routine.",
+   "published_at": "2026-11-27T14:03:11Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 8.055,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131910223",
+   "symbol": "NABL",
+   "headline": "B. Riley Initiates Coverage on N-able With Buy Rating",
+   "p_up": 55,
+   "impact": "low",
+   "reason": "Initiation with Buy rating from B. Riley is a mild positive analyst action from a smaller firm.",
+   "published_at": "2026-11-27T14:03:14Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 5.3378,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131910228",
+   "symbol": "FLY",
+   "headline": "LUNR Aerospace Appoints Cameron Chell to Board of Directors",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Board appointment of an external CEO is routine governance news with no clear price implication.",
+   "published_at": "2026-11-27T14:03:21Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 18.81,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131910229",
+   "symbol": "ABI",
+   "headline": "Abcourt Mines Reports Financial Results for First Quarter Ended September 30, 2026",
+   "p_up": 49,
+   "impact": "low",
+   "reason": "Routine quarterly results with revenue disclosed; debt restructuring details offer no clear directional edge.",
+   "published_at": "2026-11-27T14:03:24Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 24.555,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131910232",
+   "symbol": "DMX",
+   "headline": "District Metals Corp. Reports Financial Results for the Three Months Ended September 30, 2026",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine quarterly filing with cash position update; no material new information for price direction.",
+   "published_at": "2026-11-27T14:03:26Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 49.01,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131910233",
+   "symbol": "BAR",
+   "headline": "Barranco Gold Mining Corp. Completes Second and Final Tranche of Flow-Through Private Placement",
+   "p_up": 49,
+   "impact": "low",
+   "reason": "Small $1.5M private placement closing is routine and mildly dilutive; no clear edge.",
+   "published_at": "2026-11-27T14:03:26Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 35.728,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131910234",
+   "symbol": "XRN",
+   "headline": "Huntington Securities Adjusts Price Target on Chiron Real Estate",
+   "p_up": 42,
+   "impact": "low",
+   "reason": "Price target cut from $34 to $31 with Market Perform rating is a mild negative analyst action.",
+   "published_at": "2026-11-27T14:03:27Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 27.6,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131910242",
+   "symbol": "PWR",
+   "headline": "Power Probe Issues Trading Update Ahead of FY26 Year-End",
+   "p_up": 36,
+   "impact": "medium",
+   "reason": "Revenue expectations revised down due to US market headwinds, a negative new fact, partly offset by EMEA growth.",
+   "published_at": "2026-11-27T14:03:36Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 578.65,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131910243",
+   "symbol": "TBLD",
+   "headline": "Shore Capital Markets Upgrades tinyBuild to Hold",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Shore Capital upgrade to Hold from a presumably lower rating; minor, non-Buy action with limited price impact.",
+   "published_at": "2026-11-27T14:03:36Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 19.66,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131910257",
+   "symbol": "PAI",
+   "headline": "Predictiv AI Inc. Announces Resignation of Independent Director Rob Barlow",
+   "p_up": 46,
+   "impact": "low",
+   "reason": "Independent director resignation, no stated reason; routine governance news with slight negative tilt.",
+   "published_at": "2026-11-27T14:03:47Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 11.385,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131910265",
+   "symbol": "BAY",
+   "headline": "Aston Bay CEO to Present at Resourcing Tomorrow Conference",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Conference presentation scheduled; routine event with no new material information.",
+   "published_at": "2026-11-27T14:03:49Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 25.5001,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131910269",
+   "symbol": "WYY",
+   "headline": "WidePoint Coverage Assumed by HC Wainwright & Co. at Buy",
+   "p_up": 55,
+   "impact": "low",
+   "reason": "HC Wainwright initiates Buy coverage; modest positive analyst action from a smaller broker, already up 2.9% today.",
+   "published_at": "2026-11-27T14:03:52Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 6.34,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131910274",
+   "symbol": "AEP",
+   "headline": "Atlas Engineered Products Secures $3.6 Million Conditional Loan for Ontario Robotics Facility",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Conditional government loan for facility; modest positive funding news but conditional and small relative to company.",
+   "published_at": "2026-11-27T14:03:53Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 127.53,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131910278",
+   "symbol": "SATO",
+   "headline": "SATO Technologies Corp. Reports Third Quarter 2026 Results and Signs First AI Co-Location Agreement",
+   "p_up": 53,
+   "impact": "medium",
+   "reason": "Q3 results plus first AI co-location agreement; new business news but financial details unclear.",
+   "published_at": "2026-11-27T14:03:55Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 10.6186,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131910281",
+   "symbol": "BEX",
+   "headline": "Benton Resources Acquires Strategic Land for Dominion Project",
+   "p_up": 51,
+   "impact": "low",
+   "reason": "Small land acquisition expanding exploration project; minor news, stock already up 3.8% today.",
+   "published_at": "2026-11-27T14:03:55Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 8.875,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131910951",
+   "symbol": "DOCT",
+   "headline": "Republic Technologies Inc. Partners with FalconX to Support Ethereum Validator Operations",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Partnership with FalconX for Ethereum validator operations; operational news with limited expected impact.",
+   "published_at": "2026-11-27T14:04:02Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 47.06,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131910957",
+   "symbol": "PURR",
+   "headline": "Panther Minerals Inc. Adopts Semi-Annual Financial Reporting",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Switch to semi-annual reporting is administrative and carries no earnings information.",
+   "published_at": "2026-11-27T14:04:05Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 7.61,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131910963",
+   "symbol": "VIS",
+   "headline": "Visionstate Announces Leadership Transition and Board Appointments",
+   "p_up": 49,
+   "impact": "low",
+   "reason": "Interim CEO appointment and board additions; leadership change adds some uncertainty, limited price impact.",
+   "published_at": "2026-11-27T14:04:09Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 315.7,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131910974",
+   "symbol": "ADP",
+   "headline": "Adelphi Metals Inc. Closes Non-Brokered Private Placement",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine small private placement closing; immaterial to share price.",
+   "published_at": "2026-11-27T14:04:14Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 318.425,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131910984",
+   "symbol": "FGI",
+   "headline": "FGI Industries Lowers FY2026 Sales Guidance",
+   "p_up": 25,
+   "impact": "high",
+   "reason": "Guidance cut for FY2026 sales is new negative information; stock already up 5.71% today, suggesting partial pricing or odd move.",
+   "published_at": "2026-11-27T14:04:19Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 5.0,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131910999",
+   "symbol": "VEEE",
+   "headline": "USFM Corporation Enters Earn-In Agreement for Hook Lake Project Ahead of Twin Vee Merger",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Earn-in term sheet on minor project tied to reverse merger; limited near-term impact.",
+   "published_at": "2026-11-27T14:04:25Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 6.73,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131911004",
+   "symbol": "FRDM",
+   "headline": "Freedom Gold Corp. Announces Extension and Amendment of Flow-Through Offering and Extension of Unit Offering",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Financing terms amendment and deadline extension; routine, no clear directional edge.",
+   "published_at": "2026-11-27T14:04:27Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 57.15,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131911012",
+   "symbol": "WMS",
+   "headline": "Western Metallica Resources Corp. Extends Exclusivity and Revises Terms for Nueva Celti Copper Project Sale",
+   "p_up": 48,
+   "impact": "low",
+   "reason": "Exclusivity extension and revised cash-only sale terms; modest, mostly already known.",
+   "published_at": "2026-11-27T14:04:32Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 119.05,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131911754",
+   "symbol": "JADE",
+   "headline": "Jade Leader Corp. Announces Change of Auditor",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Auditor change is routine administrative news with no price implication.",
+   "published_at": "2026-11-27T14:05:00Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 66.6698,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131911756",
+   "symbol": "CPER",
+   "headline": "CopperCorp Provides Update on Proposed Sale of the Skyline Copper-Gold Project",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Status update on pending asset sale with closing expected mid-December; largely expected.",
+   "published_at": "2026-11-27T14:05:04Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 33.055,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131930974",
+   "symbol": "TGT",
+   "headline": "Target Announces Cyber Monday Sale and New AI-Powered Shopping Tools",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Cyber Monday promotion and AI shopping features are routine announcements, not material.",
+   "published_at": "2026-11-27T14:31:22Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 172.8,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131930975",
+   "symbol": "INSM",
+   "headline": "Sanofi Completes $41 Billion Acquisition of Insmed",
+   "p_up": 60,
+   "impact": "medium",
+   "reason": "Completed $41B acquisition by Sanofi; price likely pinned near deal terms, slight upward bias if premium remains.",
+   "published_at": "2026-11-27T14:31:28Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 170.645,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131930976",
+   "symbol": "KEY",
+   "headline": "KeyBank Offers Tips to Help Consumers Spot and Avoid Holiday Shopping Scams",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine consumer fraud advisory with no financial or earnings information; no expected price impact.",
+   "published_at": "2026-11-27T14:31:31Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 20.475,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131930977",
+   "symbol": "UNH",
+   "headline": "UnitedHealthcare to Close Medicare Advantage Plans in Idaho",
+   "p_up": 46,
+   "impact": "low",
+   "reason": "Plan closure affecting about 16,500 Idaho seniors is a minor operational negative, modestly unfavorable and small relative to UNH's size.",
+   "published_at": "2026-11-27T14:31:36Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 351.99,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131930978",
+   "symbol": "RY",
+   "headline": "Cybercrime Investigation into AI-Powered Fraud Targeting RBC",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Investigation mention of RBC as a fraud target is not material financial news; no clear directional edge.",
+   "published_at": "2026-11-27T14:31:38Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 189.46,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131930979",
+   "symbol": "LUV",
+   "headline": "Southwest Airlines Announces Limited-Time Black Friday Companion Pass Promotion",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Promotional marketing offer with no material financial impact; stays near neutral.",
+   "published_at": "2026-11-27T14:31:42Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 46.18,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131930980",
+   "symbol": "CAE",
+   "headline": "CAE Announces Successful Completion of Consent Solicitation for Senior Unsecured Notes",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine bond consent solicitation completion; administrative, no material change to fundamentals.",
+   "published_at": "2026-11-27T14:31:42Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 27.9,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131930981",
+   "symbol": "SNAP",
+   "headline": "Snap Integrates Linktree for Profile Links",
+   "p_up": 51,
+   "impact": "low",
+   "reason": "Minor product partnership with Linktree; small feature integration, limited expected price impact.",
+   "published_at": "2026-11-27T14:31:44Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 5.1995,
+   "scored_at": "2026-11-27T14:46:39Z"
+  },
+  {
+   "article_id": "131930982",
+   "symbol": "JPM",
+   "headline": "JPMorgan and BlackRock Contending to Manage Portion of Singapore's Public Pension Fund",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Reported competition for a Singapore pension mandate is unconfirmed and small relative to JPM's size; no clear edge.",
+   "published_at": "2026-11-27T14:31:44Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 322.34,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131930983",
+   "symbol": "WMG",
+   "headline": "Warner Music Group Settles Copyright Lawsuit with Suno",
+   "p_up": 55,
+   "impact": "low",
+   "reason": "Settling a copyright suit and forming an AI partnership with Suno removes legal overhang; modestly positive, mostly priced in at +0.89%.",
+   "published_at": "2026-11-27T14:31:45Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 32.75,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131930984",
+   "symbol": "META",
+   "headline": "Meta Launches Instagram for TV in India",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Regional launch of Instagram for TV in India is immaterial to Meta's overall results.",
+   "published_at": "2026-11-27T14:31:46Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 624.4201,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131930985",
+   "symbol": "META",
+   "headline": "Meta Cited in South African High Court Ruling Regarding Pseudonymous Content",
+   "p_up": 49,
+   "impact": "low",
+   "reason": "Being named as a respondent in a South African court ruling is routine and immaterial.",
+   "published_at": "2026-11-27T14:31:46Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 624.4201,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131930986",
+   "symbol": "GAP",
+   "headline": "Gap Inc. Deploys AI Software Engineering Agent 'Devin' to Enhance E-commerce Operations",
+   "p_up": 51,
+   "impact": "low",
+   "reason": "Adopting an AI engineering agent for e-commerce operations is incremental and unlikely to move the stock meaningfully.",
+   "published_at": "2026-11-27T14:31:48Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 23.31,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131930987",
+   "symbol": "HUT",
+   "headline": "Hut 8 Receives Approval for Second Phase of Beacon Point Data Center",
+   "p_up": 56,
+   "impact": "medium",
+   "reason": "Approval to build phase two of Beacon Point data center adds AI/hosting capacity growth, a positive new development.",
+   "published_at": "2026-11-27T14:31:48Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 49.42,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131930988",
+   "symbol": "BEN",
+   "headline": "Franklin Templeton Mutual Fund Suspends SIP/STP Investments in Overseas Schemes",
+   "p_up": 48,
+   "impact": "low",
+   "reason": "Temporary suspension of SIP/STP inflows in some overseas funds is minor and operational in nature.",
+   "published_at": "2026-11-27T14:31:49Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 34.12,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131930989",
+   "symbol": "FLR",
+   "headline": "Fluor Canada Hosts Tipi Transfer Ceremony",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Indigenous reconciliation ceremony in Calgary is a community event with no financial impact.",
+   "published_at": "2026-11-27T14:31:49Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 46.82,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131930990",
+   "symbol": "GLXY",
+   "headline": "Recent Insider Trading Activity at Galaxy Digital Inc.",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Net insider buying over the past year is a mild positive signal but stale-ish and already reflected in price.",
+   "published_at": "2026-11-27T14:31:52Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 11.6401,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131931747",
+   "symbol": "KR",
+   "headline": "UBS Adjusts Kroger Price Target to $72 From $66, Maintains Neutral Rating",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "UBS raised price target to $72 while keeping Neutral; a modest target bump with little directional edge.",
+   "published_at": "2026-11-27T14:32:00Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 70.06,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131931748",
+   "symbol": "T",
+   "headline": "CRTC Issues Decision Regarding TELUS Wireless Device Unlocking Rules",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "CRTC regulatory decision on device unlocking rules; routine telecom regulation with minimal expected price impact.",
+   "published_at": "2026-11-27T14:32:00Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 23.255,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131931749",
+   "symbol": "TIGO",
+   "headline": "Millicom Announces Voluntary Redemption of SEK 2.25 Billion Sustainability Notes",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Voluntary redemption of existing sustainability notes is routine debt housekeeping with no meaningful earnings or operational impact.",
+   "published_at": "2026-11-27T14:32:00Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 80.695,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131931750",
+   "symbol": "LEGN",
+   "headline": "Legend Biotech to Host Investor Event During the 68th American Society of Hematology Annual Meeting and Exposition",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Announcement of an investor event to review CARVYKTI and LB2501 data in December; scheduling news, not new clinical results.",
+   "published_at": "2026-11-27T14:32:02Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 18.36,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131931751",
+   "symbol": "KIM",
+   "headline": "Truist Adjusts Price Target on Kimco Realty to $26",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Truist raised price target to $26 but kept Hold; modest positive but largely expected and small.",
+   "published_at": "2026-11-27T14:32:05Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 26.15,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131931752",
+   "symbol": "OVV",
+   "headline": "RBC Raises Price Target on Ovintiv to $92",
+   "p_up": 53,
+   "impact": "low",
+   "reason": "RBC raised price target to $92 from prior level; analyst target increase with limited immediate catalyst.",
+   "published_at": "2026-11-27T14:32:12Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 61.835,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131931753",
+   "symbol": "WT",
+   "headline": "WisdomTree Multi Asset Issuer PLC Adjourns Meeting of Affected Securities Holders",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Adjourned securityholder meeting due to lack of quorum; administrative news with no price relevance.",
+   "published_at": "2026-11-27T14:32:15Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 19.77,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131931754",
+   "symbol": "BLK",
+   "headline": "BlackRock Contending for Singapore Public Pension Fund Mandate",
+   "p_up": 51,
+   "impact": "low",
+   "reason": "Reported competition for a Singapore pension mandate; unconfirmed and small relative to BlackRock's size.",
+   "published_at": "2026-11-27T14:32:15Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 1165.2475,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131931755",
+   "symbol": "OHI",
+   "headline": "Truist Raises Price Target on Omega Healthcare Investors to $48",
+   "p_up": 51,
+   "impact": "low",
+   "reason": "Truist nudged price target to $48 with Hold rating; minimal change, near-neutral impact.",
+   "published_at": "2026-11-27T14:32:16Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 47.45,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131931756",
+   "symbol": "REG",
+   "headline": "Truist Adjusts Price Target on Regency Centers to $81 From $84",
+   "p_up": 48,
+   "impact": "low",
+   "reason": "Truist lowered price target to $81 from $84 while keeping Buy; modest negative revision.",
+   "published_at": "2026-11-27T14:32:16Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 75.984,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131931757",
+   "symbol": "AKR",
+   "headline": "Truist Securities Adjusts Acadia Realty Price Target to $23 From $22, Maintains Buy Rating",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Truist raised price target to $23 from $22 with Buy rating; small positive analyst revision.",
+   "published_at": "2026-11-27T14:32:20Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 21.12,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131931758",
+   "symbol": "IVT",
+   "headline": "Truist Adjusts Price Target on InvenTrust Properties to $33 From $32",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Minor Truist price target bump by $1 while maintaining Hold; routine analyst update with no edge.",
+   "published_at": "2026-11-27T14:32:22Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 32.095,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131931759",
+   "symbol": "HUBS",
+   "headline": "Argus Research Downgrades HubSpot to Hold From Buy",
+   "p_up": 40,
+   "impact": "medium",
+   "reason": "Argus downgrade from Buy to Hold is a material analyst action, though stock is already up 1.93% today.",
+   "published_at": "2026-11-27T14:32:22Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 214.26,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131931760",
+   "symbol": "KRG",
+   "headline": "Truist Adjusts Price Target on Kite Realty Group Trust to $26",
+   "p_up": 47,
+   "impact": "low",
+   "reason": "Truist trims price target by $1 while keeping Hold; modest negative signal, small move expected.",
+   "published_at": "2026-11-27T14:32:30Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 25.61,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131931761",
+   "symbol": "RSI",
+   "headline": "Stifel Maintains Buy Rating on Rush Street Interactive, Adjusts Price Target",
+   "p_up": 46,
+   "impact": "low",
+   "reason": "Stifel keeps Buy but cuts price target from $28 to $23; sizable target cut but rating unchanged.",
+   "published_at": "2026-11-27T14:32:59Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 11.75,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131932533",
+   "symbol": "ZS",
+   "headline": "B. Riley Downgrades Zscaler to Neutral",
+   "p_up": 35,
+   "impact": "medium",
+   "reason": "B. Riley downgrade to Neutral with lowered price target is a material negative analyst action.",
+   "published_at": "2026-11-27T14:33:02Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 232.039,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131932534",
+   "symbol": "CLBK",
+   "headline": "Columbia Financial Chief Financial Officer Thomas Splaine Jr. Intends to Resign",
+   "p_up": 45,
+   "impact": "low",
+   "reason": "CFO intends to resign; unplanned executive departure is mildly negative with limited near-term price impact.",
+   "published_at": "2026-11-27T14:33:03Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 10.835,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131932535",
+   "symbol": "BRX",
+   "headline": "Truist Securities Adjusts Brixmor Property Price Target to $33 From $31, Maintains Buy Rating",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Truist raises price target to $33 from $31 with Buy rating; modest positive, largely routine.",
+   "published_at": "2026-11-27T14:33:38Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 31.33,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131933310",
+   "symbol": "GEV",
+   "headline": "GE Vernova Hitachi Nuclear Energy Co-Hosts Briefing for UK Small Modular Reactor Program",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Briefing on UK SMR supply chain roles is promotional and non-binding; no material new contract or earnings information.",
+   "published_at": "2026-11-27T14:34:14Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 725.2951,
+   "scored_at": "2026-11-27T14:48:07Z"
+  },
+  {
+   "article_id": "131977486",
+   "symbol": "UBS",
+   "headline": "UBS Group AG Discloses Change in Shareholding in Solar A/S",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine shareholding disclosure in a Danish company; minimal relevance to UBS's own stock price.",
+   "published_at": "2026-11-27T15:31:23Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 45.69,
+   "scored_at": "2026-11-27T15:32:09Z"
+  },
+  {
+   "article_id": "132000889",
+   "symbol": "JPM",
+   "headline": "JPMorgan Chase Discloses Change in Voting Rights in Ashtead Technology",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine voting-rights disclosure in a UK small-cap; no operational or earnings information for JPMorgan.",
+   "published_at": "2026-11-27T16:01:17Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 324.195,
+   "scored_at": "2026-11-27T16:02:36Z"
+  },
+  {
+   "article_id": "132000891",
+   "symbol": "ICE",
+   "headline": "Intercontinental Exchange Abandons Proposed UK Government Bond Futures Modification",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Cancelled minor contract modification for UK bond futures; immaterial to ICE's valuation.",
+   "published_at": "2026-11-27T16:01:25Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 177.83,
+   "scored_at": "2026-11-27T16:02:36Z"
+  },
+  {
+   "article_id": "132000892",
+   "symbol": "PEP",
+   "headline": "SodaStream Updates Cylinder Exchange Process",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Operational change to SodaStream cylinder exchange; immaterial to PepsiCo's stock price.",
+   "published_at": "2026-11-27T16:01:29Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 144.155,
+   "scored_at": "2026-11-27T16:02:36Z"
+  },
+  {
+   "article_id": "132000893",
+   "symbol": "SBLK",
+   "headline": "Star Bulk Carriers Corp. Shares to Trade Ex-Dividend on Euronext Athens",
+   "p_up": 47,
+   "impact": "low",
+   "reason": "Ex-dividend notice for $1.00 dividend starting Nov 30 mechanically lowers price; stock already up 1.21% today.",
+   "published_at": "2026-11-27T16:01:35Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 27.55,
+   "scored_at": "2026-11-27T16:02:36Z"
+  },
+  {
+   "article_id": "132000894",
+   "symbol": "TMUS",
+   "headline": "Southwest Airlines Provides Free WiFi Powered by T-Mobile",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Recap of existing free in-flight WiFi partnership with Southwest; no new material information.",
+   "published_at": "2026-11-27T16:01:36Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 168.2,
+   "scored_at": "2026-11-27T16:02:36Z"
+  },
+  {
+   "article_id": "132000896",
+   "symbol": "MCK",
+   "headline": "McKesson Canada Opens New Distribution Centre in Québec",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Opening of a regional distribution centre in Quebec; minor operational news for McKesson.",
+   "published_at": "2026-11-27T16:01:53Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 1072.0,
+   "scored_at": "2026-11-27T16:02:36Z"
+  },
+  {
+   "article_id": "132000897",
+   "symbol": "BNS",
+   "headline": "Scotiabank Comments on Alberta's Provincial Budget Surplus",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Bank analyst commentary on Alberta's provincial budget surplus; no direct company-specific impact.",
+   "published_at": "2026-11-27T16:01:59Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 84.88,
+   "scored_at": "2026-11-27T16:02:36Z"
+  },
+  {
+   "article_id": "132001687",
+   "symbol": "PANW",
+   "headline": "Palo Alto Networks Collaborates with Google Cloud and Fujitsu on AI-Driven Security",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Collaboration announcement with Google Cloud and Fujitsu is routine partnership news with little immediate earnings impact.",
+   "published_at": "2026-11-27T16:02:09Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 356.92,
+   "scored_at": "2026-11-27T16:03:42Z"
+  },
+  {
+   "article_id": "132001688",
+   "symbol": "SBSW",
+   "headline": "Sibanye-Stillwater Receives Notification of JPMorgan Chase & Co. Beneficial Interest",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Passive disclosure of JPMorgan's increased beneficial stake is routine; stock already up 6.11% today, limiting edge.",
+   "published_at": "2026-11-27T16:02:13Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 8.2661,
+   "scored_at": "2026-11-27T16:03:42Z"
+  },
+  {
+   "article_id": "132001689",
+   "symbol": "REGN",
+   "headline": "Regeneron Pharmaceuticals Receives UK Regulatory Approval for Linvoseltamab",
+   "p_up": 53,
+   "impact": "low",
+   "reason": "UK regulatory approval for Linvoseltamab is incremental, mostly expected, and small relative to Regeneron's size.",
+   "published_at": "2026-11-27T16:02:50Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 984.1339,
+   "scored_at": "2026-11-27T16:03:42Z"
+  },
+  {
+   "article_id": "132024661",
+   "symbol": "ING",
+   "headline": "Electrica Signs EUR 500 Million Bridge Facility with ING and Other Lenders",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine bridge facility for Electrica as lender; immaterial to ING's share price today.",
+   "published_at": "2026-11-27T16:31:30Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 29.895,
+   "scored_at": "2026-11-27T16:32:03Z"
+  },
+  {
+   "article_id": "132024674",
+   "symbol": "EL",
+   "headline": "J.P. Morgan Adjusts EssilorLuxottica Price Target in Luxury Sector Outlook",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "J.P. Morgan maintained overweight and adjusted target in sector outlook; modest positive analyst sentiment, mostly priced in.",
+   "published_at": "2026-11-27T16:31:42Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 111.39,
+   "scored_at": "2026-11-27T16:32:03Z"
+  },
+  {
+   "article_id": "132024680",
+   "symbol": "DOV",
+   "headline": "doValue Seeks New Head for Italy Operations",
+   "p_up": 48,
+   "impact": "low",
+   "reason": "Search for new Italian operations head amid stock underperformance; minor negative tone, no material new financial information.",
+   "published_at": "2026-11-27T16:31:48Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 207.23,
+   "scored_at": "2026-11-27T16:32:03Z"
+  },
+  {
+   "article_id": "132024683",
+   "symbol": "OR",
+   "headline": "L'Oréal Paris Launches 'Le Grand Magasin' Activation at Fondaco dei Tedeschi",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Brand marketing activation launch in Italy; no financial impact and stock already up 3.81% today.",
+   "published_at": "2026-11-27T16:31:49Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 34.225,
+   "scored_at": "2026-11-27T16:32:03Z"
+  },
+  {
+   "article_id": "132024684",
+   "symbol": "ETG",
+   "headline": "Director's Dealings: vLB GmbH & Co. KG Acquires Shares in EnviTec Biogas AG",
+   "p_up": 53,
+   "impact": "low",
+   "reason": "Insider share purchase by board-associated entity is mildly positive signal but small and routine.",
+   "published_at": "2026-11-27T16:31:53Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 22.26,
+   "scored_at": "2026-11-27T16:32:03Z"
+  },
+  {
+   "article_id": "132024686",
+   "symbol": "LYG",
+   "headline": "Lloyds Banking Group Resumes Online Services Following Outage",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Outage resolved; operational disruption restored, no lasting financial impact expected.",
+   "published_at": "2026-11-27T16:31:56Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 5.05,
+   "scored_at": "2026-11-27T16:32:03Z"
+  },
+  {
+   "article_id": "132025508",
+   "symbol": "SAN",
+   "headline": "Santander UK Group Announces Redemption of 2028 Notes",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine note redemption announcement by a subsidiary; no change to earnings or fundamentals, price already up 4.67% today.",
+   "published_at": "2026-11-27T16:32:02Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 11.8586,
+   "scored_at": "2026-11-27T16:33:12Z"
+  },
+  {
+   "article_id": "132025510",
+   "symbol": "DB",
+   "headline": "Deutsche Bank Lowers Price Target on Polestar Automotive Holding UK",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Price target cut applies to Polestar, not Deutsche Bank; Deutsche Bank is only the analyst, so no direct edge.",
+   "published_at": "2026-11-27T16:32:03Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 33.19,
+   "scored_at": "2026-11-27T16:33:12Z"
+  },
+  {
+   "article_id": "132025515",
+   "symbol": "BCS",
+   "headline": "HSBC, Barclays, and Standard Chartered Retain Status as UK-based Global Systemically Important Banks",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine confirmation of G-SIB status; already known and largely priced in, with shares up 2.06% today.",
+   "published_at": "2026-11-27T16:32:25Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 21.575,
+   "scored_at": "2026-11-27T16:33:12Z"
+  },
+  {
+   "article_id": "132049617",
+   "symbol": "EBS",
+   "headline": "Erste Bank Polska S.A. Joins Erste Group's Multi Issuer EMTN Programme",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Administrative program membership change; no earnings or financial impact on the stock.",
+   "published_at": "2026-11-27T17:01:22Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 5.54,
+   "scored_at": "2026-11-27T17:02:42Z"
+  },
+  {
+   "article_id": "132049619",
+   "symbol": "FBK",
+   "headline": "Jefferies Reaffirms Buy Rating on FinecoBank",
+   "p_up": 54,
+   "impact": "low",
+   "reason": "Reaffirmed buy rating from Jefferies, a routine reiteration; modest positive tone with the stock up 0.84%.",
+   "published_at": "2026-11-27T17:01:23Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 52.96,
+   "scored_at": "2026-11-27T17:02:42Z"
+  },
+  {
+   "article_id": "132049624",
+   "symbol": "VALE",
+   "headline": "Vale Provides Update on FICO Railway Project Progress",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine project progress update on FICO railway; no new financial information and stock already up 5.48%.",
+   "published_at": "2026-11-27T17:01:30Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 10.3474,
+   "scored_at": "2026-11-27T17:02:42Z"
+  },
+  {
+   "article_id": "132049626",
+   "symbol": "FMS",
+   "headline": "Artisan Partners Funds Files Voting Rights Notification for Fresenius Medical Care",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine voting rights threshold filing by an investor; no fundamental news.",
+   "published_at": "2026-11-27T17:01:33Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 20.98,
+   "scored_at": "2026-11-27T17:02:42Z"
+  },
+  {
+   "article_id": "132049631",
+   "symbol": "HBM",
+   "headline": "Dr. John Feldmann to Resign from Supervisory Board of HORNBACH Baumarkt AG",
+   "p_up": 48,
+   "impact": "low",
+   "reason": "Supervisory board chairman resignation effective after 2027 AGM; minor governance news, stock already up 7%.",
+   "published_at": "2026-11-27T17:01:42Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 18.45,
+   "scored_at": "2026-11-27T17:02:42Z"
+  },
+  {
+   "article_id": "132049636",
+   "symbol": "MICC",
+   "headline": "Kibon Celebrates 85th Anniversary with 'Vila Kibon' Event in São Paulo",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Brand anniversary event; no material financial impact.",
+   "published_at": "2026-11-27T17:01:46Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 19.76,
+   "scored_at": "2026-11-27T17:02:42Z"
+  },
+  {
+   "article_id": "132049638",
+   "symbol": "EQT",
+   "headline": "EQT Healthcare Growth Strategy Fund to Acquire Majority Stake in Kelso Pharma",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "EQT's fund acquiring Kelso Pharma; Kelso is a target, not EQT itself, so minimal impact on EQT.",
+   "published_at": "2026-11-27T17:01:47Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 52.01,
+   "scored_at": "2026-11-27T17:02:42Z"
+  },
+  {
+   "article_id": "132049646",
+   "symbol": "ELPC",
+   "headline": "Opposition Lawmaker in Paraná Requests Explanations from Copel Regarding Recent Blackouts",
+   "p_up": 45,
+   "impact": "low",
+   "reason": "Political request for explanations over blackouts; minor reputational risk, stock already up 13% today.",
+   "published_at": "2026-11-27T17:01:59Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 11.68,
+   "scored_at": "2026-11-27T17:02:42Z"
+  },
+  {
+   "article_id": "132049647",
+   "symbol": "ELPC",
+   "headline": "Procon of Toledo Opens Investigation into Copel Following Power Outage Complaints",
+   "p_up": 45,
+   "impact": "low",
+   "reason": "Local consumer agency investigation into outages; limited financial impact, stock already up 13% today.",
+   "published_at": "2026-11-27T17:01:59Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 11.68,
+   "scored_at": "2026-11-27T17:02:42Z"
+  },
+  {
+   "article_id": "132050513",
+   "symbol": "BNR",
+   "headline": "AlphaValue/Baader Europe Downgrades Brenntag",
+   "p_up": 40,
+   "impact": "low",
+   "reason": "Downgrade to Reduce with lower EPS forecasts is negative, but from a smaller European broker; stock already up 5.2% today, limiting impact.",
+   "published_at": "2026-11-27T17:02:04Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 13.95,
+   "scored_at": "2026-11-27T17:03:49Z"
+  },
+  {
+   "article_id": "132075808",
+   "symbol": "UL",
+   "headline": "Unilever Chief R&D Officer Richard Slater Sells Shares",
+   "p_up": 48,
+   "impact": "low",
+   "reason": "Routine executive share sale of about £2 million; minimal signal for intraday price direction.",
+   "published_at": "2026-11-27T17:31:22Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 66.415,
+   "scored_at": "2026-11-27T17:32:15Z"
+  },
+  {
+   "article_id": "132075816",
+   "symbol": "IPO",
+   "headline": "IP Group plc: Notification of Major Holdings by Bank of America Corporation",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Routine major holdings notification by Bank of America; no fundamental news, no expected price impact.",
+   "published_at": "2026-11-27T17:31:34Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 44.6444,
+   "scored_at": "2026-11-27T17:32:15Z"
+  },
+  {
+   "article_id": "132075822",
+   "symbol": "PAY",
+   "headline": "PayPoint plc Chief Executive Disposes of 150,000 Shares",
+   "p_up": 46,
+   "impact": "low",
+   "reason": "CEO sold 150,000 shares; insider selling is a mild negative signal, stock already up 3% today.",
+   "published_at": "2026-11-27T17:31:39Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 34.93,
+   "scored_at": "2026-11-27T17:32:15Z"
+  },
+  {
+   "article_id": "132075823",
+   "symbol": "TRN",
+   "headline": "Aviva Increases Stake in Trainline PLC",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Aviva raised stake to 5.45%; routine disclosure with slight positive sentiment only.",
+   "published_at": "2026-11-27T17:31:39Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 30.7,
+   "scored_at": "2026-11-27T17:32:15Z"
+  },
+  {
+   "article_id": "132075828",
+   "symbol": "ITM",
+   "headline": "ITM Power Acquires Assets from Resato Hydrogen Technology",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Small asset acquisition for 3 million EUR; immaterial to company valuation.",
+   "published_at": "2026-11-27T17:31:46Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 45.79,
+   "scored_at": "2026-11-27T17:32:15Z"
+  },
+  {
+   "article_id": "132075832",
+   "symbol": "SHEL",
+   "headline": "Shell plc Announces Daily Share Buyback Transactions",
+   "p_up": 52,
+   "impact": "low",
+   "reason": "Routine daily buyback disclosure; ongoing programme already known, mild supportive effect only.",
+   "published_at": "2026-11-27T17:31:53Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 95.655,
+   "scored_at": "2026-11-27T17:32:15Z"
+  },
+  {
+   "article_id": "132075833",
+   "symbol": "SHEL",
+   "headline": "Shell-Backed Raízen Explores Sale of Fuel Distribution Unit",
+   "p_up": 50,
+   "impact": "low",
+   "reason": "Reported exploration of sale by Shell-backed Raízen is unconfirmed and indirect for Shell shareholders.",
+   "published_at": "2026-11-27T17:31:53Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 95.655,
+   "scored_at": "2026-11-27T17:32:15Z"
+  },
+  {
+   "article_id": "132077638",
+   "symbol": "SRAD",
+   "headline": "Stelrad Group PLC Board Chair Purchases Shares",
+   "p_up": 53,
+   "impact": "low",
+   "reason": "Board chair share purchase of 16,000 shares is mildly positive insider signal but small and routine in scale.",
+   "published_at": "2026-11-27T17:33:03Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 12.54,
+   "scored_at": "2026-11-27T17:34:27Z"
+  },
+  {
+   "article_id": "132077639",
+   "symbol": "SRAD",
+   "headline": "Berenberg Bank Reaffirms Buy Recommendation for Stelrad Group PLC",
+   "p_up": 54,
+   "impact": "low",
+   "reason": "Berenberg reiterating Buy is a reaffirmation, not a new rating change, so only a slight positive tilt.",
+   "published_at": "2026-11-27T17:33:03Z",
+   "scored_by": "claude:claude-haiku-5-5",
+   "price_at_news": 12.54,
+   "scored_at": "2026-11-27T17:34:27Z"
+  }
+ ],
+ "predictions": [
+  {
+   "time": "2026-11-27T14:46:39Z",
+   "symbol": "FGI",
+   "call": "FALL",
+   "confidence": 75,
+   "p_up": 25.0,
+   "price": 5.0,
+   "headline": "FGI Industries Lowers FY2026 Sales Guidance",
+   "reason": "Guidance cut for FY2026 sales is new negative information; stock already up 5.71% today, suggesting partial pricing or odd move.",
+   "session": "open",
+   "close_price": 4.6584,
+   "move_pct": -6.83,
+   "correct": true
+  },
+  {
+   "time": "2026-11-27T14:48:07Z",
+   "symbol": "ZS",
+   "call": "FALL",
+   "confidence": 63,
+   "p_up": 37.4,
+   "price": 232.039,
+   "headline": "B. Riley Downgrades Zscaler to Neutral",
+   "reason": "B. Riley downgrade to Neutral with lowered price target is a material negative analyst action.",
+   "session": "open",
+   "close_price": 239.47,
+   "move_pct": 3.2,
+   "correct": false
+  }
+ ],
+ "picks": [],
+ "positions": [],
+ "trades": [],
+ "skips": [
+  {
+   "time": "2026-11-27T14:46:39Z",
+   "symbol": "FGI",
+   "why": "spread too wide (5.97%)"
+  },
+  {
+   "time": "2026-11-27T14:51:29Z",
+   "symbol": "FGI",
+   "why": "spread too wide (5.57%)"
+  },
+  {
+   "time": "2026-11-27T15:25:50Z",
+   "symbol": "FGI",
+   "why": "spread too wide (8.09%)"
+  }
+ ],
+ "price_paths": {},
+ "last_prices": {
+  "AACIW": [
+   "2026-11-27T17:57:38Z",
+   0.17
+  ],
+  "AAPL": [
+   "2026-11-27T17:59:46Z",
+   357.82
+  ],
+  "ABCL": [
+   "2026-11-27T17:59:46Z",
+   10.8
+  ],
+  "ADV": [
+   "2026-11-27T17:59:46Z",
+   30.77
+  ],
+  "AEF": [
+   "2026-11-27T17:59:46Z",
+   7.56
+  ],
+  "AIOK": [
+   "2026-11-27T17:59:46Z",
+   4.52
+  ],
+  "AMD": [
+   "2026-11-27T17:59:46Z",
+   424.55
+  ],
+  "AMS": [
+   "2026-11-27T17:32:15Z",
+   0.9551
+  ],
+  "AMZN": [
+   "2026-11-27T17:59:46Z",
+   253.785
+  ],
+  "ANDG": [
+   "2026-11-27T17:59:46Z",
+   57.91
+  ],
+  "ANT": [
+   "2026-11-27T17:59:46Z",
+   91.875
+  ],
+  "AREC": [
+   "2026-11-27T14:52:30Z",
+   0.9558
+  ],
+  "ARM": [
+   "2026-11-27T17:59:46Z",
+   171.19
+  ],
+  "ATPC": [
+   "2026-11-27T14:42:07Z",
+   1.16
+  ],
+  "AVGO": [
+   "2026-11-27T17:59:46Z",
+   311.61
+  ],
+  "BA": [
+   "2026-11-27T17:59:46Z",
+   167.18
+  ],
+  "BAERW": [
+   "2026-11-27T14:52:30Z",
+   0.01
+  ],
+  "BBD": [
+   "2026-11-27T17:59:46Z",
+   2.805
+  ],
+  "BEN": [
+   "2026-11-27T17:59:46Z",
+   34.18
+  ],
+  "BFLR": [
+   "2026-11-27T17:59:46Z",
+   0.0151
+  ],
+  "BGLC": [
+   "2026-11-27T14:42:07Z",
+   1.1225
+  ],
+  "BGLWW": [
+   "2026-11-27T14:52:30Z",
+   0.0141
+  ],
+  "BINV": [
+   "2026-11-27T17:59:46Z",
+   45.4499
+  ],
+  "BMO": [
+   "2026-11-27T17:59:46Z",
+   159.05
+  ],
+  "BRZD": [
+   "2026-11-27T17:59:46Z",
+   34.23
+  ],
+  "BRZL": [
+   "2026-11-27T15:19:33Z",
+   15.2288
+  ],
+  "BZQ": [
+   "2026-11-27T16:22:37Z",
+   19.463
+  ],
+  "C": [
+   "2026-11-27T17:59:46Z",
+   115.57
+  ],
+  "CAPNR": [
+   "2026-11-27T17:59:46Z",
+   0.0264
+  ],
+  "CBAT": [
+   "2026-11-27T14:42:07Z",
+   0.9147
+  ],
+  "CCM": [
+   "2026-11-27T14:42:07Z",
+   3.73
+  ],
+  "CIG": [
+   "2026-11-27T14:42:07Z",
+   2.01
+  ],
+  "COIN": [
+   "2026-11-27T17:59:46Z",
+   106.86
+  ],
+  "COST": [
+   "2026-11-27T17:59:46Z",
+   1097.51
+  ],
+  "CRWD": [
+   "2026-11-27T17:59:46Z",
+   216.83
+  ],
+  "CSCO": [
+   "2026-11-27T17:59:46Z",
+   96.92
+  ],
+  "CVX": [
+   "2026-11-27T17:59:46Z",
+   212.44
+  ],
+  "DARE": [
+   "2026-11-27T17:59:46Z",
+   0.3161
+  ],
+  "DBE": [
+   "2026-11-27T17:59:46Z",
+   33.84
+  ],
+  "DCX": [
+   "2026-11-27T17:59:46Z",
+   1.19
+  ],
+  "DELL": [
+   "2026-11-27T17:59:46Z",
+   316.27
+  ],
+  "DIS": [
+   "2026-11-27T17:59:46Z",
+   127.145
+  ],
+  "DKI": [
+   "2026-11-27T14:42:07Z",
+   1.2
+  ],
+  "DOV": [
+   "2026-11-27T17:59:46Z",
+   206.83
+  ],
+  "EHI": [
+   "2026-11-27T17:59:46Z",
+   5.21
+  ],
+  "ENRD": [
+   "2026-11-27T14:42:07Z",
+   1.7596
+  ],
+  "ETN": [
+   "2026-11-27T17:59:46Z",
+   325.58
+  ],
+  "EUDAW": [
+   "2026-11-27T15:56:19Z",
+   0.0125
+  ],
+  "EWZ": [
+   "2026-11-27T17:59:46Z",
+   33.105
+  ],
+  "EXLS": [
+   "2026-11-27T17:59:46Z",
+   45.74
+  ],
+  "EYE": [
+   "2026-11-27T14:42:07Z",
+   17.33
+  ],
+  "F": [
+   "2026-11-27T17:59:46Z",
+   12.315
+  ],
+  "FCHL": [
+   "2026-11-27T17:59:46Z",
+   0.0095
+  ],
+  "FERAR": [
+   "2026-11-27T17:59:46Z",
+   0.18
+  ],
+  "FHI": [
+   "2026-11-27T17:59:46Z",
+   61.04
+  ],
+  "FIGXW": [
+   "2026-11-27T16:12:09Z",
+   0.1399
+  ],
+  "FRSX": [
+   "2026-11-27T14:42:07Z",
+   0.4237
+  ],
+  "GAM": [
+   "2026-11-27T17:59:46Z",
+   55.53
+  ],
+  "GCOR": [
+   "2026-11-27T17:59:46Z",
+   39.885
+  ],
+  "GDHG": [
+   "2026-11-27T17:57:38Z",
+   0.0639
+  ],
+  "GDS": [
+   "2026-11-27T17:59:46Z",
+   13.43
+  ],
+  "GGROW": [
+   "2026-11-27T17:59:46Z",
+   0.0035
+  ],
+  "GOOGL": [
+   "2026-11-27T17:59:46Z",
+   274.19
+  ],
+  "GRABW": [
+   "2026-11-27T17:36:36Z",
+   0.0037
+  ],
+  "GURE": [
+   "2026-11-27T14:42:07Z",
+   2.5894
+  ],
+  "HOOD": [
+   "2026-11-27T17:59:46Z",
+   67.845
+  ],
+  "HPQ": [
+   "2026-11-27T17:59:46Z",
+   32.12
+  ],
+  "HUDI": [
+   "2026-11-27T14:42:07Z",
+   3.9992
+  ],
+  "IG": [
+   "2026-11-27T17:59:46Z",
+   19.765
+  ],
+  "IMO": [
+   "2026-11-27T17:59:46Z",
+   118.06
+  ],
+  "INEO": [
+   "2026-11-27T14:42:07Z",
+   2.4495
+  ],
+  "INLF": [
+   "2026-11-27T14:42:07Z",
+   2.65
+  ],
+  "INTC": [
+   "2026-11-27T17:59:46Z",
+   57.745
+  ],
+  "IVDAW": [
+   "2026-11-27T14:52:30Z",
+   0.0148
+  ],
+  "JDZG": [
+   "2026-11-27T17:59:46Z",
+   0.0801
+  ],
+  "JNJ": [
+   "2026-11-27T17:59:46Z",
+   275.45
+  ],
+  "JPM": [
+   "2026-11-27T17:59:46Z",
+   323.07
+  ],
+  "KKR": [
+   "2026-11-27T17:59:46Z",
+   95.745
+  ],
+  "KRNT": [
+   "2026-11-27T14:42:07Z",
+   15.165
+  ],
+  "LHSW": [
+   "2026-11-27T14:42:07Z",
+   1.57
+  ],
+  "LLY": [
+   "2026-11-27T17:59:46Z",
+   1392.91
+  ],
+  "LMT": [
+   "2026-11-27T17:59:46Z",
+   605.515
+  ],
+  "LOOP": [
+   "2026-11-27T17:04:56Z",
+   0.1175
+  ],
+  "LOT": [
+   "2026-11-27T17:59:46Z",
+   0.2669
+  ],
+  "MCD": [
+   "2026-11-27T17:59:46Z",
+   282.49
+  ],
+  "META": [
+   "2026-11-27T17:59:46Z",
+   628.19
+  ],
+  "MNDR": [
+   "2026-11-27T17:59:46Z",
+   0.907
+  ],
+  "MSFT": [
+   "2026-11-27T17:59:46Z",
+   492.22
+  ],
+  "MSI": [
+   "2026-11-27T17:59:46Z",
+   544.88
+  ],
+  "MSTR": [
+   "2026-11-27T17:59:46Z",
+   81.49
+  ],
+  "MTEN": [
+   "2026-11-27T15:14:20Z",
+   0.3415
+  ],
+  "MU": [
+   "2026-11-27T17:59:46Z",
+   650.785
+  ],
+  "NCPL": [
+   "2026-11-27T14:46:39Z",
+   2.23
+  ],
+  "NFLX": [
+   "2026-11-27T17:59:46Z",
+   60.875
+  ],
+  "NIVF": [
+   "2026-11-27T17:59:46Z",
+   0.0139
+  ],
+  "NMZ.RT": [
+   "2026-11-27T17:15:26Z",
+   0.0018
+  ],
+  "NRSN": [
+   "2026-11-27T14:42:07Z",
+   1.8415
+  ],
+  "NRSNW": [
+   "2026-11-27T17:47:07Z",
+   0.0105
+  ],
+  "NUR": [
+   "2026-11-27T16:12:09Z",
+   0.2928
+  ],
+  "NVDA": [
+   "2026-11-27T17:59:46Z",
+   150.324
+  ],
+  "NXAT": [
+   "2026-11-27T17:20:43Z",
+   0.8938
+  ],
+  "OMH": [
+   "2026-11-27T14:42:07Z",
+   4.4388
+  ],
+  "ORCL": [
+   "2026-11-27T17:59:46Z",
+   107.13
+  ],
+  "OTLY": [
+   "2026-11-27T15:24:49Z",
+   12.92
+  ],
+  "PEP": [
+   "2026-11-27T17:59:46Z",
+   144.44
+  ],
+  "PLTR": [
+   "2026-11-27T17:59:46Z",
+   171.78
+  ],
+  "POM": [
+   "2026-11-27T17:59:46Z",
+   3.11
+  ],
+  "QH": [
+   "2026-11-27T14:42:07Z",
+   3.225
+  ],
+  "RCS": [
+   "2026-11-27T14:42:07Z",
+   4.82
+  ],
+  "RGNT": [
+   "2026-11-27T14:42:07Z",
+   0.925
+  ],
+  "RYDE": [
+   "2026-11-27T17:59:46Z",
+   0.2912
+  ],
+  "SCLXW": [
+   "2026-11-27T16:27:53Z",
+   0.05
+  ],
+  "SES": [
+   "2026-11-27T14:42:07Z",
+   0.4199
+  ],
+  "SHG": [
+   "2026-11-27T17:59:46Z",
+   63.82
+  ],
+  "SHOP": [
+   "2026-11-27T17:59:46Z",
+   141.7
+  ],
+  "SLDPW": [
+   "2026-11-27T16:22:37Z",
+   0.0098
+  ],
+  "SLGB": [
+   "2026-11-27T14:42:07Z",
+   0.15
+  ],
+  "SMCI": [
+   "2026-11-27T17:59:46Z",
+   23.775
+  ],
+  "SNDK": [
+   "2026-11-27T17:59:46Z",
+   85.435
+  ],
+  "SNPS": [
+   "2026-11-27T17:59:46Z",
+   419.45
+  ],
+  "SNXX": [
+   "2026-11-27T17:59:46Z",
+   1.9101
+  ],
+  "SOFI": [
+   "2026-11-27T17:59:46Z",
+   13.37
+  ],
+  "SOUNW": [
+   "2026-11-27T15:56:19Z",
+   0.1374
+  ],
+  "SOXL": [
+   "2026-11-27T17:59:46Z",
+   36.565
+  ],
+  "SOXS": [
+   "2026-11-27T17:59:46Z",
+   53.3494
+  ],
+  "SPRC": [
+   "2026-11-27T17:15:26Z",
+   1.44
+  ],
+  "SRTM": [
+   "2026-11-27T15:03:47Z",
+   0.2893
+  ],
+  "SSACW": [
+   "2026-11-27T15:19:33Z",
+   0.0399
+  ],
+  "STAK": [
+   "2026-11-27T16:59:32Z",
+   2.1
+  ],
+  "STG": [
+   "2026-11-27T14:42:07Z",
+   1.45
+  ],
+  "STM": [
+   "2026-11-27T17:59:46Z",
+   41.02
+  ],
+  "SVRE": [
+   "2026-11-27T14:42:07Z",
+   1.3174
+  ],
+  "TOPP": [
+   "2026-11-27T14:53:01Z",
+   0.4611
+  ],
+  "TOPS": [
+   "2026-11-27T14:42:07Z",
+   2.52
+  ],
+  "TQQQ": [
+   "2026-11-27T17:59:46Z",
+   48.62
+  ],
+  "TRUG": [
+   "2026-11-27T15:03:47Z",
+   0.237
+  ],
+  "TSLA": [
+   "2026-11-27T17:59:46Z",
+   399.79
+  ],
+  "UBER": [
+   "2026-11-27T17:59:46Z",
+   66.67
+  ],
+  "UFG": [
+   "2026-11-27T17:15:26Z",
+   2.415
+  ],
+  "UNH": [
+   "2026-11-27T17:59:46Z",
+   351.79
+  ],
+  "VFSWW": [
+   "2026-11-27T14:46:39Z",
+   0.23
+  ],
+  "VIVK": [
+   "2026-11-27T16:12:09Z",
+   0.1059
+  ],
+  "VOX": [
+   "2026-11-27T17:59:46Z",
+   180.69
+  ],
+  "WETO": [
+   "2026-11-27T17:59:46Z",
+   0.6853
+  ],
+  "WMT": [
+   "2026-11-27T17:59:46Z",
+   132.995
+  ],
+  "XLAB": [
+   "2026-11-27T15:45:51Z",
+   2.03
+  ],
+  "XOM": [
+   "2026-11-27T17:59:46Z",
+   160.27
+  ],
+  "YAAS": [
+   "2026-11-27T14:42:07Z",
+   3.701
+  ],
+  "YMAT": [
+   "2026-11-27T14:42:07Z",
+   0.795
+  ],
+  "ZH": [
+   "2026-11-27T14:42:07Z",
+   2.71
+  ],
+  "AEG": [
+   "2026-11-27T17:59:46Z",
+   8.575
+  ],
+  "AERO": [
+   "2026-11-27T17:59:46Z",
+   17.92
+  ],
+  "ARBB": [
+   "2026-11-27T14:43:35Z",
+   3.21
+  ],
+  "BAVA": [
+   "2026-11-27T17:59:46Z",
+   17.45
+  ],
+  "DTE": [
+   "2026-11-27T17:59:46Z",
+   137.71
+  ],
+  "EML": [
+   "2026-11-27T17:59:46Z",
+   30.575
+  ],
+  "EMR": [
+   "2026-11-27T17:59:46Z",
+   162.14
+  ],
+  "FDM": [
+   "2026-11-27T17:59:46Z",
+   88.83
+  ],
+  "HMC": [
+   "2026-11-27T17:59:46Z",
+   33.68
+  ],
+  "ICON": [
+   "2026-11-27T14:43:35Z",
+   0.89
+  ],
+  "INSP": [
+   "2026-11-27T17:59:46Z",
+   54.87
+  ],
+  "KEN": [
+   "2026-11-27T17:59:46Z",
+   56.06
+  ],
+  "NANO": [
+   "2026-11-27T14:43:35Z",
+   3.87
+  ],
+  "NRR": [
+   "2026-11-27T17:59:46Z",
+   15.8
+  ],
+  "RENT": [
+   "2026-11-27T14:43:35Z",
+   1.897
+  ],
+  "ROAD": [
+   "2026-11-27T17:59:46Z",
+   74.36
+  ],
+  "ROCK": [
+   "2026-11-27T17:59:46Z",
+   31.79
+  ],
+  "SAP": [
+   "2026-11-27T17:59:46Z",
+   213.645
+  ],
+  "STLA": [
+   "2026-11-27T14:43:35Z",
+   3.8924
+  ],
+  "TM": [
+   "2026-11-27T17:59:46Z",
+   214.94
+  ],
+  "TRI": [
+   "2026-11-27T17:59:46Z",
+   111.68
+  ],
+  "TRIB": [
+   "2026-11-27T14:43:35Z",
+   5.25
+  ],
+  "ADM": [
+   "2026-11-27T17:59:46Z",
+   67.8
+  ],
+  "ADPT": [
+   "2026-11-27T17:59:46Z",
+   28.84
+  ],
+  "ASML": [
+   "2026-11-27T17:59:46Z",
+   1326.67
+  ],
+  "ASTS": [
+   "2026-11-27T17:59:46Z",
+   26.845
+  ],
+  "ATS": [
+   "2026-11-27T17:59:46Z",
+   17.94
+  ],
+  "AXS": [
+   "2026-11-27T17:59:46Z",
+   109.17
+  ],
+  "BBVA": [
+   "2026-11-27T14:44:48Z",
+   24.175
+  ],
+  "BBY": [
+   "2026-11-27T17:59:46Z",
+   104.085
+  ],
+  "BCS": [
+   "2026-11-27T17:59:46Z",
+   21.595
+  ],
+  "BLK": [
+   "2026-11-27T17:59:46Z",
+   1166.81
+  ],
+  "BMNR": [
+   "2026-11-27T17:59:46Z",
+   13.865
+  ],
+  "BMY": [
+   "2026-11-27T17:59:46Z",
+   61.095
+  ],
+  "BNR": [
+   "2026-11-27T17:59:46Z",
+   14.15
+  ],
+  "BP": [
+   "2026-11-27T17:59:46Z",
+   43.265
+  ],
+  "BUD": [
+   "2026-11-27T17:59:46Z",
+   78.44
+  ],
+  "CBK": [
+   "2026-11-27T17:59:46Z",
+   32.79
+  ],
+  "CDL": [
+   "2026-11-27T17:59:46Z",
+   81.465
+  ],
+  "CF": [
+   "2026-11-27T17:59:46Z",
+   119.47
+  ],
+  "CM": [
+   "2026-11-27T17:59:46Z",
+   104.065
+  ],
+  "CNQ": [
+   "2026-11-27T17:59:46Z",
+   46.22
+  ],
+  "CRM": [
+   "2026-11-27T17:59:46Z",
+   198.09
+  ],
+  "DB": [
+   "2026-11-27T17:59:46Z",
+   33.31
+  ],
+  "DLTR": [
+   "2026-11-27T17:59:46Z",
+   148.445
+  ],
+  "DSC": [
+   "2026-11-27T14:44:48Z",
+   2.06
+  ],
+  "EBS": [
+   "2026-11-27T17:59:46Z",
+   5.54
+  ],
+  "EQIX": [
+   "2026-11-27T17:59:46Z",
+   984.38
+  ],
+  "ERO": [
+   "2026-11-27T17:59:46Z",
+   21.605
+  ],
+  "EZJ": [
+   "2026-11-27T17:59:46Z",
+   56.16
+  ],
+  "FAB": [
+   "2026-11-27T17:59:46Z",
+   106.33
+  ],
+  "GIC": [
+   "2026-11-27T17:59:46Z",
+   44.6475
+  ],
+  "GOOG": [
+   "2026-11-27T17:59:46Z",
+   271.85
+  ],
+  "GS": [
+   "2026-11-27T17:59:46Z",
+   812.64
+  ],
+  "HBAN": [
+   "2026-11-27T17:59:46Z",
+   15.045
+  ],
+  "HBM": [
+   "2026-11-27T17:59:46Z",
+   18.605
+  ],
+  "HBNB": [
+   "2026-11-27T14:44:48Z",
+   4.53
+  ],
+  "HCM": [
+   "2026-11-27T17:59:46Z",
+   14.375
+  ],
+  "HIG": [
+   "2026-11-27T17:59:46Z",
+   139.625
+  ],
+  "HLN": [
+   "2026-11-27T17:59:46Z",
+   9.465
+  ],
+  "HON": [
+   "2026-11-27T17:59:46Z",
+   228.34
+  ],
+  "HSBC": [
+   "2026-11-27T17:59:46Z",
+   83.36
+  ],
+  "ITUB": [
+   "2026-11-27T17:59:46Z",
+   7.68
+  ],
+  "KO": [
+   "2026-11-27T17:59:46Z",
+   97.43
+  ],
+  "KYIV": [
+   "2026-11-27T17:59:46Z",
+   11.705
+  ],
+  "LIF": [
+   "2026-11-27T17:59:46Z",
+   38.64
+  ],
+  "LOW": [
+   "2026-11-27T17:59:46Z",
+   236.48
+  ],
+  "LTC": [
+   "2026-11-27T17:59:46Z",
+   43.43
+  ],
+  "MA": [
+   "2026-11-27T14:44:48Z",
+   661.26
+  ],
+  "MAA": [
+   "2026-11-27T17:59:46Z",
+   117.45
+  ],
+  "MANU": [
+   "2026-11-27T17:59:46Z",
+   21.78
+  ],
+  "MC": [
+   "2026-11-27T17:59:46Z",
+   53.72
+  ],
+  "MCO": [
+   "2026-11-27T17:59:46Z",
+   487.585
+  ],
+  "MDT": [
+   "2026-11-27T17:59:46Z",
+   95.3
+  ],
+  "MORN": [
+   "2026-11-27T17:59:46Z",
+   234.25
+  ],
+  "MRNA": [
+   "2026-11-27T17:59:46Z",
+   228.35
+  ],
+  "MRVL": [
+   "2026-11-27T17:59:46Z",
+   140.55
+  ],
+  "MS": [
+   "2026-11-27T17:59:46Z",
+   170.895
+  ],
+  "MUFG": [
+   "2026-11-27T14:44:48Z",
+   19.975
+  ],
+  "NET": [
+   "2026-11-27T17:59:46Z",
+   296.45
+  ],
+  "NIO": [
+   "2026-11-27T14:44:48Z",
+   2.855
+  ],
+  "NRG": [
+   "2026-11-27T17:59:46Z",
+   93.72
+  ],
+  "NTES": [
+   "2026-11-27T17:59:46Z",
+   106.79
+  ],
+  "NVO": [
+   "2026-11-27T17:59:46Z",
+   41.095
+  ],
+  "OGC": [
+   "2026-11-27T17:59:46Z",
+   26.5
+  ],
+  "OMC": [
+   "2026-11-27T17:59:46Z",
+   92.16
+  ],
+  "PIPR": [
+   "2026-11-27T17:59:46Z",
+   62.96
+  ],
+  "PSO": [
+   "2026-11-27T14:44:48Z",
+   17.44
+  ],
+  "RKLB": [
+   "2026-11-27T17:59:46Z",
+   50.84
+  ],
+  "ROP": [
+   "2026-11-27T14:44:48Z",
+   483.5
+  ],
+  "RYAAY": [
+   "2026-11-27T17:59:46Z",
+   57.46
+  ],
+  "SAF": [
+   "2026-11-27T17:59:46Z",
+   25.01
+  ],
+  "SAN": [
+   "2026-11-27T17:59:46Z",
+   11.9
+  ],
+  "SBLK": [
+   "2026-11-27T17:59:46Z",
+   27.92
+  ],
+  "SBRA": [
+   "2026-11-27T17:59:46Z",
+   21.315
+  ],
+  "SHEL": [
+   "2026-11-27T17:59:46Z",
+   95.445
+  ],
+  "SKHY": [
+   "2026-11-27T17:59:46Z",
+   119.445
+  ],
+  "SMTC": [
+   "2026-11-27T17:59:46Z",
+   97.39
+  ],
+  "SONY": [
+   "2026-11-27T14:44:48Z",
+   27.86
+  ],
+  "SPGI": [
+   "2026-11-27T17:59:46Z",
+   461.11
+  ],
+  "SPOT": [
+   "2026-11-27T17:59:46Z",
+   619.7
+  ],
+  "SU": [
+   "2026-11-27T17:59:46Z",
+   64.82
+  ],
+  "SYK": [
+   "2026-11-27T17:59:46Z",
+   334.225
+  ],
+  "TD": [
+   "2026-11-27T17:59:46Z",
+   116.88
+  ],
+  "TGT": [
+   "2026-11-27T17:59:46Z",
+   172.0
+  ],
+  "TJX": [
+   "2026-11-27T17:59:46Z",
+   143.725
+  ],
+  "TKO": [
+   "2026-11-27T17:59:46Z",
+   193.56
+  ],
+  "TME": [
+   "2026-11-27T17:59:46Z",
+   10.11
+  ],
+  "TMO": [
+   "2026-11-27T17:59:46Z",
+   682.85
+  ],
+  "TRT": [
+   "2026-11-27T14:44:48Z",
+   4.4
+  ],
+  "UMC": [
+   "2026-11-27T17:59:46Z",
+   13.475
+  ],
+  "WFC": [
+   "2026-11-27T17:59:46Z",
+   82.22
+  ],
+  "XPEV": [
+   "2026-11-27T17:59:46Z",
+   9.285
+  ],
+  "ZGN": [
+   "2026-11-27T17:59:46Z",
+   13.56
+  ],
+  "ABI": [
+   "2026-11-27T17:59:46Z",
+   24.5713
+  ],
+  "ADP": [
+   "2026-11-27T17:59:46Z",
+   319.225
+  ],
+  "AEP": [
+   "2026-11-27T17:59:46Z",
+   127.51
+  ],
+  "AIDX": [
+   "2026-11-27T14:46:39Z",
+   0.1634
+  ],
+  "ASPI": [
+   "2026-11-27T14:46:39Z",
+   1.31
+  ],
+  "ASX": [
+   "2026-11-27T17:59:46Z",
+   31.34
+  ],
+  "ATER": [
+   "2026-11-27T14:46:39Z",
+   1.2797
+  ],
+  "BAR": [
+   "2026-11-27T17:59:46Z",
+   35.77
+  ],
+  "BAY": [
+   "2026-11-27T17:59:46Z",
+   25.84
+  ],
+  "BBAI": [
+   "2026-11-27T14:46:39Z",
+   1.625
+  ],
+  "BEX": [
+   "2026-11-27T17:59:46Z",
+   9.675
+  ],
+  "BOW": [
+   "2026-11-27T17:59:46Z",
+   34.1
+  ],
+  "BTCT": [
+   "2026-11-27T14:46:39Z",
+   0.55
+  ],
+  "CAE": [
+   "2026-11-27T17:59:46Z",
+   27.935
+  ],
+  "CAPR": [
+   "2026-11-27T14:46:39Z",
+   1.9775
+  ],
+  "CDNL": [
+   "2026-11-27T17:59:46Z",
+   5.835
+  ],
+  "CEPO": [
+   "2026-11-27T17:59:46Z",
+   10.835
+  ],
+  "CION": [
+   "2026-11-27T17:59:46Z",
+   6.15
+  ],
+  "CLSK": [
+   "2026-11-27T17:59:46Z",
+   5.135
+  ],
+  "CNA": [
+   "2026-11-27T17:59:46Z",
+   48.67
+  ],
+  "CPER": [
+   "2026-11-27T17:59:46Z",
+   33.255
+  ],
+  "CRD": [
+   "2026-11-27T14:46:39Z",
+   2.865
+  ],
+  "CTEC": [
+   "2026-11-27T17:59:46Z",
+   43.8475
+  ],
+  "DFNS": [
+   "2026-11-27T14:46:39Z",
+   1.27
+  ],
+  "DJT": [
+   "2026-11-27T14:46:39Z",
+   3.71
+  ],
+  "DMX": [
+   "2026-11-27T17:59:46Z",
+   49.0617
+  ],
+  "DOCT": [
+   "2026-11-27T17:59:46Z",
+   47.175
+  ],
+  "DPRO": [
+   "2026-11-27T14:46:39Z",
+   2.32
+  ],
+  "EOG": [
+   "2026-11-27T17:59:46Z",
+   148.77
+  ],
+  "EONR": [
+   "2026-11-27T14:46:39Z",
+   0.2413
+  ],
+  "ETG": [
+   "2026-11-27T17:59:46Z",
+   22.29
+  ],
+  "FGI": [
+   "2026-11-27T17:59:46Z",
+   4.6584
+  ],
+  "FLY": [
+   "2026-11-27T17:59:46Z",
+   19.405
+  ],
+  "FRDM": [
+   "2026-11-27T17:59:46Z",
+   57.76
+  ],
+  "FUSE": [
+   "2026-11-27T14:46:39Z",
+   0.2599
+  ],
+  "HYFM": [
+   "2026-11-27T14:46:39Z",
+   0.578
+  ],
+  "INSM": [
+   "2026-11-27T17:59:46Z",
+   170.46
+  ],
+  "IQ": [
+   "2026-11-27T14:46:39Z",
+   0.5136
+  ],
+  "JADE": [
+   "2026-11-27T17:59:46Z",
+   68.5201
+  ],
+  "KDK": [
+   "2026-11-27T14:46:39Z",
+   1.255
+  ],
+  "KEY": [
+   "2026-11-27T17:59:46Z",
+   20.495
+  ],
+  "KODK": [
+   "2026-11-27T17:59:46Z",
+   8.245
+  ],
+  "KOS": [
+   "2026-11-27T14:46:39Z",
+   1.66
+  ],
+  "KYNB": [
+   "2026-11-27T14:46:39Z",
+   2.1599
+  ],
+  "LUV": [
+   "2026-11-27T17:59:46Z",
+   47.23
+  ],
+  "MEDS": [
+   "2026-11-27T14:46:39Z",
+   1.6701
+  ],
+  "MMA": [
+   "2026-11-27T14:46:39Z",
+   0.2502
+  ],
+  "MTA": [
+   "2026-11-27T17:59:46Z",
+   6.84
+  ],
+  "MVST": [
+   "2026-11-27T14:46:39Z",
+   0.2573
+  ],
+  "NABL": [
+   "2026-11-27T17:59:46Z",
+   5.39
+  ],
+  "NCI": [
+   "2026-11-27T14:46:39Z",
+   3.45
+  ],
+  "NRC": [
+   "2026-11-27T17:59:46Z",
+   25.72
+  ],
+  "OGEN": [
+   "2026-11-27T14:46:39Z",
+   0.1088
+  ],
+  "ONCO": [
+   "2026-11-27T14:46:39Z",
+   3.0733
+  ],
+  "PAI": [
+   "2026-11-27T17:59:46Z",
+   11.42
+  ],
+  "PBK": [
+   "2026-11-27T14:46:39Z",
+   0.093
+  ],
+  "PDD": [
+   "2026-11-27T17:59:46Z",
+   88.365
+  ],
+  "PETS": [
+   "2026-11-27T14:46:39Z",
+   0.8656
+  ],
+  "PFSA": [
+   "2026-11-27T14:46:39Z",
+   2.75
+  ],
+  "PPX": [
+   "2026-11-27T17:59:46Z",
+   25.43
+  ],
+  "PURR": [
+   "2026-11-27T17:59:46Z",
+   7.79
+  ],
+  "PW": [
+   "2026-11-27T14:46:39Z",
+   3.69
+  ],
+  "PWR": [
+   "2026-11-27T17:59:46Z",
+   580.01
+  ],
+  "QCLS": [
+   "2026-11-27T14:46:39Z",
+   0.2801
+  ],
+  "RAIL": [
+   "2026-11-27T14:46:39Z",
+   4.72
+  ],
+  "RIME": [
+   "2026-11-27T14:46:39Z",
+   0.4501
+  ],
+  "RIO": [
+   "2026-11-27T17:59:46Z",
+   76.51
+  ],
+  "RUM": [
+   "2026-11-27T14:46:39Z",
+   3.54
+  ],
+  "RY": [
+   "2026-11-27T17:59:46Z",
+   189.265
+  ],
+  "SATO": [
+   "2026-11-27T17:59:46Z",
+   10.6186
+  ],
+  "SAY": [
+   "2026-11-27T14:46:39Z",
+   25.04
+  ],
+  "SCLX": [
+   "2026-11-27T17:59:46Z",
+   0.91
+  ],
+  "SM": [
+   "2026-11-27T17:59:46Z",
+   29.22
+  ],
+  "SNAP": [
+   "2026-11-27T17:59:46Z",
+   5.19
+  ],
+  "SPWR": [
+   "2026-11-27T14:46:39Z",
+   1.915
+  ],
+  "TASK": [
+   "2026-11-27T17:59:46Z",
+   9.43
+  ],
+  "TBLD": [
+   "2026-11-27T17:59:46Z",
+   19.91
+  ],
+  "VEEE": [
+   "2026-11-27T17:59:46Z",
+   6.92
+  ],
+  "VIS": [
+   "2026-11-27T17:59:46Z",
+   317.415
+  ],
+  "VMAR": [
+   "2026-11-27T14:46:39Z",
+   4.32
+  ],
+  "VOD": [
+   "2026-11-27T17:59:46Z",
+   13.605
+  ],
+  "VWAV": [
+   "2026-11-27T14:46:39Z",
+   0.04
+  ],
+  "WMS": [
+   "2026-11-27T17:59:46Z",
+   121.07
+  ],
+  "WW": [
+   "2026-11-27T17:59:46Z",
+   8.24
+  ],
+  "WYY": [
+   "2026-11-27T17:59:46Z",
+   6.59
+  ],
+  "XRN": [
+   "2026-11-27T17:59:46Z",
+   27.36
+  ],
+  "AKR": [
+   "2026-11-27T17:59:46Z",
+   21.01
+  ],
+  "BRX": [
+   "2026-11-27T17:59:46Z",
+   31.22
+  ],
+  "CLBK": [
+   "2026-11-27T17:59:46Z",
+   10.955
+  ],
+  "DSX.WS": [
+   "2026-11-27T15:24:49Z",
+   0.065
+  ],
+  "ENVXW": [
+   "2026-11-27T15:30:05Z",
+   0.2411
+  ],
+  "FLDDW": [
+   "2026-11-27T15:51:03Z",
+   0.0141
+  ],
+  "FLR": [
+   "2026-11-27T17:59:46Z",
+   47.35
+  ],
+  "GAP": [
+   "2026-11-27T17:59:46Z",
+   23.66
+  ],
+  "GEV": [
+   "2026-11-27T17:59:46Z",
+   735.665
+  ],
+  "GIXXR": [
+   "2026-11-27T15:19:33Z",
+   0.0853
+  ],
+  "GLXY": [
+   "2026-11-27T17:59:46Z",
+   11.665
+  ],
+  "HUBS": [
+   "2026-11-27T17:59:46Z",
+   207.63
+  ],
+  "HUT": [
+   "2026-11-27T17:59:46Z",
+   52.53
+  ],
+  "IPXGU": [
+   "2026-11-27T15:03:47Z",
+   13.66
+  ],
+  "IVT": [
+   "2026-11-27T17:59:46Z",
+   31.99
+  ],
+  "KIM": [
+   "2026-11-27T17:59:46Z",
+   26.02
+  ],
+  "KR": [
+   "2026-11-27T17:59:46Z",
+   69.35
+  ],
+  "KRG": [
+   "2026-11-27T17:59:46Z",
+   25.61
+  ],
+  "LEGN": [
+   "2026-11-27T17:59:46Z",
+   18.09
+  ],
+  "OHI": [
+   "2026-11-27T17:59:46Z",
+   47.37
+  ],
+  "OPTXW": [
+   "2026-11-27T14:52:30Z",
+   1.02
+  ],
+  "OVV": [
+   "2026-11-27T17:59:46Z",
+   61.69
+  ],
+  "REG": [
+   "2026-11-27T17:59:46Z",
+   75.715
+  ],
+  "RSI": [
+   "2026-11-27T17:59:46Z",
+   11.745
+  ],
+  "T": [
+   "2026-11-27T17:59:46Z",
+   23.215
+  ],
+  "TIGO": [
+   "2026-11-27T17:59:46Z",
+   79.56
+  ],
+  "WMG": [
+   "2026-11-27T17:59:46Z",
+   32.42
+  ],
+  "WT": [
+   "2026-11-27T17:59:46Z",
+   19.88
+  ],
+  "ZS": [
+   "2026-11-27T17:59:46Z",
+   239.47
+  ],
+  "RIBBU": [
+   "2026-11-27T17:59:46Z",
+   133.7
+  ],
+  "RZLVW": [
+   "2026-11-27T16:38:29Z",
+   0.1701
+  ],
+  "WTF": [
+   "2026-11-27T17:59:46Z",
+   1.6
+  ],
+  "BZFDW": [
+   "2026-11-27T16:06:53Z",
+   0.01
+  ],
+  "TVGNW": [
+   "2026-11-27T14:58:34Z",
+   0.0388
+  ],
+  "CDROW": [
+   "2026-11-27T17:59:46Z",
+   0.0022
+  ],
+  "RETO": [
+   "2026-11-27T17:59:46Z",
+   5.4701
+  ],
+  "LVWR": [
+   "2026-11-27T17:47:07Z",
+   1.525
+  ],
+  "SPDN": [
+   "2026-11-27T17:59:46Z",
+   8.92
+  ],
+  "SVAQW": [
+   "2026-11-27T17:36:36Z",
+   0.2493
+  ],
+  "BENF": [
+   "2026-11-27T15:19:33Z",
+   1.1304
+  ],
+  "BNAIW": [
+   "2026-11-27T16:38:29Z",
+   0.081
+  ],
+  "BBCIW": [
+   "2026-11-27T17:41:50Z",
+   0.0599
+  ],
+  "DZZ": [
+   "2026-11-27T15:40:35Z",
+   0.93
+  ],
+  "PDC": [
+   "2026-11-27T17:59:46Z",
+   0.7502
+  ],
+  "COHQ": [
+   "2026-11-27T17:59:46Z",
+   23.465
+  ],
+  "GCL": [
+   "2026-11-27T15:40:35Z",
+   1.2
+  ],
+  "SNDQ": [
+   "2026-11-27T17:59:46Z",
+   34.51
+  ],
+  "GLE": [
+   "2026-11-27T15:32:09Z",
+   2.1299
+  ],
+  "UBS": [
+   "2026-11-27T17:59:46Z",
+   45.615
+  ],
+  "BIXIW": [
+   "2026-11-27T15:40:35Z",
+   0.15
+  ],
+  "XCUR": [
+   "2026-11-27T16:59:32Z",
+   1.33
+  ],
+  "BNCWW": [
+   "2026-11-27T15:45:51Z",
+   0.0029
+  ],
+  "LNKS": [
+   "2026-11-27T15:45:51Z",
+   0.64
+  ],
+  "DOGZ": [
+   "2026-11-27T17:59:46Z",
+   0.3633
+  ],
+  "HUBCZ": [
+   "2026-11-27T17:59:46Z",
+   0.0039
+  ],
+  "MRNOW": [
+   "2026-11-27T17:59:46Z",
+   0.0057
+  ],
+  "NXATW": [
+   "2026-11-27T16:49:02Z",
+   0.0105
+  ],
+  "WHLRP": [
+   "2026-11-27T15:51:03Z",
+   8.4
+  ],
+  "XLABW": [
+   "2026-11-27T15:51:03Z",
+   0.1
+  ],
+  "FGIWW": [
+   "2026-11-27T17:59:46Z",
+   0.0099
+  ],
+  "MNYWW": [
+   "2026-11-27T17:31:13Z",
+   0.0238
+  ],
+  "OGGWZ": [
+   "2026-11-27T17:59:46Z",
+   0.006
+  ],
+  "DAICW": [
+   "2026-11-27T17:59:46Z",
+   0.0055
+  ],
+  "BNS": [
+   "2026-11-27T17:59:46Z",
+   84.92
+  ],
+  "ICE": [
+   "2026-11-27T17:59:46Z",
+   178.355
+  ],
+  "MCK": [
+   "2026-11-27T17:59:46Z",
+   1076.02
+  ],
+  "TMUS": [
+   "2026-11-27T17:59:46Z",
+   169.98
+  ],
+  "ZYN": [
+   "2026-11-27T17:59:46Z",
+   2.31
+  ],
+  "PANW": [
+   "2026-11-27T17:59:46Z",
+   366.0701
+  ],
+  "REGN": [
+   "2026-11-27T17:59:46Z",
+   991.21
+  ],
+  "SBSW": [
+   "2026-11-27T17:59:46Z",
+   8.5
+  ],
+  "AEHL": [
+   "2026-11-27T17:59:46Z",
+   12.93
+  ],
+  "NCT": [
+   "2026-11-27T17:10:09Z",
+   5.36
+  ],
+  "EL": [
+   "2026-11-27T17:59:46Z",
+   111.98
+  ],
+  "ING": [
+   "2026-11-27T17:59:46Z",
+   29.965
+  ],
+  "LYG": [
+   "2026-11-27T17:59:46Z",
+   5.065
+  ],
+  "OR": [
+   "2026-11-27T17:59:46Z",
+   34.93
+  ],
+  "SNT": [
+   "2026-11-27T16:32:03Z",
+   2.038
+  ],
+  "PSNY": [
+   "2026-11-27T16:33:12Z",
+   2.46
+  ],
+  "FUSEW": [
+   "2026-11-27T17:59:46Z",
+   0.0075
+  ],
+  "HDRNW": [
+   "2026-11-27T16:49:02Z",
+   0.0318
+  ],
+  "ENGNW": [
+   "2026-11-27T17:59:46Z",
+   0.1599
+  ],
+  "MB": [
+   "2026-11-27T16:43:45Z",
+   3.6499
+  ],
+  "MPU": [
+   "2026-11-27T17:59:46Z",
+   7.1406
+  ],
+  "WLIIW": [
+   "2026-11-27T17:57:38Z",
+   0.455
+  ],
+  "BSBR": [
+   "2026-11-27T17:02:42Z",
+   4.99
+  ],
+  "ELPC": [
+   "2026-11-27T17:59:46Z",
+   11.685
+  ],
+  "EQT": [
+   "2026-11-27T17:59:46Z",
+   51.86
+  ],
+  "FBK": [
+   "2026-11-27T17:59:46Z",
+   52.82
+  ],
+  "FMS": [
+   "2026-11-27T17:59:46Z",
+   20.901
+  ],
+  "MICC": [
+   "2026-11-27T17:59:46Z",
+   19.755
+  ],
+  "VALE": [
+   "2026-11-27T17:59:46Z",
+   10.28
+  ],
+  "CAN": [
+   "2026-11-27T17:03:49Z",
+   0.1282
+  ],
+  "NCPLW": [
+   "2026-11-27T17:59:46Z",
+   0.0517
+  ],
+  "BFRG": [
+   "2026-11-27T17:59:46Z",
+   0.2195
+  ],
+  "CPAC": [
+   "2026-11-27T17:20:43Z",
+   9.05
+  ],
+  "GRAB": [
+   "2026-11-27T17:59:46Z",
+   2.865
+  ],
+  "AIIO": [
+   "2026-11-27T17:59:46Z",
+   7.34
+  ],
+  "ANDD": [
+   "2026-11-27T17:25:56Z",
+   13.03
+  ],
+  "ANTY": [
+   "2026-11-27T17:36:36Z",
+   22.23
+  ],
+  "CCTG": [
+   "2026-11-27T17:36:36Z",
+   5.17
+  ],
+  "ECX": [
+   "2026-11-27T17:32:15Z",
+   0.7917
+  ],
+  "IPO": [
+   "2026-11-27T17:59:46Z",
+   44.67
+  ],
+  "ITM": [
+   "2026-11-27T17:59:46Z",
+   45.745
+  ],
+  "MSAIW": [
+   "2026-11-27T17:59:46Z",
+   0.0088
+  ],
+  "PAY": [
+   "2026-11-27T17:59:46Z",
+   34.825
+  ],
+  "TRN": [
+   "2026-11-27T17:59:46Z",
+   30.6
+  ],
+  "UL": [
+   "2026-11-27T17:59:46Z",
+   66.39
+  ],
+  "SRAD": [
+   "2026-11-27T17:59:46Z",
+   12.505
+  ],
+  "FBYDP": [
+   "2026-11-27T17:41:50Z",
+   5.05
+  ],
+  "RAYA": [
+   "2026-11-27T17:47:07Z",
+   0.909
+  ],
+  "KITTW": [
+   "2026-11-27T17:57:38Z",
+   0.0091
+  ],
+  "KIDZ": [
+   "2026-11-27T17:59:46Z",
+   1.045
+  ],
+  "AMOD": [
+   "2026-11-27T17:59:46Z",
+   1.0402
+  ],
+  "MCGAW": [
+   "2026-11-27T17:57:38Z",
+   0.0862
+  ],
+  "AXTQ": [
+   "2026-11-27T17:59:46Z",
+   32.54
+  ],
+  "NU": [
+   "2026-11-27T17:59:46Z",
+   12.915
+  ],
+  "OABIW": [
+   "2026-11-27T17:59:46Z",
+   0.3559
+  ]
+ },
+ "llm": {
+  "articles_scored": 294,
+  "input_tokens": 14059,
+  "output_tokens": 2908
+ },
+ "finalized": true,
+ "summary": {
+  "trades": 0,
+  "wins": 0,
+  "losses": 0,
+  "win_rate": null,
+  "pnl_usd": 0,
+  "capital_per_trade": 10000,
+  "predictions": 2,
+  "predictions_correct": 1,
+  "prediction_accuracy": 50.0,
+  "best": null,
+  "worst": null
+ },
+ "updated_at": "2026-11-27T18:00:48Z"
+}
