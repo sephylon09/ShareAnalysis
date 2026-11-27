@@ -61,10 +61,16 @@ class Store:
         """Force-push the data folder as a single commit to the results branch.
 
         On GitHub Actions this uses the workflow token; on a desktop it pushes to this repo's `origin`
-        remote using your normal git login.
+        remote using your normal git login. A failed publish is logged and never stops the bot.
         """
         if not self.publish_enabled:
             return
+        try:
+            self._publish()
+        except (OSError, subprocess.SubprocessError) as e:
+            log.warning("publish failed (%s: %s); results are still saved locally", type(e).__name__, e)
+
+    def _publish(self) -> None:
         repo = os.environ.get("GITHUB_REPOSITORY")
         token = os.environ.get("GITHUB_TOKEN") or ""
         if repo and token:

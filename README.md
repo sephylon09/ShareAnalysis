@@ -117,8 +117,13 @@ It saves to `data-moomoo/` and publishes to the `data-moomoo` branch. On the das
    powershell -ExecutionPolicy Bypass -File scripts\install-desktop-task.ps1
    ```
    This registers the Windows task `NewsSimDesk-moomoo`. It runs on US trading days, every 30 min for 10 h from
-   12:00 UTC (20:00 in Singapore), and wakes the PC from sleep. Remove it with
-   `Unregister-ScheduledTask -TaskName NewsSimDesk-moomoo`.
+   12:00 UTC (20:00 in Singapore), and wakes the PC from sleep. When the bot starts, it opens a minimized window
+   titled **News Sim Desk bot** in the taskbar, showing its live log. Closing that window stops the bot for the
+   day. Set `DESKTOP_WINDOW` in `.env` to `Normal` to make the window pop up, or `Hidden` to hide it. Remove the task
+   with `Unregister-ScheduledTask -TaskName NewsSimDesk-moomoo`.
+
+   Resource use: about 170 MB of RAM and under 1% of one CPU core, only while the US market is open (plus about 90 min
+   of pre-market). Outside those hours the bot isn't running at all. OpenD itself uses about 200 MB while it's open.
 
 Options in `.env`:
 - `MOOMOO_PAPER_MIRROR=1` also places each simulated entry and exit as a market order in your moomoo **paper**

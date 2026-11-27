@@ -4,6 +4,7 @@
 #
 # The task fires every 30 min for 10 h starting at 12:00 UTC (7:00 ET in winter / 8:00 ET in summer),
 # which covers pre-market analysis through the 4pm ET close all year. It wakes the PC if it is asleep.
+# The check itself runs hidden; when the bot starts, it opens in its own (minimized) window.
 
 $ErrorActionPreference = "Stop"
 $root = Split-Path -Parent $PSScriptRoot
