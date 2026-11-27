@@ -52,6 +52,24 @@ def main() -> int:
     hot = p.hot_symbols(10)
     line(bool(hot), f"hot stocks screener: {len(hot)} symbols" + (f" (e.g. {', '.join(h.symbol for h in hot[:5])})" if hot else ""))
 
+    print("moomoo (desktop copy only)")
+    try:
+        import os
+
+        from .market_moomoo import MoomooProvider
+
+        mp = MoomooProvider(s.alpaca_key, s.alpaca_secret, os.environ.get("MOOMOO_OPEND_HOST", "127.0.0.1"),
+                            int(os.environ.get("MOOMOO_OPEND_PORT", "11111")))
+        try:
+            mq = mp._moomoo_snap(["AAPL", "NVDA", "TSLA"])
+            line(bool(mq), "OpenD prices: " + ", ".join(f"{k} ${v.price:.2f}" for k, v in sorted(mq.items())))
+        finally:
+            mp.shutdown()
+    except ImportError:
+        print("  --   moomoo-api not installed (only needed for the desktop copy)")
+    except Exception as e:  # noqa: BLE001
+        print(f"  --   OpenD not reachable ({type(e).__name__}: {str(e)[:100]}); only needed for the desktop copy")
+
     print("Claude")
     if not s.anthropic_key_present:
         print("  --   ANTHROPIC_API_KEY not set: the free keyword model will be used")
