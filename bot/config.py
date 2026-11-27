@@ -83,7 +83,7 @@ class Settings:
     premarket_window_min: float = field(default_factory=lambda: _f("PREMARKET_WINDOW_MIN", 90))
     max_runtime_min: float = field(default_factory=lambda: _f("MAX_RUNTIME_MIN", 340))
     publish_every_min: float = field(default_factory=lambda: _f("PUBLISH_EVERY_MIN", 3))
-    llm_max_articles_per_day: int = field(default_factory=lambda: _i("LLM_MAX_ARTICLES_PER_DAY", 600))
+    llm_max_articles_per_day: int = field(default_factory=lambda: _i("LLM_MAX_ARTICLES_PER_DAY", 2000))
     max_symbols_per_article: int = field(default_factory=lambda: _i("MAX_SYMBOLS_PER_ARTICLE", 4))
     watchlist: list[str] = field(
         default_factory=lambda: [s.strip().upper() for s in _s("WATCHLIST", DEFAULT_WATCHLIST).split(",") if s.strip()]

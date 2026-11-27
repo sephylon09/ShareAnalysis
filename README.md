@@ -52,10 +52,10 @@ trade that was already winning from ending as a loss.
 Without an Anthropic key the bot uses a free keyword model. It works, but it is much weaker. For example, it
 can't tell whether news is already priced in.
 
-**Claude cost estimate**: roughly 300-600 articles a day, sent 10 per request. With the default model
-`claude-haiku-5-5` this is about **$0.05 per trading day**. For deeper analysis, set the repository variable
-`CLAUDE_MODEL` to `claude-opus-5-5` (about $1-3 a day). `LLM_MAX_ARTICLES_PER_DAY` (default 600) caps the
-spend. Articles past the cap use the keyword model.
+**Claude cost estimate**: roughly 500-2,000 articles a day (including overnight news), sent 10 per request.
+With the default model `claude-haiku-5-5` this is at most about **$0.12 per trading day**. For deeper analysis,
+set the repository variable `CLAUDE_MODEL` to `claude-opus-5-5` (several dollars a day at this volume).
+`LLM_MAX_ARTICLES_PER_DAY` (default 2,000) caps the spend. Articles past the cap use the keyword model.
 
 ### 2. Put the code on GitHub
 
