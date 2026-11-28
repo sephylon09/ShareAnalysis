@@ -71,10 +71,15 @@ class ProviderError(RuntimeError):
     pass
 
 
+LISTED_EXCHANGES = {"NYSE", "NASDAQ", "AMEX", "ARCA", "BATS", "NYSEARCA"}
+
+
 class AlpacaProvider:
     name = "alpaca"
     TRADING = "https://paper-api.alpaca.markets"
     DATA = "https://data.alpaca.markets"
+    _names: dict[str, str] | None = None
+    _names_at: float = 0.0
 
     def __init__(self, key: str, secret: str, feed: str = "iex"):
         if not key or not secret:
@@ -204,6 +209,19 @@ class AlpacaProvider:
         except ProviderError:
             pass
         return out
+
+    def company_names(self) -> dict[str, str]:
+        """{symbol: company name} for stocks listed on a US exchange (OTC excluded). Refreshed every 12 h.
+        Returns {} if the list can't be fetched, in which case callers shouldn't filter on it."""
+        if self._names is None or time.time() - self._names_at > 12 * 3600:
+            try:
+                assets = self._get(self.TRADING, "/v2/assets", {"status": "active", "asset_class": "us_equity"})
+                self._names = {a["symbol"]: a.get("name", "") for a in assets
+                               if a.get("tradable") and a.get("exchange") in LISTED_EXCHANGES}
+                self._names_at = time.time()
+            except ProviderError:
+                return self._names or {}
+        return self._names
 
     def sleep(self, seconds: float) -> None:
         time.sleep(max(0.0, seconds))

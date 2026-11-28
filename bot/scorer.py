@@ -69,7 +69,8 @@ _NEG = {
 class LexiconScorer:
     name = "keywords"
 
-    def score(self, articles: list[Article], quotes: dict[str, Quote]) -> list[Signal]:
+    def score(self, articles: list[Article], quotes: dict[str, Quote],
+              names: dict[str, str] | None = None) -> list[Signal]:
         out: list[Signal] = []
         for a in articles:
             text = f"{a.headline}. {a.summary}".lower()
@@ -113,7 +114,15 @@ For every (article, ticker) pair that the article is really about, output:
 - Consider whether the move is already priced in: the current intraday change % is provided.
 - impact: "low" | "medium" | "high" (how big a price move this news can cause).
 - reason: <= 25 words, concrete.
-Skip tickers the article only mentions in passing. Output an empty list if nothing is material."""
+Skip tickers the article only mentions in passing. Output an empty list if nothing is material.
+
+Each ticker comes with the name of the US-listed company it belongs to. News feeds sometimes tag an article
+with a US ticker that belongs to a different company (often a foreign company with a similar name or the same
+local ticker). If the article is not about that named company, skip the ticker.
+
+Takeovers: once a cash acquisition has been agreed, approved or completed, the target's price is pinned near
+the deal price and barely moves, so keep p_up between 45 and 55 for the target. Only a NEW, unexpected
+takeover announcement (or a deal collapsing) moves the target's price."""
 
 OUTPUT_SCHEMA = {
     "type": "object",
@@ -156,7 +165,8 @@ class ClaudeScorer:
         self.input_tokens = 0
         self.output_tokens = 0
 
-    def _payload(self, batch: list[Article], quotes: dict[str, Quote]) -> str:
+    def _payload(self, batch: list[Article], quotes: dict[str, Quote], names: dict[str, str] | None = None) -> str:
+        names = names or {}
         rows = []
         for a in batch:
             tickers = []
@@ -165,7 +175,10 @@ class ClaudeScorer:
                 if not q:
                     continue
                 chg = f"{q.change_pct:+.2f}%" if q.change_pct is not None else "n/a"
-                tickers.append({"symbol": s, "price": round(q.price, 2), "change_today": chg})
+                t = {"symbol": s, "price": round(q.price, 2), "change_today": chg}
+                if names.get(s):
+                    t["company"] = names[s]
+                tickers.append(t)
             if tickers:
                 rows.append({
                     "article_id": a.id,
@@ -194,11 +207,12 @@ class ClaudeScorer:
                 pass
         return self.client.messages.create(**kwargs)
 
-    def score(self, articles: list[Article], quotes: dict[str, Quote]) -> list[Signal]:
+    def score(self, articles: list[Article], quotes: dict[str, Quote],
+              names: dict[str, str] | None = None) -> list[Signal]:
         out: list[Signal] = []
         for i in range(0, len(articles), self.batch_size):
             batch = articles[i : i + self.batch_size]
-            content = self._payload(batch, quotes)
+            content = self._payload(batch, quotes, names)
             if content == "[]":
                 continue
             try:

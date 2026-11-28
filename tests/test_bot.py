@@ -74,11 +74,65 @@ class ClaudeScorerTests(unittest.TestCase):
         fake = _FakeMessages({"items": [{"article_id": "a1", "symbol": "X", "p_up": 83, "impact": "high", "reason": "beat"}]})
         sc.client = types.SimpleNamespace(beta=types.SimpleNamespace(messages=fake), messages=fake)
         q = {"X": Quote("X", 20.0, prev_close=19.0)}
-        sigs = sc.score([Article("a1", "X beats", "", ["X"], datetime.now(timezone.utc))], q)
+        sigs = sc.score([Article("a1", "X beats", "", ["X"], datetime.now(timezone.utc))], q, {"X": "Xylo Corp."})
         self.assertEqual(len(sigs), 1)
         self.assertEqual(sigs[0].p_up, 83)
         self.assertEqual(fake.calls[0]["fallbacks"], "default")
         self.assertEqual(fake.calls[0]["output_config"]["format"]["type"], "json_schema")
+        sent = json.loads(fake.calls[0]["messages"][0]["content"])
+        self.assertEqual(sent[0]["tickers"][0]["company"], "Xylo Corp.")
+        self.assertIn("Takeovers", fake.calls[0]["system"])
+
+    def test_haiku_gets_no_fallbacks_param(self):
+        try:
+            sc = ClaudeScorer("claude-haiku-5-5")
+        except Exception:
+            self.skipTest("anthropic SDK not installed")
+        fake = _FakeMessages({"items": []})
+        sc.client = types.SimpleNamespace(beta=types.SimpleNamespace(messages=fake), messages=fake)
+        sc.score([Article("a1", "X beats", "", ["X"], datetime.now(timezone.utc))], {"X": Quote("X", 20.0)})
+        self.assertNotIn("fallbacks", fake.calls[0])
+
+
+class EngineNewsTests(unittest.TestCase):
+    class _CountingScorer:
+        model = "fake"
+        name = "claude"
+
+        def __init__(self):
+            self.input_tokens = 0
+            self.output_tokens = 0
+            self.seen = []
+
+        def score(self, articles, quotes, names=None):
+            self.input_tokens += 100
+            self.output_tokens += 10
+            self.seen.append((articles, names))
+            return []
+
+    def test_tokens_accumulate_across_restarts_and_otc_is_dropped(self):
+        store = Store(tempfile.mkdtemp())
+        now = datetime(2026, 11, 27, 15, 0, tzinfo=timezone.utc)
+        for _ in range(2):  # second engine = bot restarted mid-day, scorer counters start at 0 again
+            sc = self._CountingScorer()
+            e = Engine(Settings(), None, sc, store)
+            e.day = store.load_day("2026-11-27") or e._new_day("2026-11-27", now)
+            e.names = {"AAPL": "Apple Inc."}
+            e.quotes = {"AAPL": Quote("AAPL", 200.0), "BIOF": Quote("BIOF", 6.0)}
+            e._score([Article("1", "Apple beats", "", ["AAPL"], now)], now)
+            store.save_day(e.day)
+        self.assertEqual(e.day["llm"]["input_tokens"], 200)
+        self.assertEqual(e.day["llm"]["output_tokens"], 20)
+        self.assertEqual(sc.seen[0][1], {"AAPL": "Apple Inc."})
+
+        class P:
+            def news(self, since):
+                return [Article("9", "OTC thing", "", ["BIOF"], now), Article("8", "Apple", "", ["AAPL", "BIOF"], now)]
+
+        e.p = P()
+        e.day["seen_article_ids"] = []
+        kept = e._fetch_news(now)
+        self.assertEqual([a.symbols for a in kept], [["AAPL"]])
 
 
 class ExitRuleTests(unittest.TestCase):

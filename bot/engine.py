@@ -34,6 +34,7 @@ class Engine:
         self.keyword_scorer = LexiconScorer()
         self.store = store
         self.day: dict | None = None
+        self.names: dict[str, str] = {}  # symbol -> company name for US-listed stocks ({} = unknown, don't filter)
         self.history: dict[str, deque] = defaultdict(lambda: deque(maxlen=60))  # sym -> (time, price)
         self.hot: dict[str, str] = {}
         self.hot_refreshed: datetime | None = None
@@ -141,6 +142,8 @@ class Engine:
         now = clk.now
         d = self.day
         d["status"] = "open" if trading else "premarket"
+        if hasattr(self.p, "company_names"):
+            self.names = self.p.company_names()
         self._refresh_hot(now)
         articles = self._fetch_news(now)
         tracked = set(self.s.watchlist) | set(self.hot) | {p["symbol"] for p in d["positions"]}
@@ -187,6 +190,8 @@ class Engine:
         keep = []
         for a in fresh:
             syms = a.symbols if len(a.symbols) <= self.s.max_symbols_per_article else [s for s in a.symbols if s in focus]
+            if self.names:  # only stocks listed on a US exchange (drops OTC / foreign tickers)
+                syms = [s for s in syms if s in self.names]
             if syms and a.headline:
                 a.symbols = syms
                 keep.append(a)
@@ -203,12 +208,15 @@ class Engine:
         rest = articles[len(use_llm):] if use_llm else articles
         sigs: list[Signal] = []
         if use_llm:
-            sigs += self.scorer.score(use_llm, tradable)
+            in0 = getattr(self.scorer, "input_tokens", 0)
+            out0 = getattr(self.scorer, "output_tokens", 0)
+            sigs += self.scorer.score(use_llm, tradable, self.names)
             d["llm"]["articles_scored"] += len(use_llm)
-            d["llm"]["input_tokens"] = getattr(self.scorer, "input_tokens", 0)
-            d["llm"]["output_tokens"] = getattr(self.scorer, "output_tokens", 0)
+            # add this cycle's usage, so the day's total survives restarts
+            d["llm"]["input_tokens"] += getattr(self.scorer, "input_tokens", 0) - in0
+            d["llm"]["output_tokens"] += getattr(self.scorer, "output_tokens", 0) - out0
         if rest:
-            sigs += self.keyword_scorer.score(rest, tradable)
+            sigs += self.keyword_scorer.score(rest, tradable, self.names)
         for sg in sigs:
             row = sg.to_dict()
             row["scored_at"] = iso(now)

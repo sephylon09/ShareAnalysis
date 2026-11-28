@@ -134,6 +134,9 @@ class DemoProvider:
         ranked = sorted(self.price, key=lambda s: -abs(self.price[s] / self.prev_close[s] - 1))
         return [HotSymbol(s, f"mover {(self.price[s] / self.prev_close[s] - 1) * 100:+.1f}%") for s in ranked[:6]]
 
+    def company_names(self) -> dict[str, str]:
+        return {s: name for s, (name, _) in STOCKS.items()}
+
     def sleep(self, seconds: float) -> None:
         self.now += timedelta(seconds=max(seconds, 1))
 
